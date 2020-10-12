@@ -8,43 +8,56 @@
     align-items: center;
 }
 
-html body {
-    background-color: white !important;
-}
 
 #survey {
-    height: 400px;
+    height: 54vh;
 }
 
 .greeting {
     font-family: calluna, serif;
-    font-weight: 600 !important;
-    font-size: 32pt !important;
-    font-style: normal;
+    font-size: 40px !important;
     text-align: center;
     color: #486491 !important;
-    opacity: 1;
-    letter-spacing: 0px;
 }
 
 .about-assessment {
     font-family: futura-pt, sans-serif;
-    font-weight: 500 !important;
-    font-size: 18pt !important;
-    font-style: normal;
+    font-size: 24px !important;
+    text-align: left;
+    color: #1B1C1D;
 }
 
 .disclaimer {
     font-family: futura-pt, sans-serif;
-    font-weight: 400 !important;
-    font-size: 16pt !important;
-    font-style: normal;
+    font-size: 20px !important;
+    text-align: left;
+    color: #1B1C1D;
 }
 
 .disclaimer > a {
+    text-decoration: none;
     color: #FD866D;
 }
 
+.disclaimer > a:link {
+    text-decoration: none;
+    color: #FD866D;
+}
+
+.disclaimer > a:visited {
+    text-decoration: none;
+    color: #f85737;
+}
+
+.disclaimer > a:hover {
+    text-decoration: none;
+    color: #f85737;
+}
+
+.disclaimer > a:active{
+    text-decoration: none;
+    color: #486491;
+}
 
 .sv_start_btn {
     background-color: Transparent;
