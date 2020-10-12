@@ -1,1 +1,179 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import url("https://use.typekit.net/kll3mxz.css");
+
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+html body {
+    background-color: white !important;
+}
+
+#survey {
+    height: 400px;
+}
+
+.greeting {
+    font-family: calluna, serif;
+    font-weight: 600 !important;
+    font-size: 32pt !important;
+    font-style: normal;
+    text-align: center;
+    color: #486491 !important;
+    opacity: 1;
+    letter-spacing: 0px;
+}
+
+.about-assessment {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500 !important;
+    font-size: 18pt !important;
+    font-style: normal;
+}
+
+.disclaimer {
+    font-family: futura-pt, sans-serif;
+    font-weight: 400 !important;
+    font-size: 16pt !important;
+    font-style: normal;
+}
+
+.disclaimer > a {
+    color: #FD866D;
+}
+
+
+.sv_start_btn {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    text-align: center;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400 !important;
+    font-size: 16pt !important;
+    color: #FD866D;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.sv_prev_btn{
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    text-align: center;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400 !important;
+    font-size: 16pt !important;
+    color: #FD866D;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.sv_next_btn{
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    text-align: center;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400 !important;
+    font-size: 16pt !important;
+    color: #FD866D;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.sv_complete_btn{
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    text-align: center;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400 !important;
+    font-size: 16pt !important;
+    color: #FD866D;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.sv_q_title, .sv_p_title{
+    font-family: futura-pt, sans-serif;
+    font-weight: 400 !important;
+    font-size: 18pt !important;
+    color: black;
+    text-align: center;
+}
+
+.sv_q_text_root {
+    border: none;
+    border-bottom: 1px solid gray !important; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 32%;
+}
+
+.sv_q_text_root:hover {
+    border: none;
+    border-bottom: 1px solid #FD866D !important; 
+}
+
+*:focus {
+    outline: none !important; 
+}
+
+.sv_body {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sv_q_radiogroup > label {
+    border: 1px solid #B8DEF5;
+    padding: 8px;
+    margin: 8px;
+    font-family: futura-pt, sans-serif;
+    font-weight: 300 !important;
+    font-size: 14pt !important;
+    width: 80%;
+}
+
+input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.sv_q_radiogroup > label:hover {
+    background-color: #B8DEF5;
+}
+
+.sv_q_radiogroup.sv-q-col-1.checked > label {
+    background-color: #B8DEF5;
+}
+
+.sv_qstn {
+    margin-left: auto;
+    margin-right: auto;
+
+}

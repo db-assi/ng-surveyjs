@@ -1,0 +1,336 @@
+{
+	"pages": [
+		{
+			"name": "get_started",
+			"elements": [
+				{
+					"type": "html",
+     				"name": "welcome",
+     				"hideNumber": true,
+    				 "html": "<h1 class='greeting'>Hello there, we're Bia.</h1>\n<h3 class='about-assessment'>We’ve made this short assessment to help you receive relevant information about your menopause.</h3>\n<p class='disclaimer'>Please note we this is not medical advice. If you are concerned about a medical issue or symptom, please speak to your doctor. \n\nAll information you give us will be anonymised and stored securely according to our <a href='#'>privacy policy</a> and GDPR.</p>\n"
+				}
+			]
+		},
+		{
+			"name": "page_two",
+			"elements": [
+				{
+					"type": "text",
+     				"name": "age",
+					"title": "Please tell us how old you are?",
+					"inputType": "number",
+					"hideNumber": true
+				}
+			]
+		},
+		{
+			"name": "page_three",
+			"elements": [
+				{
+					"type": "panel",
+     				"name": "page_three_panel",
+     				"elements": [
+						 {
+							"type": "radiogroup",
+                            "name": "describe_period",
+							"startWithNewLine": false,
+							"titleLocation": "hidden",
+                            "choices": [
+                                {
+                                    "value": "item1",
+                                    "text": "I have regular periods."
+                                }, {
+                                    "value": "item2",
+                                    "text": "I have irregular periods."
+                                }, {
+                                    "value": "item3",
+                                    "text": "My last period was over 3 months ago, but in the last year."
+								},
+								{
+                                    "value": "item4",
+                                    "text": "My last period was over 12 months ago."
+                                }
+                            ],
+                            "colCount": 1
+						 }
+					 ],
+					 "title": "Please select the option that best describes your periods:"
+				}
+			]
+		},
+		{
+			"name": "page_four",
+			"elements": [
+				{
+					"type": "panel",
+     				"name": "page_four_panel",
+     				"elements": [
+						{
+							"type": "panel",
+							"name": "page_four_panel_subtitle", 
+							"elements": [
+								{
+									"type": "radiogroup",
+									"name": "affecting_period",
+									"startWithNewLine": false,
+									"titleLocation": "hidden",
+									"choices": [
+										{
+											"value": "item1",
+											"text": "Yes"
+										}, {
+											"value": "item2",
+											"text": "No"
+										}
+									],
+									"colCount": 1
+								},
+								{
+									"type": "text",
+									"name": "age",
+								   	"title": "What is affecting your periods?",
+									"hideNumber": true,
+									"visibleIf": "{affecting_period}='item2'"
+								}
+							],
+							"title": "(For example: birth control, hormonal therapy, Mirena coil, hysterectomy, ablation, chemotherapy, pregnancy)"
+						}
+					],
+					"title": "Could any other factors be affecting your periods?"
+				}
+			]
+		},
+		{
+			"name": "page_five",
+			"elements": [
+				{
+					"type": "panel",
+					"name": "page_five_panel",
+					"elements": 
+					[
+						{
+							"type": "checkbox",
+							"name": "symptoms",
+							"startWithNewLine": false,
+							"titleLocation": "hidden",
+							"hideNumber": true,
+							"choices": [
+								{
+									"value": "item1",
+									"text": "Hot or cold flushes or night sweats"
+								},
+								{
+									"value": "item2",
+									"text": "Difficulty falling or staying asleep"
+								},
+								{
+									"value": "item3",
+									"text": "Low energy or fatigue"
+								},
+								{
+									"value": "item4",
+									"text": "Feeling anxious or low mood"
+								},
+								{
+									"value": "item5",
+									"text": "Mood swings"
+								}, 
+								{
+									"value": "item6",
+									"text": "Reduced concentration"
+								},
+								{
+									"value": "item7",
+									"text": "Forgetfulness"
+								}, 
+								{
+									"value": "item8",
+									"text": "Reduced sex drive"
+								},
+								{
+									"value": "item9",
+									"text": "Vaginal dryness"
+								}, 
+								{
+									"value": "item10",
+									"text": "Frequently peeing during day or night"
+								},
+								{
+									"value": "item11",
+									"text": "Leaking urine when you laugh or cough"
+								}, 
+								{
+									"value": "item12",
+									"text": "Sudden need to pass urine"
+								},
+								{
+									"value": "item13",
+									"text": "Painful joints or muscles"
+								}, 
+								{
+									"value": "item14",
+									"text": "Heart racing or skipping beats"
+								},
+								{
+									"value": "item15",
+									"text": "Migranes"
+								}, 
+								{
+									"value": "item16",
+									"text": "Weight gain"
+								},
+								{
+									"value": "item17",
+									"text": "Change to skin, hair and nails"
+								}, 
+								{
+									"value": "item18",
+									"text": "None of these"
+								}
+							],
+							"colCount": 4
+						}
+					],
+					"title": "Have you experienced any of the following symptoms?"
+				}
+			]
+		},
+		{
+			"name": "page_six",
+			"elements": 
+			[
+				{
+					"type": "panel",
+					"name": "page_six_panel",
+					"elements": 
+					[
+						{
+							"type": "matrix",
+							"name": "rate",
+							"startWithNewLine": false,
+							"titleLocation": "hidden",
+							"hideNumber": true,
+							"columns": 
+							[
+								{
+									"value": 1,
+									"text": "Not at all "
+								},
+								{
+									"value": 2,
+									"text": "A ltitle "
+								},
+								{
+									"value": 3,
+									"text": "Quite a bit "
+								},
+								{
+									"value": 4,
+									"text": "A lot "
+								}
+							],
+							"rows": 
+							[
+								{
+									"value": 1,
+									"text": "Hot or cold flushes or night sweats",
+									"visibleIf": "{symptoms} contains ['item1']"
+								},
+								{
+									"value": 2,
+									"text": "Difficulty falling or staying asleep",
+									"visibleIf": "{symptoms} contains ['item2']"
+								},
+								{
+									"value": 3,
+									"text": "Low energy or fatigue",
+									"visibleIf": "{symptoms} contains ['item3']"
+								},
+								{
+									"value": 4,
+									"text": "Feeling anxious or low mood",
+									"visibleIf": "{symptoms} contains ['item4']"
+								},
+								{
+									"value": 5,
+									"text": "Mood swings",
+									"visibleIf": "{symptoms} contains ['item5']"
+								},
+								{
+									"value": 6,
+									"text": "Reduced concentration",
+									"visibleIf": "{symptoms} contains ['item6']"
+								},
+								{
+									"value": 7,
+									"text": "Forgetfulness",
+									"visibleIf": "{symptoms} contains ['item7']"
+								},
+								{
+									"value": 8,
+									"text": "Reduced sex drive",
+									"visibleIf": "{symptoms} contains ['item8']"
+								},
+								{
+									"value": 9,
+									"text": "Vaginal dryness",
+									"visibleIf": "{symptoms} contains ['item9']"
+								},
+								{
+									"value": 10,
+									"text": "Frequently peeing during day or night",
+									"visibleIf": "{symptoms} contains ['item10']"
+								},
+								{
+									"value": 11,
+									"text": "Leaking urine when you laugh or cough",
+									"visibleIf": "{symptoms} contains ['item11']"
+								},
+								{
+									"value": 12,
+									"text": "Sudden need to pass urine",
+									"visibleIf": "{symptoms} contains ['item12']"
+								},
+								{
+									"value": 13,
+									"text": "Painful joints or muscles",
+									"visibleIf": "{symptoms} contains ['item13']"
+								},
+								{
+									"value":14,
+									"text": "Heart racing or skipping beats",
+									"visibleIf": "{symptoms} contains ['item14']"
+								},
+								{
+									"value": 15,
+									"text": "Migranes",
+									"visibleIf": "{symptoms} contains ['item15']"
+								},
+								{
+									"value": 16,
+									"text": "Weight gain",
+									"visibleIf": "{symptoms} contains ['item16']"
+								},
+								{
+									"value": 17,
+									"text": "Change to skin, hair and nails",
+									"visibleIf": "{symptoms} contains ['item17']"
+								}
+							]
+
+						}
+					],
+					"title": "How much do these symptoms bother you?"
+				}
+			],
+			"visibleIf": "{symptoms} != ['item18']"
+		}
+	],
+	"startSurveyText": "Get Started",
+	"firstPageIsStarted": true,
+	"pagePrevText": "Back",
+	"pageNextText": "Next",
+	"sendResultOnPageNext": true,
+	"showQuestionNumbers": "off",
+	"showProgressBar": "bottom"
+}
