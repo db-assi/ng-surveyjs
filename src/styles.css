@@ -82,6 +82,14 @@ input[type=number] {
     margin: 0 0 10px 0;
 }
 
+#sq_103.sv_qstn .sv_q_select_column {
+    min-width: 16% !important;  
+}
+
+.sv_qstn fieldset {
+    text-align: center;
+}
+
 .sv_q_title, .sv_p_title{
     font-family: futura-pt, sans-serif;
     font-weight: 400 !important;
@@ -123,13 +131,13 @@ input[type=radio], input[type=checkbox] {
     font-family: futura-pt, sans-serif;
     font-weight: 300 !important;
     font-size: 14pt !important;
-    display: flex;
-    align-items: center;
+    display: block;
+    text-align: center;
 }
 
-.sv_q_radiogroup > label {
+/* .sv_q_radiogroup > label {
     width: 80%;
-}
+} */
 
 .sv_q_checkbox > label {
     width: 100%;
