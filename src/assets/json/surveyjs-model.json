@@ -72,8 +72,8 @@
 								{
 									"type": "radiogroup",
 									"name": "affecting_period",
+									"title": "(For example: birth control, hormonal therapy, Mirena coil, hysterectomy, ablation, chemotherapy, pregnancy)",
 									"startWithNewLine": false,
-									"titleLocation": "hidden",
 									"choices": [
 										{
 											"value": "item1",
@@ -92,8 +92,7 @@
 									"hideNumber": true,
 									"visibleIf": "{affecting_period}='item2'"
 								}
-							],
-							"title": "(For example: birth control, hormonal therapy, Mirena coil, hysterectomy, ablation, chemotherapy, pregnancy)"
+							]
 						}
 					],
 					"title": "Could any other factors be affecting your periods?"
@@ -149,42 +148,42 @@
 								},
 								{
 									"value": "item9",
-									"text": "Vaginal dryness"
+									"text": "Leaking urine when you laugh or cough"
 								}, 
 								{
 									"value": "item10",
 									"text": "Frequently peeing during day or night"
 								},
 								{
-									"value": "item11",
-									"text": "Leaking urine when you laugh or cough"
+									"value": "item21",
+									"text": "Vaginal dryness"
 								}, 
 								{
-									"value": "item12",
+									"value": "item22",
 									"text": "Sudden need to pass urine"
 								},
 								{
-									"value": "item13",
+									"value": "item23",
 									"text": "Painful joints or muscles"
 								}, 
 								{
-									"value": "item14",
+									"value": "item24",
 									"text": "Heart racing or skipping beats"
 								},
 								{
-									"value": "item15",
+									"value": "item25",
 									"text": "Migranes"
 								}, 
 								{
-									"value": "item16",
+									"value": "item26",
 									"text": "Weight gain"
 								},
 								{
-									"value": "item17",
+									"value": "item27",
 									"text": "Change to skin, hair and nails"
 								}, 
 								{
-									"value": "item18",
+									"value": "item28",
 									"text": "None of these"
 								}
 							],
@@ -218,7 +217,7 @@
 								},
 								{
 									"value": 2,
-									"text": "A ltitle "
+									"text": "A little "
 								},
 								{
 									"value": 3,
@@ -273,7 +272,7 @@
 								},
 								{
 									"value": 9,
-									"text": "Vaginal dryness",
+									"text": "Leaking urine when you laugh or cough",
 									"visibleIf": "{symptoms} contains ['item9']"
 								},
 								{
@@ -283,7 +282,7 @@
 								},
 								{
 									"value": 11,
-									"text": "Leaking urine when you laugh or cough",
+									"text": "Vaginal dryness",
 									"visibleIf": "{symptoms} contains ['item11']"
 								},
 								{
@@ -326,11 +325,9 @@
 			"visibleIf": "{symptoms} != ['item18']"
 		}
 	],
-	"startSurveyText": "Get Started",
-	"firstPageIsStarted": true,
-	"pagePrevText": "Back",
-	"pageNextText": "Next",
-	"sendResultOnPageNext": true,
 	"showQuestionNumbers": "off",
-	"showProgressBar": "bottom"
+	"startSurveyText": "Get Started →",
+	"firstPageIsStarted": true,
+	"pagePrevText": "← Back",
+	"pageNextText": "Next →"
 }

@@ -1,16 +1,24 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 @import url("https://use.typekit.net/kll3mxz.css");
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .vertical-center {
+    background:transparent !important;
     min-height: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-}
-
-
-#survey {
-    height: 54vh;
 }
 
 .greeting {
@@ -34,24 +42,9 @@
     color: #1B1C1D;
 }
 
-.disclaimer > a {
+.disclaimer > a,  .disclaimer > a:link, .disclaimer > a:visited, .disclaimer > a:hover {
     text-decoration: none;
     color: #FD866D;
-}
-
-.disclaimer > a:link {
-    text-decoration: none;
-    color: #FD866D;
-}
-
-.disclaimer > a:visited {
-    text-decoration: none;
-    color: #f85737;
-}
-
-.disclaimer > a:hover {
-    text-decoration: none;
-    color: #f85737;
 }
 
 .disclaimer > a:active{
@@ -59,7 +52,8 @@
     color: #486491;
 }
 
-.sv_start_btn {
+.sv_start_btn, .sv_prev_btn, .sv_next_btn, .sv_complete_btn{
+    margin-top: 32px;
     background-color: Transparent;
     background-repeat: no-repeat;
     border: none;
@@ -71,66 +65,27 @@
     font-weight: 400 !important;
     font-size: 16pt !important;
     color: #FD866D;
-    position: absolute;
-    bottom: 0;
-    right: 0;
 }
 
-.sv_prev_btn{
-    background-color: Transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    text-align: center;
-    font-family: futura-pt, sans-serif;
-    font-weight: 400 !important;
-    font-size: 16pt !important;
-    color: #FD866D;
+.sv_prev_btn {
     position: absolute;
-    bottom: 0;
     left: 0;
 }
 
-.sv_next_btn{
-    background-color: Transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    text-align: center;
-    font-family: futura-pt, sans-serif;
-    font-weight: 400 !important;
-    font-size: 16pt !important;
-    color: #FD866D;
+.sv_next_btn, .sv_complete_btn, .sv_start_btn {
     position: absolute;
-    bottom: 0;
     right: 0;
 }
 
-.sv_complete_btn{
-    background-color: Transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    text-align: center;
-    font-family: futura-pt, sans-serif;
-    font-weight: 400 !important;
-    font-size: 16pt !important;
-    color: #FD866D;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+#sq_103_ariaTitle {
+    font-size: 14pt !important;
+    margin: 0 0 10px 0;
 }
 
 .sv_q_title, .sv_p_title{
     font-family: futura-pt, sans-serif;
     font-weight: 400 !important;
-    font-size: 18pt !important;
+    font-size: 18pt;
     color: black;
     text-align: center;
 }
@@ -141,7 +96,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 32%;
+    width: 40%;
 }
 
 .sv_q_text_root:hover {
@@ -153,23 +108,7 @@
     outline: none !important; 
 }
 
-.sv_body {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.sv_q_radiogroup > label {
-    border: 1px solid #B8DEF5;
-    padding: 8px;
-    margin: 8px;
-    font-family: futura-pt, sans-serif;
-    font-weight: 300 !important;
-    font-size: 14pt !important;
-    width: 80%;
-}
-
-input[type=radio] {
+input[type=radio], input[type=checkbox] {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -177,16 +116,83 @@ input[type=radio] {
     width: 0;
 }
 
-.sv_q_radiogroup > label:hover {
+.sv_q_radiogroup > label, .sv_q_checkbox > label {
+    border: 1px solid #B8DEF5;
+    padding: 8px;
+    margin: 8px;
+    font-family: futura-pt, sans-serif;
+    font-weight: 300 !important;
+    font-size: 14pt !important;
+    display: flex;
+    align-items: center;
+}
+
+.sv_q_radiogroup > label {
+    width: 80%;
+}
+
+.sv_q_checkbox > label {
+    width: 100%;
+    height: 72px;
+}
+
+.sv_q_radiogroup > label:hover, .sv_q_checkbox > label:hover {
     background-color: #B8DEF5;
 }
 
-.sv_q_radiogroup.sv-q-col-1.checked > label {
+.sv_q_radiogroup.sv-q-col-1.checked > label, .sv_q_checkbox.checked > label {
     background-color: #B8DEF5;
 }
 
-.sv_qstn {
-    margin-left: auto;
-    margin-right: auto;
+.sv-hidden {
+    color: black;
+    text-align: center;
+}
 
+.sv_q_m_label > input[type=radio] {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: auto !important;
+    width: auto !important;
+    opacity: 1;
+}
+
+table {
+    width: 100% !important;
+}
+
+thead {
+    background-color: coral;
+}
+
+tbody {
+    background-color: darkkhaki;
+}
+
+thead > tr > th > span {
+    margin: 8px;
+    font-family: futura-pt, sans-serif;
+    font-weight: 300 !important;
+    font-size: 18pt !important;
+    color: dimgrey;
+    display: flex;
+    align-items: center;
+}
+
+tbody > tr > td > span {
+    border: 1px solid #B8DEF5;
+    padding: 8px;
+    margin: 8px;
+    font-family: futura-pt, sans-serif;
+    font-weight: 300 !important;
+    font-size: 14pt !important;
+    display: flex;
+    align-items: center;
+}
+
+tbody > tr > td {
+    text-align:center; 
+    margin-left:50%; 
+    margin-right:auto;
 }
