@@ -7,7 +7,7 @@
 					"type": "html",
      				"name": "welcome",
      				"hideNumber": true,
-    				 "html": "<h1 class='greeting'>Hello there, we're Bia.</h1>\n<h3 class='about-assessment'>We’ve made this short assessment to help you receive relevant information about your menopause.</h3>\n<p class='disclaimer'>Please note, this is not medical advice. If you are concerned about a medical issue or symptom, please speak to your doctor. \n\nAll information you give us will be anonymised and stored securely according to our <a href='#'>privacy policy</a> and GDPR.</p>\n"
+    				"html": "<h1 class='greeting'>Hello there, we're Bia.</h1>\n<h3 class='about-assessment'>We’ve made this short assessment to help you receive relevant information about your menopause.</h3>\n<p class='disclaimer'>Please note, this is not medical advice. If you are concerned about a medical issue or symptom, please speak to your doctor. \n\nAll information you give us will be anonymised and stored securely according to our <a href='#'>privacy policy</a> and GDPR.</p>\n"
 				}
 			]
 		},
@@ -155,35 +155,35 @@
 									"text": "Frequently peeing during day or night"
 								},
 								{
-									"value": "item21",
+									"value": "item11",
 									"text": "Vaginal dryness"
 								}, 
 								{
-									"value": "item22",
+									"value": "item12",
 									"text": "Sudden need to pass urine"
 								},
 								{
-									"value": "item23",
+									"value": "item13",
 									"text": "Painful joints or muscles"
 								}, 
 								{
-									"value": "item24",
+									"value": "item14",
 									"text": "Heart racing or skipping beats"
 								},
 								{
-									"value": "item25",
+									"value": "item15",
 									"text": "Migranes"
 								}, 
 								{
-									"value": "item26",
+									"value": "item16",
 									"text": "Weight gain"
 								},
 								{
-									"value": "item27",
+									"value": "item17",
 									"text": "Change to skin, hair and nails"
 								}, 
 								{
-									"value": "item28",
+									"value": "item18",
 									"text": "None of these"
 								}
 							],
@@ -323,6 +323,137 @@
 				}
 			],
 			"visibleIf": "{symptoms} != ['item18']"
+		},
+		{
+			"name": "page_seven",
+			"elements": [
+				{
+					"type": "panel",
+     				"name": "page_seven_panel",
+     				"elements": [
+						{
+							"type": "radiogroup",
+							"name": "hrt_interest",
+							"startWithNewLine": false,
+							"titleLocation": "hidden",
+							"choices": [
+								{
+									"value": "item1",
+									"text": "Yes"
+								}, 
+								{
+									"value": "item2",
+									"text": "No"
+								},
+								{
+									"value": "item3",
+									"text": "I'm not sure"
+								}
+							],
+							"colCount": 3
+						}
+
+					],
+					"title": "Are you interested in learning more about hormone replacement therapy (HRT)?"
+				}
+			]
+		},
+		{
+			"name": "page_eight",
+			"elements": [
+				{
+					"type": "panel",
+					"name": "page_eight_panel",
+					"elements": 
+					[
+						{
+							"type": "checkbox",
+							"name": "goals",
+							"startWithNewLine": false,
+							"title": "Pick as many as you like",
+							"hideNumber": true,
+							"choices": [
+								{
+									"value": "item1",
+									"text": "Exercise more"
+								},
+								{
+									"value": "item2",
+									"text": "Improve diet or nutrition"
+								},
+								{
+									"value": "item3",
+									"text": "Quit smoking"
+								},
+								{
+									"value": "item4",
+									"text": "Improve sleep"
+								},
+								{
+									"value": "item5",
+									"text": "Improve mood or mental health"
+								}, 
+								{
+									"value": "item6",
+									"text": "Lose weight"
+								},
+								{
+									"value": "item7",
+									"text": "Reduce alcohol intake"
+								}, 
+								{
+									"value": "item8",
+									"text": "None of these"
+								}
+							],
+							"colCount": 2
+						}
+					],
+					"title": "What are your top health goals?"
+				}
+			]
+		},
+		{
+			"name": "page_nine",
+			"elements": [
+				{
+					"type": "panel",
+     				"name": "page_nine_panel",
+     				"elements": [
+						{
+							"type": "html",
+							 "name": "welcome",
+							 "hideNumber": true,
+							"html": "<p class='disclaimer'>We’ll send you your results and keep you updated with our newsletter. We’ll never share it with third parties and you can unsubscribe any time.</p>"
+						},
+						{
+							"type": "panel",
+							"name": "page_four_nine_subtitle", 
+							"elements": [
+								{
+									"type": "text",
+									"name": "name",
+								   	"title": "Name",
+									"hideNumber": true
+								}
+							]
+						},
+						{
+							"type": "panel",
+							"name": "page_four_nine_subtitle", 
+							"elements": [
+								{
+									"type": "text",
+									"name": "email",
+								   	"title": "Email",
+									"hideNumber": true
+								}
+							]
+						}
+					],
+					"title": "Let's continue the conversation"
+				}
+			]
 		}
 	],
 	"showQuestionNumbers": "off",
