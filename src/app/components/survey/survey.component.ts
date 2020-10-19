@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import * as Survey from 'survey-angular';
+import { Router, RouterModule, Routes } from '@angular/router';
 
 import json from '../../../assets/json/surveyjs-model.json';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'ng-app',
@@ -12,15 +15,27 @@ import json from '../../../assets/json/surveyjs-model.json';
 
 export class SurveyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
     var survey = new Survey.Model(json);
 
     Survey.StylesManager.applyTheme("bootstrap");
     
-    Survey.SurveyNG.render('survey', { model: survey });
+
+    survey.onComplete.add( (result) => {
+      console.log(JSON.stringify({email: result.getValue('email'), fname: 'x', lname: 'x'}));
+      this.http.post('http://localhost:3000/api/signup', { email: JSON.stringify(result.getValue('email')), fname: 'x', lname: 'x' }).subscribe(response => {
+        console.log(response)
+      });
+     console.log('this is result' +  JSON.stringify(result.getAllValues()));
+    });
     
+
+    Survey.SurveyNG.render('survey', { model: survey });
+
   }
+
+
 
 }

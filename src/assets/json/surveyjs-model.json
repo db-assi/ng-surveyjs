@@ -1,7 +1,7 @@
 {
 	"pages": [
 		{
-			"name": "get_started",
+			"name": "start",
 			"elements": [
 				{
 					"type": "html",
@@ -19,6 +19,7 @@
      				"name": "age",
 					"title": "Please tell us how old you are?",
 					"inputType": "number",
+					"isRequired": true,
 					"hideNumber": true
 				}
 			]
@@ -35,19 +36,20 @@
                             "name": "describe_period",
 							"startWithNewLine": false,
 							"titleLocation": "hidden",
+							"isRequired": true,
                             "choices": [
                                 {
-                                    "value": "item1",
+                                    "value": "describe_period_value_1",
                                     "text": "I have regular periods."
                                 }, {
-                                    "value": "item2",
+                                    "value": "describe_period_value_2",
                                     "text": "I have irregular periods."
                                 }, {
-                                    "value": "item3",
+                                    "value": "describe_period_value_3",
                                     "text": "My last period was over 3 months ago, but in the last year."
 								},
 								{
-                                    "value": "item4",
+                                    "value": "describe_period_value_4",
                                     "text": "My last period was over 12 months ago."
                                 }
                             ],
@@ -67,19 +69,20 @@
      				"elements": [
 						{
 							"type": "panel",
-							"name": "page_four_panel_subtitle", 
+							"name": "page_four_panel_panel", 
 							"elements": [
 								{
 									"type": "radiogroup",
 									"name": "affecting_period",
 									"title": "(For example: birth control, hormonal therapy, Mirena coil, hysterectomy, ablation, chemotherapy, pregnancy)",
 									"startWithNewLine": false,
+									"isRequired": true,
 									"choices": [
 										{
-											"value": "item1",
+											"value": "affecting_period_value_1",
 											"text": "Yes"
 										}, {
-											"value": "item2",
+											"value": "affecting_period_value_2",
 											"text": "No"
 										}
 									],
@@ -87,10 +90,10 @@
 								},
 								{
 									"type": "text",
-									"name": "age",
+									"name": "what_affecting_period",
 								   	"title": "What is affecting your periods?",
 									"hideNumber": true,
-									"visibleIf": "{affecting_period}='item2'"
+									"visibleIf": "{affecting_period}='affecting_period_value_1'"
 								}
 							]
 						}
@@ -112,78 +115,79 @@
 							"name": "symptoms",
 							"startWithNewLine": false,
 							"titleLocation": "hidden",
+							"isRequired": true,
 							"hideNumber": true,
 							"choices": [
 								{
-									"value": "item1",
+									"value": "symptoms_value_1",
 									"text": "Hot or cold flushes or night sweats"
 								},
 								{
-									"value": "item2",
+									"value": "symptoms_value_2",
 									"text": "Difficulty falling or staying asleep"
 								},
 								{
-									"value": "item3",
+									"value": "symptoms_value_3",
 									"text": "Low energy or fatigue"
 								},
 								{
-									"value": "item4",
+									"value": "symptoms_value_4",
 									"text": "Feeling anxious or low mood"
 								},
 								{
-									"value": "item5",
+									"value": "symptoms_value_5",
 									"text": "Mood swings"
 								}, 
 								{
-									"value": "item6",
+									"value": "symptoms_value_6",
 									"text": "Reduced concentration"
 								},
 								{
-									"value": "item7",
+									"value": "symptoms_value_7",
 									"text": "Forgetfulness"
 								}, 
 								{
-									"value": "item8",
+									"value": "symptoms_value_8",
 									"text": "Reduced sex drive"
 								},
 								{
-									"value": "item9",
+									"value": "symptoms_value_9",
 									"text": "Leaking urine when you laugh or cough"
 								}, 
 								{
-									"value": "item10",
+									"value": "symptoms_value_10",
 									"text": "Frequently peeing during day or night"
 								},
 								{
-									"value": "item11",
+									"value": "symptoms_value_11",
 									"text": "Vaginal dryness"
 								}, 
 								{
-									"value": "item12",
+									"value": "symptoms_value_12",
 									"text": "Sudden need to pass urine"
 								},
 								{
-									"value": "item13",
+									"value": "symptoms_value_13",
 									"text": "Painful joints or muscles"
 								}, 
 								{
-									"value": "item14",
+									"value": "symptoms_value_14",
 									"text": "Heart racing or skipping beats"
 								},
 								{
-									"value": "item15",
+									"value": "symptoms_value_15",
 									"text": "Migranes"
 								}, 
 								{
-									"value": "item16",
+									"value": "symptoms_value_16",
 									"text": "Weight gain"
 								},
 								{
-									"value": "item17",
+									"value": "symptoms_value_17",
 									"text": "Change to skin, hair and nails"
 								}, 
 								{
-									"value": "item18",
+									"value": "symptoms_value_18",
 									"text": "None of these"
 								}
 							],
@@ -205,115 +209,115 @@
 					[
 						{
 							"type": "matrix",
-							"name": "rate",
+							"name": "rate_symptoms",
 							"startWithNewLine": false,
 							"titleLocation": "hidden",
 							"hideNumber": true,
 							"columns": 
 							[
 								{
-									"value": 1,
+									"value": "rate_symptoms_value_1",
 									"text": "Not at all "
 								},
 								{
-									"value": 2,
+									"value": "rate_symptoms_value_2",
 									"text": "A little "
 								},
 								{
-									"value": 3,
+									"value": "rate_symptoms_value_3",
 									"text": "Quite a bit "
 								},
 								{
-									"value": 4,
+									"value": "rate_symptoms_value_4",
 									"text": "A lot "
 								}
 							],
 							"rows": 
 							[
 								{
-									"value": 1,
+									"value": "symptoms_value_1",
 									"text": "Hot or cold flushes or night sweats",
-									"visibleIf": "{symptoms} contains ['item1']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_1']"
 								},
 								{
-									"value": 2,
+									"value": "symptoms_value_2",
 									"text": "Difficulty falling or staying asleep",
-									"visibleIf": "{symptoms} contains ['item2']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_2']"
 								},
 								{
-									"value": 3,
+									"value": "symptoms_value_3",
 									"text": "Low energy or fatigue",
-									"visibleIf": "{symptoms} contains ['item3']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_3']"
 								},
 								{
-									"value": 4,
+									"value": "symptoms_value_4",
 									"text": "Feeling anxious or low mood",
-									"visibleIf": "{symptoms} contains ['item4']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_4']"
 								},
 								{
-									"value": 5,
+									"value": "symptoms_value_5",
 									"text": "Mood swings",
-									"visibleIf": "{symptoms} contains ['item5']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_5']"
 								},
 								{
-									"value": 6,
+									"value": "symptoms_value_6",
 									"text": "Reduced concentration",
-									"visibleIf": "{symptoms} contains ['item6']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_6']"
 								},
 								{
-									"value": 7,
+									"value": "symptoms_value_7",
 									"text": "Forgetfulness",
-									"visibleIf": "{symptoms} contains ['item7']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_7']"
 								},
 								{
-									"value": 8,
+									"value": "symptoms_value_8",
 									"text": "Reduced sex drive",
-									"visibleIf": "{symptoms} contains ['item8']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_8']"
 								},
 								{
-									"value": 9,
+									"value": "symptoms_value_9",
 									"text": "Leaking urine when you laugh or cough",
-									"visibleIf": "{symptoms} contains ['item9']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_9']"
 								},
 								{
-									"value": 10,
+									"value": "symptoms_value_10",
 									"text": "Frequently peeing during day or night",
-									"visibleIf": "{symptoms} contains ['item10']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_10']"
 								},
 								{
-									"value": 11,
+									"value": "symptoms_value_11",
 									"text": "Vaginal dryness",
-									"visibleIf": "{symptoms} contains ['item11']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_11']"
 								},
 								{
-									"value": 12,
+									"value": "symptoms_value_12",
 									"text": "Sudden need to pass urine",
-									"visibleIf": "{symptoms} contains ['item12']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_12']"
 								},
 								{
-									"value": 13,
+									"value": "symptoms_value_13",
 									"text": "Painful joints or muscles",
-									"visibleIf": "{symptoms} contains ['item13']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_13']"
 								},
 								{
-									"value":14,
+									"value": "symptoms_value_14",
 									"text": "Heart racing or skipping beats",
-									"visibleIf": "{symptoms} contains ['item14']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_14']"
 								},
 								{
-									"value": 15,
+									"value": "symptoms_value_15",
 									"text": "Migranes",
-									"visibleIf": "{symptoms} contains ['item15']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_15']"
 								},
 								{
-									"value": 16,
+									"value": "symptoms_value_16",
 									"text": "Weight gain",
-									"visibleIf": "{symptoms} contains ['item16']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_16']"
 								},
 								{
-									"value": 17,
+									"value": "symptoms_value_17",
 									"text": "Change to skin, hair and nails",
-									"visibleIf": "{symptoms} contains ['item17']"
+									"visibleIf": "{symptoms} contains ['symptoms_value_17']"
 								}
 							]
 
@@ -322,7 +326,7 @@
 					"title": "How much do these symptoms bother you?"
 				}
 			],
-			"visibleIf": "{symptoms} != ['item18']"
+			"visibleIf": "{symptoms} != ['symptoms_value_18']"
 		},
 		{
 			"name": "page_seven",
@@ -338,15 +342,15 @@
 							"titleLocation": "hidden",
 							"choices": [
 								{
-									"value": "item1",
+									"value": "hrt_interest_value_1",
 									"text": "Yes"
 								}, 
 								{
-									"value": "item2",
+									"value": "hrt_interest_value_2",
 									"text": "No"
 								},
 								{
-									"value": "item3",
+									"value": "hrt_interest_value_3",
 									"text": "I'm not sure"
 								}
 							],
@@ -368,41 +372,41 @@
 					[
 						{
 							"type": "checkbox",
-							"name": "goals",
+							"name": "health_goals",
 							"startWithNewLine": false,
 							"title": "Pick as many as you like",
 							"hideNumber": true,
 							"choices": [
 								{
-									"value": "item1",
+									"value": "health_goals_value_1",
 									"text": "Exercise more"
 								},
 								{
-									"value": "item2",
+									"value": "health_goals_value_2",
 									"text": "Improve diet or nutrition"
 								},
 								{
-									"value": "item3",
+									"value": "health_goals_value_3",
 									"text": "Quit smoking"
 								},
 								{
-									"value": "item4",
+									"value": "health_goals_value_4",
 									"text": "Improve sleep"
 								},
 								{
-									"value": "item5",
+									"value": "health_goals_value_5",
 									"text": "Improve mood or mental health"
 								}, 
 								{
-									"value": "item6",
+									"value": "health_goals_value_6",
 									"text": "Lose weight"
 								},
 								{
-									"value": "item7",
+									"value": "health_goals_value_7",
 									"text": "Reduce alcohol intake"
 								}, 
 								{
-									"value": "item8",
+									"value": "health_goals_value_8",
 									"text": "None of these"
 								}
 							],
@@ -415,46 +419,40 @@
 		},
 		{
 			"name": "page_nine",
-			"elements": [
-				{
-					"type": "panel",
-     				"name": "page_nine_panel",
-     				"elements": [
-						{
-							"type": "html",
-							 "name": "welcome",
-							 "hideNumber": true,
-							"html": "<p class='disclaimer'>We’ll send you your results and keep you updated with our newsletter. We’ll never share it with third parties and you can unsubscribe any time.</p>"
-						},
-						{
-							"type": "panel",
-							"name": "page_four_nine_subtitle", 
-							"elements": [
-								{
-									"type": "text",
-									"name": "name",
-								   	"title": "Name",
-									"hideNumber": true
-								}
-							]
-						},
-						{
-							"type": "panel",
-							"name": "page_four_nine_subtitle", 
-							"elements": [
-								{
-									"type": "text",
-									"name": "email",
-								   	"title": "Email",
-									"hideNumber": true
-								}
-							]
-						}
-					],
-					"title": "Let's continue the conversation"
-				}
-			]
+			"elements": [{
+				"type": "panel",
+				"name": "page_nine_panel",
+				"elements": [{
+						"type": "html",
+						"name": "welcome",
+						"hideNumber": true,
+						"html": "<p class='disclaimer'>We’ll send you your results and keep you updated with our newsletter. We’ll never share it with third parties and you can unsubscribe any time.</p>"
+					},
+					{
+						"type": "panel",
+						"name": "page_nine_panel_panel_one",
+						"elements": [{
+							"type": "text",
+							"name": "name",
+							"title": "Name",
+							"hideNumber": true
+						}]
+					},
+					{
+						"type": "panel",
+						"name": "page_nine_panel_panel_two",
+						"elements": [{
+							"type": "text",
+							"name": "email",
+							"title": "Email",
+							"hideNumber": true
+						}]
+					}
+				],
+				"title": "Let's continue the conversation"
+			}]
 		}
+		
 	],
 	"showQuestionNumbers": "off",
 	"startSurveyText": "Get Started →",

@@ -147,6 +147,11 @@ input[type=radio], input[type=checkbox] {
     height: 72px;
 }
 
+#sp_114.sv_q_checkbox_label {
+    width: auto !important;
+    height: auto !important;
+}
+
 .sv_qcbx .checkbox-material {
     margin: 0 !important;
 }
