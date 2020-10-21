@@ -458,5 +458,6 @@
 	"startSurveyText": "Get Started →",
 	"firstPageIsStarted": true,
 	"pagePrevText": "← Back",
-	"pageNextText": "Next →"
+	"pageNextText": "Next →",
+	"completedHtml": "<span><span>"
 }

@@ -5,6 +5,8 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import json from '../../../assets/json/surveyjs-model.json';
 import { HttpClient } from '@angular/common/http';
 
+import { DataService } from "../../services/data.service";
+
 
 @Component({
   selector: 'ng-app',
@@ -15,7 +17,9 @@ import { HttpClient } from '@angular/common/http';
 
 export class SurveyComponent implements OnInit {
 
-  constructor(private router: Router, private http: HttpClient) { }
+  completed: boolean = false;
+
+  constructor(private router: Router, private http: HttpClient, private data: DataService) { }
 
   ngOnInit(): void {
     var survey = new Survey.Model(json);
@@ -24,7 +28,10 @@ export class SurveyComponent implements OnInit {
     
 
     survey.onComplete.add( (result) => {
+      this.data.changeMessage(result.getAllValues());
       console.log(JSON.stringify({email: result.getValue('email'), fname: 'x', lname: 'x'}));
+      //this.router.navigate(['/complete']);
+      this.completed = true;
       this.http.post('https://menopause-assessment.herokuapp.com/api/signup', { email: result.getValue('email'), fname: 'x', lname: 'x' }).subscribe(response => {
         console.log(response)
       });

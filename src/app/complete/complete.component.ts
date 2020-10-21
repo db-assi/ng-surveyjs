@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from "../services/data.service";
 
 @Component({
   selector: 'app-complete',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompleteComponent implements OnInit {
 
-  constructor() { }
+  result: any;
+
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
+    this.data.currentMessage.subscribe(response => this.result = response);
+    console.log(JSON.stringify(this.result));
   }
 
 }
