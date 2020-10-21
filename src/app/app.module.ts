@@ -6,6 +6,7 @@ import { SurveyComponent } from './components/survey/survey.component';
 import { CompleteComponent } from './complete/complete.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule  } from '@angular/common/http'; 
+import { DataService } from './services/data.service';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { HttpClientModule  } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule 
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 
