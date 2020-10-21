@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import * as Survey from 'survey-angular';
-import { Router, RouterModule, Routes } from '@angular/router';
 
 import json from '../../../assets/json/surveyjs-model.json';
 import { HttpClient } from '@angular/common/http';
@@ -19,7 +18,7 @@ export class SurveyComponent implements OnInit {
 
   completed: boolean = false;
 
-  constructor(private router: Router, private http: HttpClient, private data: DataService) { }
+  constructor(private http: HttpClient, private data: DataService) { }
 
   ngOnInit(): void {
     var survey = new Survey.Model(json);
@@ -28,7 +27,7 @@ export class SurveyComponent implements OnInit {
     
 
     survey.onComplete.add( (result) => {
-      this.data.changeMessage(result.getAllValues());
+      this.data.changeMessage(result.getAllValues())
       console.log(JSON.stringify({email: result.getValue('email'), fname: 'x', lname: 'x'}));
       //this.router.navigate(['/complete']);
       this.completed = true;
