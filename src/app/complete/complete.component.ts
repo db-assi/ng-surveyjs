@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from "../services/data.service";
 
-import json from '../../assets/json/surveyjs-model.json';
-
 import JsonFind from 'json-find';
 
 @Component({
