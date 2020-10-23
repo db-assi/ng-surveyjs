@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import * as Survey from 'survey-angular';
+import { SignupService } from '../signup/signup.service';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,7 @@ export class SurveyService {
   currentSurveyResult = this.surveyResult.asObservable();
   
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private signup: SignupService) { }
 
   createSurveyModel(model: any): Survey.Model {
     return new Survey.Model(model);
@@ -30,10 +31,9 @@ export class SurveyService {
       this.earlyAge.next(true)
     } else {
       this.completeStatus.next(true);
+      console.log(survey.getAllValues());
       this.surveyResult.next(survey.getAllValues());
-      this.http.post('https://menopause-assessment.herokuapp.com/api/signup', { email: survey.getValue('email'), fname: 'x', lname: 'x' }).subscribe(_response => {
-          console.log(_response)
-        });
+      this.signup.subscribe(survey);
     }
   }
 
