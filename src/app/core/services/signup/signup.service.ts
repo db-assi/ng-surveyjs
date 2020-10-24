@@ -17,7 +17,14 @@ export class SignupService {
     var values = this.adapter.adapt(survey);
     this.http.post(url, {
       email: values.eMail, fname: values.firstName, lname: values.lastName
-    }).subscribe(res => console.log(res));
+    }).subscribe({
+      next: res => {
+        console.log(res)
+      },
+      error: err => {
+        console.error('There was an error: ', err)
+      }
+    });
   }
 
 }
