@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import * as Survey from 'survey-angular';
 
-import json from '../../../assets/json/surveyjs-model.json';
-import { HttpClient } from '@angular/common/http';
+import { SurveyService } from 'src/app/core/services/survey/survey.service';
+import json from '../../../assets/data/surveyjs-model.json';
 
-import { DataService } from "../../services/data.service";
 
 
 @Component({
@@ -13,31 +12,32 @@ import { DataService } from "../../services/data.service";
   styleUrls: ['./survey.component.css']
 })
 
-
 export class SurveyComponent implements OnInit {
 
-  completed: boolean = false;
+  isCompleted: boolean = false;
+  isEarlyAge: boolean = false;
 
-  constructor(private http: HttpClient, private data: DataService) { }
+  constructor(private survey: SurveyService) {}
 
   ngOnInit(): void {
-    var survey = new Survey.Model(json);
+
+    Survey
+      .SurveyNG
+      .render('surveyElement',
+        { 
+          model: this.survey.createSurveyModel(json),
+          onComplete: this.survey.onCompleteSurvey
+        })
 
     Survey.StylesManager.applyTheme("bootstrap");
-    
 
-    survey.onComplete.add( (result) => {
-      this.data.changeMessage(result.getAllValues())
-      this.completed = true;
-      this.http.post('https://menopause-assessment.herokuapp.com/api/signup', { email: result.getValue('email'), fname: 'x', lname: 'x' }).subscribe(response => {
-        console.log(response)
-      });
-     console.log('this is result' +  JSON.stringify(result.getAllValues()));
+    this.survey.currentEarlyAge.subscribe(status => {
+      this.isEarlyAge = status
+    })
+
+    this.survey.currentCompleteStatus.subscribe(status => {
+      this.isCompleted = status
     });
-    
-    
-
-    Survey.SurveyNG.render('survey', { model: survey });
 
   }
 

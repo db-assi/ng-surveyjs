@@ -2,9 +2,12 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-md-offset-1" style="background-color: white;">
-        <div id='survey'></div>
-        <div *ngIf="completed">
+        <div id='surveyElement'></div>
+        <div *ngIf="isCompleted">
           <app-complete></app-complete>
+        </div>
+        <div *ngIf="isEarlyAge">
+          You are too young.
         </div>
       </div>
     </div>

@@ -1,4 +1,9 @@
-{
+{	"triggers": [
+		{
+			"type": "complete",
+			"expression": "{age} < 40"
+		}
+	],
 	"pages": [
 		{
 			"name": "start",
@@ -431,12 +436,21 @@
 					{
 						"type": "panel",
 						"name": "page_nine_panel_panel_one",
-						"elements": [{
+						"elements": [
+							{
 							"type": "text",
-							"name": "name",
-							"title": "Name",
+							"name": "first_name",
+							"title": "First Name",
 							"hideNumber": true
-						}]
+							},
+							{
+								"type": "text",
+								"name": "last_name",
+								"title": "Last Name",
+								"startWithNewLine": false,
+								"hideNumber": true
+							}
+						]
 					},
 					{
 						"type": "panel",

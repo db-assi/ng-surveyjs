@@ -1,0 +1,133 @@
+[
+    
+    {
+        "value": "symptoms_value_1",
+        "text": "Hot or cold flushes or night sweats",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_2",
+        "text": "Difficulty falling or staying asleep",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_3",
+        "text": "Low energy or fatigue",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_4",
+        "text": "Feeling anxious or low mood",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_5",
+        "text": "Mood swings",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_6",
+        "text": "Reduced concentration",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_7",
+        "text": "Forgetfulness",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_8",
+        "text": "Reduced sex drive",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_9",
+        "text": "Leaking urine when you laugh or cough",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_10",
+        "text": "Frequently peeing during day or night",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_11",
+        "text": "Vaginal dryness",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_12",
+        "text": "Sudden need to pass urine",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_13",
+        "text": "Painful joints or muscles",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_14",
+        "text": "Heart racing or skipping beats",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_15",
+        "text": "Migranes",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_16",
+        "text": "Weight gain",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_17",
+        "text": "Change to skin, hair and nails",
+        "url": "#"
+    },
+    {
+        "value": "symptoms_value_18",
+        "text": "None of these",
+        "url": "#"
+    },
+    {
+        "value": "health_goals_value_1",
+        "text": "Exercise more",
+        "url": "#"
+    },
+    {
+        "value": "health_goals_value_2",
+        "text": "Improve diet or nutrition",
+        "url": "#"
+    },
+    {
+        "value": "health_goals_value_3",
+        "text": "Quit smoking",
+        "url": "#"
+    },
+    {
+        "value": "health_goals_value_4",
+        "text": "Improve sleep",
+        "url": "#"
+    },
+    {
+        "value": "health_goals_value_5",
+        "text": "Improve mood or mental health",
+        "url": "#"
+    },
+    {
+        "value": "health_goals_value_6",
+        "text": "Lose weight",
+        "url": "#"
+    },
+    {
+        "value": "health_goals_value_7",
+        "text": "Reduce alcohol intake",
+        "url": "#"
+    },
+    {
+        "value": "health_goals_value_8",
+        "text": "None of these",
+        "url": "#"
+    }
+]

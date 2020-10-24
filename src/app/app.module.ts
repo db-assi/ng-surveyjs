@@ -1,12 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule  } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SurveyComponent } from './components/survey/survey.component';
 import { CompleteComponent } from './complete/complete.component';
-import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule  } from '@angular/common/http'; 
-import { DataService } from './services/data.service';
+
+import { SurveyService } from './core/services/survey/survey.service';
+
+import { SignupService } from './core/services/signup/signup.service';
+import { SignupAdapter } from './core/models/signup.model';
 
 
 @NgModule({
@@ -21,7 +25,9 @@ import { DataService } from './services/data.service';
     HttpClientModule 
   ],
   providers: [
-    DataService
+    SurveyService,
+    SignupService,
+    SignupAdapter
   ],
   bootstrap: [AppComponent]
 })
