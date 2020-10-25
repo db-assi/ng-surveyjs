@@ -269,3 +269,31 @@ tbody > tr > td {
 #sq_111i.sv_q_text_root {
     width: 88%;
 }
+
+.panel > .panel-heading {
+    background-image: none !important;
+    background-color: white !important;
+    color: white;
+    line-height: 32px !important;
+}
+
+.panel-group {
+    margin-bottom: 0 !important;
+}
+
+
+#resources {
+    background-color: white;
+    border-color: #B8DEF5;
+    border-width: 0px 0px 0.5px 0px;
+}
+
+#resources-title {
+    margin-bottom: 1.25em !important;
+    padding: 4px !important;
+}
+
+.resources-title > h4 {
+    margin-bottom: 0 !important;
+    padding: 4px !important;
+}
