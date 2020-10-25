@@ -21,13 +21,13 @@
               </div>
               <div id="{{'collapse'+i}}" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <h5>{{ symptom.title }}</h5>
+
                     <h6>{{ symptom.text }}</h6>
                       <h6>Read more about this symptom</h6>
                     <div class="card" style="width:32rem; background-color: #B8DEF5; margin-bottom: 12px;">
-                        <img class="card-img-top" src="../../assets/images/{{symptom.value}}.png" alt="Card image cap" style="width:100%">
+                      <a href="{{ symptom.url }}"><img class="card-img-top" src="../../assets/images/{{symptom.value}}.png" alt="Card image cap" style="width:100%"></a>
                         <div class="card-body" style="margin: 12px;">
-                            <h6 class="card-title" style="height: 54px; font-weight: 600;"><a href="{{ symptom.url}}">{{ symptom.description }}</a></h6>
+                            <h6 class="card-title" style="height: 54px; font-weight: 600;"><a href="{{ symptom.url}}">{{ symptom.title }}</a></h6>
                         </div>
                       </div>
                 </div>
@@ -49,13 +49,12 @@
               </div>
               <div id="{{'collapse'+i+i}}" class="panel-collapse collapse">
                 <div class="panel-body">
-                  <h5>{{ goal.title }}</h5>
                   <h6>{{ goal.text }}</h6>
                   <h6>Read more about this symptom</h6>
                 <div class="card" style="width:32rem; background-color: #B8DEF5; margin-bottom: 12px;">
-                    <img class="card-img-top" src="../../assets/images/{{goal.value}}.png" alt="Card image cap" style="width:100%">
+                  <a href="{{ goal.url }}"><img class="card-img-top" src="../../assets/images/{{goal.value}}.png" alt="Card image cap" style="width:100%"></a>
                     <div class="card-body" style="margin: 12px;">
-                        <h6 class="card-title" style="height: 54px;"><a href="{{ goal.url }}">{{ goal.description }}</a></h6>
+                        <h6 class="card-title" style="height: 54px;"><a href="{{ goal.url }}">{{ goal.title }}</a></h6>
                     </div>
                   </div>
                 </div>
@@ -70,7 +69,7 @@
       <div >
         <div class="col-md-6" [class.even]="odd">    
           <div class="card" style="width:32rem; background-color: #B8DEF5; margin-bottom: 12px;">
-              <img class="card-img-top" src="../../assets/images/{{resource.value}}.png" alt="Card image cap" style="width:100%">
+            <a href="{{ resource.url }}"><img class="card-img-top" src="../../assets/images/{{resource.value}}.png" alt="Card image cap" style="width:100%"></a>
               <div class="card-body" style="margin: 12px;">
                   <h6 class="card-title" style="height: 54px;"><a href="{{ resource.url }}">{{ resource.title }}</a></h6>
               </div>

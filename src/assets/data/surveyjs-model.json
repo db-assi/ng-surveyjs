@@ -345,6 +345,7 @@
 							"name": "hrt_interest",
 							"startWithNewLine": false,
 							"titleLocation": "hidden",
+							"isRequired": true,
 							"choices": [
 								{
 									"value": "hrt_interest_value_1",
@@ -381,6 +382,7 @@
 							"startWithNewLine": false,
 							"title": "Pick as many as you like",
 							"hideNumber": true,
+							"isRequired": true,
 							"choices": [
 								{
 									"value": "health_goals_value_1",
@@ -441,6 +443,7 @@
 							"type": "text",
 							"name": "first_name",
 							"title": "First Name",
+							"isRequired": true,
 							"hideNumber": true
 							},
 							{
@@ -448,6 +451,7 @@
 								"name": "last_name",
 								"title": "Last Name",
 								"startWithNewLine": false,
+								"isRequired": true,
 								"hideNumber": true
 							}
 						]
@@ -459,6 +463,7 @@
 							"type": "text",
 							"name": "email",
 							"title": "Email",
+							"isRequired": true,
 							"hideNumber": true
 						}]
 					}
