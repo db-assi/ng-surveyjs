@@ -5,7 +5,7 @@ import { HttpClientModule  } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SurveyComponent } from './components/survey/survey.component';
-import { CompleteComponent } from './complete/complete.component';
+import { CompleteComponent } from './components/complete/complete.component';
 
 import { SurveyService } from './core/services/survey/survey.service';
 

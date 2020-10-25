@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';
 
-import { SurveyService } from '../core/services/survey/survey.service';
-import resources from '../../assets/data/resources.json';
+import { SurveyService } from '../../core/services/survey/survey.service';
+import resources from '../../../assets/data/resources.json';
 
 @Component({
   selector: 'app-complete',
@@ -23,7 +23,6 @@ export class CompleteComponent implements OnInit {
     this.survey.currentSurveyResult.subscribe(response => this.result = response);
     this.findSymptom(this.result.symptoms);
     this.findGoal(this.result.health_goals);
-    console.log(JSON.stringify(this.result.health_goals));
   }
 
   findSymptom(result: any) {

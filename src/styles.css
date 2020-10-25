@@ -1,5 +1,43 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "./assets/css/reset.css";
 @import url("https://use.typekit.net/kll3mxz.css");
+
+
+/*--- HEADINGS ---*/
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.25em !important;
+    font-weight: bold;
+}
+  
+h1 {
+    font-size: 2.375em !important;
+    line-height: 1.25em !important;
+}
+  
+h2 {
+    font-size: 2em !important;
+    line-height: 1.25em !important;
+}
+  
+h3 {
+    font-size: 1.875em !important;
+    line-height: 1.25em !important;
+}
+  
+h4 {
+    font-size: 1.675em !important;
+    line-height: 1.25em !important;
+}
+
+h5 {
+    font-size: 1.675em !important;
+    line-height: 1.25em !important;
+}
+  
+h6 {
+    font-size: 1.375em !important;
+    line-height: 1.375em !important;
+}
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -13,43 +51,44 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.vertical-center {
-    background:transparent !important;
-    min-height: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+th {
+    text-align: center !important;
 }
 
-.greeting {
-    font-family: calluna, serif;
-    font-size: 40px !important;
+.vertical-center {
+    background:transparent !important;
+    min-height: 100% !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.intro > h1, h2 {
+    font-family: calluna, serif !important;
     text-align: center;
     color: #486491 !important;
 }
 
-.about-assessment {
-    font-family: futura-pt, sans-serif;
-    font-size: 24px !important;
+
+
+
+
+.intro > h3, h4, h5, h6 {
+    font-family: futura-pt, sans-serif !important;
     text-align: left;
     color: #1B1C1D;
 }
 
-.disclaimer {
-    font-family: futura-pt, sans-serif;
-    font-size: 20px !important;
-    text-align: left;
-    color: #1B1C1D;
+.intro > h5 > a, .intro > h5 > a:link, .intro > h5 > a:hover, .intro > h3 > a, .intro > h3 > a:link, .intro > h3 > a:hover  {
+    text-decoration: none !important;
+    color: #FD866D !important;
+    font-weight: 500 !important;
 }
 
-.disclaimer > a,  .disclaimer > a:link, .disclaimer > a:visited, .disclaimer > a:hover {
-    text-decoration: none;
-    color: #FD866D;
-}
-
-.disclaimer > a:active{
-    text-decoration: none;
-    color: #486491;
+.intro > h5 > a:active, .intro > h5 > a:visited, .intro > h3 > a:active, .intro > h3 > a:visited {
+    text-decoration: none !important;
+    color: #486491 !important;
+    font-weight: 500 !important;
 }
 
 .sv_start_btn, .sv_prev_btn, .sv_next_btn, .sv_complete_btn {
@@ -94,10 +133,17 @@ input[type=number] {
     text-align: center;
 }
 
+#sp_116.sv_p_title {
+    font-family: calluna, serif !important;
+    text-align: center;
+    color: #486491 !important;
+    font-size: 2.375em !important;
+    line-height: 1.25em !important;
+}
+
 .sv_q_title, .sv_p_title{
-    font-family: futura-pt, sans-serif;
-    font-weight: 400 !important;
-    font-size: 18pt;
+    font-family: futura-pt, sans-serif !important;
+    font-size: 18pt !important;
     color: black;
     text-align: center;
 }
@@ -108,7 +154,7 @@ input[type=number] {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 50%;
 }
 
 .sv_q_text_root:hover {
@@ -121,7 +167,6 @@ input[type=number] {
 }
 
 input[type=radio], input[type=checkbox] {
-    position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
@@ -135,12 +180,9 @@ input[type=radio], input[type=checkbox] {
     font-family: futura-pt, sans-serif;
     font-weight: 300 !important;
     font-size: 14pt !important;
-    display: block;
+    text-align: center;
+    width: 72%;
 }
-
-/* .sv_q_radiogroup > label {
-    width: 80%;
-} */
 
 .sv_q_checkbox > label {
     width: 100%;
@@ -170,34 +212,27 @@ input[type=radio], input[type=checkbox] {
 }
 
 .sv_q_m_label > input[type=radio] {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    height: 24px !important;
-    width: 24px !important;
+    height: 18px !important;
+    width: 18px !important;
     opacity: 1;
+}
+
+.sv_qstn label.sv_q_m_label {
+    position: static !important;
+    margin: 0 !important;
+    display: inline !important;
+    width: auto !important;
 }
 
 table {
     width: 100% !important;
 }
 
-/* thead {
-    background-color: coral;
-}
-
-tbody {
-    background-color: darkkhaki;
-}
- */
-thead > tr > th > span {
-    margin: 8px;
+thead > tr > th > span,  thead > tr > th > label{
     font-family: futura-pt, sans-serif;
     font-weight: 300 !important;
     font-size: 14pt !important;
     color: dimgrey;
-    display: flex;
-    align-items: center;
 }
 
 tbody > tr > td > span {
@@ -215,4 +250,22 @@ tbody > tr > td {
     text-align:center; 
     margin-left:50%; 
     margin-right:auto;
+}
+
+.sv_q_select_column.sv-q-column-2, .sv_q_select_column.sv-q-column-3 {
+    vertical-align: top !important;
+    width: 33% !important;
+}
+
+.sv_q_select_column.sv-q-column-4 {
+    vertical-align: top !important;
+    width: 25% !important;
+}
+
+#sq_110i.sv_q_text_root {
+    width: 88%;
+}
+
+#sq_111i.sv_q_text_root {
+    width: 88%;
 }

@@ -12,7 +12,7 @@
 					"type": "html",
      				"name": "welcome",
      				"hideNumber": true,
-    				"html": "<h1 class='greeting'>Hello there, we're Bia.</h1>\n<h3 class='about-assessment'>We’ve made this short assessment to help you receive relevant information about your menopause.</h3>\n<p class='disclaimer'>Please note, this is not medical advice. If you are concerned about a medical issue or symptom, please speak to your doctor. \n\nAll information you give us will be anonymised and stored securely according to our <a href='#'>privacy policy</a> and GDPR.</p>\n"
+    				"html": "<div class='intro'><h1>Hello there, we're Bia.</h1>\n<h3>We’ve made this short assessment to help you receive relevant information about your menopause.</h3>\n<h6>Please note, this is not medical advice. If you are concerned about a medical issue or symptom, please speak to your doctor.</h6><h6>All information you give us will be anonymised and stored securely according to our <a href='#'>privacy policy</a> and GDPR.</h6>\n</div>"
 				}
 			]
 		},
@@ -196,7 +196,7 @@
 									"text": "None of these"
 								}
 							],
-							"colCount": 4
+							"colCount": 3
 						}
 					],
 					"title": "Have you experienced any of the following symptoms?"
@@ -431,7 +431,7 @@
 						"type": "html",
 						"name": "welcome",
 						"hideNumber": true,
-						"html": "<p class='disclaimer'>We’ll send you your results and keep you updated with our newsletter. We’ll never share it with third parties and you can unsubscribe any time.</p>"
+						"html": "<h6 class='intro'>We’ll send you your results and keep you updated with our newsletter. We’ll never share it with third parties and you can unsubscribe any time.</h6>"
 					},
 					{
 						"type": "panel",
