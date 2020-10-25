@@ -297,3 +297,13 @@ tbody > tr > td {
     margin-bottom: 0 !important;
     padding: 4px !important;
 }
+
+/* .even {
+    margin-left:auto !important;
+    float: right !important;
+} */
+
+.odd {
+    margin-left:auto !important;
+    float: right !important;
+}

@@ -16,17 +16,18 @@
             <div class="panel panel-default" id="resources">
               <div class="panel-heading clearfix resources-title">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" href="{{'#collapse'+i}}">{{ symptom.text }}<span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="float: right; color: dimgrey;"></span></a>
+                  <a data-toggle="collapse" href="{{'#collapse'+i}}">{{ symptom.description }}<span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="float: right; color: dimgrey;"></span></a>
                 </h4>
               </div>
               <div id="{{'collapse'+i}}" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non est maximus, vehicula ex id, placerat nunc. Donec ullamcorper, nunc ut molestie tristique, ipsum ex varius tortor, eu varius ipsum lacus in velit. Nulla pharetra dolor quis tortor accumsan posuere. Nulla mollis ac nunc at tristique.</h6>
+                    <h5>{{ symptom.title }}</h5>
+                    <h6>{{ symptom.text }}</h6>
                       <h6>Read more about this symptom</h6>
                     <div class="card" style="width:32rem; background-color: #B8DEF5; margin-bottom: 12px;">
-                        <img class="card-img-top" src="../../assets/images/woman.jpg" alt="Card image cap" style="width:100%">
+                        <img class="card-img-top" src="../../assets/images/{{symptom.value}}.png" alt="Card image cap" style="width:100%">
                         <div class="card-body" style="margin: 12px;">
-                            <h6 class="card-title" style="height: 54px; font-weight: 600;"><a >{{ symptom.text }}</a></h6>
+                            <h6 class="card-title" style="height: 54px; font-weight: 600;"><a href="{{ symptom.url}}">{{ symptom.description }}</a></h6>
                         </div>
                       </div>
                 </div>
@@ -43,17 +44,18 @@
             <div class="panel panel-default" id="resources">
               <div class="panel-heading clearfix resources-title">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" href="{{'#collapse' + i + i }}">{{ goal.text }}<span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="float: right; color: dimgrey;"></span></a>
+                  <a data-toggle="collapse" href="{{'#collapse' + i + i }}">{{ goal.description}}<span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="float: right; color: dimgrey;"></span></a>
                 </h4>
               </div>
               <div id="{{'collapse'+i+i}}" class="panel-collapse collapse">
                 <div class="panel-body">
-                  <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non est maximus, vehicula ex id, placerat nunc. Donec ullamcorper, nunc ut molestie tristique, ipsum ex varius tortor, eu varius ipsum lacus in velit. Nulla pharetra dolor quis tortor accumsan posuere. Nulla mollis ac nunc at tristique.</h6>
+                  <h5>{{ goal.title }}</h5>
+                  <h6>{{ goal.text }}</h6>
                   <h6>Read more about this symptom</h6>
                 <div class="card" style="width:32rem; background-color: #B8DEF5; margin-bottom: 12px;">
-                    <img class="card-img-top" src="../../assets/images/goal.jpg" alt="Card image cap" style="width:100%">
+                    <img class="card-img-top" src="../../assets/images/{{goal.value}}.png" alt="Card image cap" style="width:100%">
                     <div class="card-body" style="margin: 12px;">
-                        <h6 class="card-title" style="height: 54px;"><a style="font-weight: 500;">{{ goal.text }}</a></h6>
+                        <h6 class="card-title" style="height: 54px;"><a href="{{ goal.url }}">{{ goal.description }}</a></h6>
                     </div>
                   </div>
                 </div>
@@ -61,7 +63,34 @@
             </div>
         </div> 
     </div>
+
+    <h1>You might also like</h1>
+    <!-- <div class="row"> -->
+    <div *ngFor="let resource of extra_content; let i = index; let even = even; let odd = odd">
+      <div >
+        <div class="col-md-6" [class.even]="odd">    
+          <div class="card" style="width:32rem; background-color: #B8DEF5; margin-bottom: 12px;">
+              <img class="card-img-top" src="../../assets/images/{{resource.value}}.png" alt="Card image cap" style="width:100%">
+              <div class="card-body" style="margin: 12px;">
+                  <h6 class="card-title" style="height: 54px;"><a href="{{ resource.url }}">{{ resource.title }}</a></h6>
+              </div>
+            </div>
+            </div>
+      </div>
+
+        <!-- </div> -->
+    </div>
+
+
+
+
+
   </div>
+
+
+
+
+
 
 
 

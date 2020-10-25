@@ -2,132 +2,240 @@
     
     {
         "value": "symptoms_value_1",
-        "text": "Hot or cold flushes or night sweats",
-        "url": "#"
+        "title": "Managing Symptoms: Hot Flushes, Cold Flushes & Night Sweats",
+        "description": "Hot or cold flushes or night sweats",
+        "text": "Hot flushes, cold flushes and night sweats are also known as vasomotor symptoms. They are common symptoms of menopause, with 80% of women report experiencing hot flushes during the menopause. They most likely happen because hormonal changes during perimenopause and menopause affect the area of the brain responsible for temperature regulation. Certain things can trigger hot flushes and identifying your triggers may help you avoid them.",
+        "url": "https://www.bia.care/blog/hot-flushes"
     },
     {
         "value": "symptoms_value_2",
-        "text": "Difficulty falling or staying asleep",
-        "url": "#"
+        "title": "How Menopause Affects Sleep",
+        "description": "Difficulty falling or staying asleep",
+        "text": "Hormonal changes during menopause can disrupt your sleep patterns, as can other symptoms like night sweats, which may keep you up at night. Practicing good sleep hygiene during the day can help you to sleep better at night. These are things like exercising, avoiding screens before bed, and reducing your caffeine intake.",
+        "url": "https://www.bia.care/blog/how-does-menopause-affect-sleep"
     },
     {
         "value": "symptoms_value_3",
-        "text": "Low energy or fatigue",
-        "url": "#"
+        "title": "Managing Symptoms: Low Energy and Fatigue",
+        "description": "Low energy or fatigue",
+        "text": "Low energy and fatigue during menopause can be related to your hormone levels. It can also be a result of poor sleep due during this time, which can be caused by other menopause symptoms, such as night sweats. Waking up to pee during the night can also related to menopausal changes and can have an imapct on your energy levels. Fortunately, there are things you can do to increase your energy during this time.",
+        "url": "www.bia.care/blog/managing-symptoms-low-energy-and-fatigue"
     },
     {
         "value": "symptoms_value_4",
-        "text": "Feeling anxious or low mood",
-        "url": "#"
+        "title": "Managing Symptoms: Anxiety and Mood Changes",
+        "description": "Feeling anxious or low mood",
+        "text": "f the many symptoms of menopause, those that affect your mood and mind can be the most difficult to manage, but they are not uncommon. 23% of women say they had increased anxiety during menopause, many of them for the first time in their life. This means that no, you are not going crazy and you are not alone. Prioritising taking care of yourself will go a long way in managing these symptoms.",
+        "url": "https://www.bia.care/blog/menopause-anxiety-and-mood-changes"
     },
     {
         "value": "symptoms_value_5",
-        "text": "Mood swings",
-        "url": "#"
+        "title": "Managing Symptoms: Anxiety and Mood Changes",
+        "description": "Mood swings",
+        "text": "f the many symptoms of menopause, those that affect your mood and mind can be the most difficult to manage, but they are not uncommon. 23% of women say they had increased anxiety during menopause, many of them for the first time in their life. This means that no, you are not going crazy and you are not alone. Prioritising taking care of yourself will go a long way in managing these symptoms.",
+        "url": "https://www.bia.care/blog/menopause-anxiety-and-mood-changes"
+    },
+    {
+        "value": "symptoms_value_45",
+        "title": "Managing Symptoms: Anxiety and Mood Changes",
+        "description": "Felling anxious, low mood and mood swings",
+        "text": "f the many symptoms of menopause, those that affect your mood and mind can be the most difficult to manage, but they are not uncommon. 23% of women say they had increased anxiety during menopause, many of them for the first time in their life. This means that no, you are not going crazy and you are not alone. Prioritising taking care of yourself will go a long way in managing these symptoms.",
+        "url": "https://www.bia.care/blog/menopause-anxiety-and-mood-changes"
     },
     {
         "value": "symptoms_value_6",
-        "text": "Reduced concentration",
-        "url": "#"
+        "title": "Managing Symptoms: Brain Fog and Reduced Concentration",
+        "description": "Reduced concentration",
+        "text": "Forgetfulness, reduced concentration and brain fog are also known as menopause-related cognitive impairment. Though these symptoms can have a big impact on our sense of self and confidence, they are a common occurrence and can be managed. Additionally, there is evidence that these symptoms do go away in the years following the menopause.",
+        "url": "https://www.bia.care/blog/menopause-brain-forgetfulness-brain-fog-reduced-concentration"
     },
     {
         "value": "symptoms_value_7",
-        "text": "Forgetfulness",
-        "url": "#"
+        "title": "Managing Symptoms: Brain Fog and Reduced Concentration",
+        "description": "Forgetfulness",
+        "text": "Forgetfulness, reduced concentration and brain fog are also known as menopause-related cognitive impairment. Though these symptoms can have a big impact on our sense of self and confidence, they are a common occurrence and can be managed. Additionally, there is evidence that these symptoms do go away in the years following the menopause.",
+        "url": "https://www.bia.care/blog/menopause-brain-forgetfulness-brain-fog-reduced-concentration"
+    },
+    {
+        "value": "symptoms_value_67",
+        "title": "Managing Symptoms: Brain Fog and Reduced Concentration",
+        "description": "Reduced concentration and forgetfulness",
+        "text": "Forgetfulness, reduced concentration and brain fog are also known as menopause-related cognitive impairment. Though these symptoms can have a big impact on our sense of self and confidence, they are a common occurrence and can be managed. Additionally, there is evidence that these symptoms do go away in the years following the menopause.",
+        "url": "https://www.bia.care/blog/menopause-brain-forgetfulness-brain-fog-reduced-concentration"
     },
     {
         "value": "symptoms_value_8",
-        "text": "Reduced sex drive",
-        "url": "#"
+        "title": "Managing Symptoms: Sex-related Symptoms",
+        "description": "Reduced sex drive",
+        "text": "Sexual issues during menopause can be related to low libido, which is a result of fluctuating hormones, or to physical discomfort due to genitourinary symtpoms such as vaginal dryness and pain, or sensitive bladders. Additionally, worrying about weight gain or other physical symptoms can lead to a decrease in confidence which leaves us far from feeling sexy.",
+        "url": "https://drive.google.com/file/d/1jX2rh0wV2wzJu5gzl1e2BG1WEdYZjLSy/view?usp=sharing"
     },
     {
         "value": "symptoms_value_9",
-        "text": "Leaking urine when you laugh or cough",
-        "url": "#"
+        "title": "Understanding the Urinary Symptoms of Menopause",
+        "description": "Leaking urine when you laugh or cough",
+        "text": "The urinary sympotms of menopause, such as peeing when you laugh or cough or rushing to the loo are extremely common. Half of women reporting them yet only 1 in 6 going to visit a doctor. Unlike some other menopause symptoms, these will not go away unless treated, so it is really important to manage them rather than suffering in silence. There is often a lot that can be done to manage these symptoms non-invasively.",
+        "url": "https://www.bia.care/blog/understanding-the-urinary-symptoms-of-menopause"
     },
     {
         "value": "symptoms_value_10",
-        "text": "Frequently peeing during day or night",
-        "url": "#"
+        "title": "Understanding the Urinary Symptoms of Menopause",
+        "description": "Frequently peeing during day or night",
+        "text": "The urinary sympotms of menopause, such as peeing when you laugh or cough or rushing to the loo are extremely common. Half of women reporting them yet only 1 in 6 going to visit a doctor. Unlike some other menopause symptoms, these will not go away unless treated, so it is really important to manage them rather than suffering in silence. There is often a lot that can be done to manage these symptoms non-invasively.",
+        "url": "https://www.bia.care/blog/understanding-the-urinary-symptoms-of-menopause"
     },
     {
         "value": "symptoms_value_11",
-        "text": "Vaginal dryness",
-        "url": "#"
+        "title": "Managing Symptoms: Sex-related Symptoms",
+        "description": "Vaginal dryness",
+        "text": "Sexual issues during menopause can be related to low libido, which is a result of fluctuating hormones, or to physical discomfort due to genitourinary symtpoms such as vaginal dryness and pain, or sensitive bladders. Additionally, worrying about weight gain or other physical symptoms can lead to a decrease in confidence which leaves us far from feeling sexy.",
+        "url": "https://drive.google.com/file/d/1jX2rh0wV2wzJu5gzl1e2BG1WEdYZjLSy/view?usp=sharing"
+    },
+    {
+        "value": "symptoms_value_811",
+        "title": "Managing Symptoms: Sex-related Symptoms",
+        "description": "Reduced sex drive and vaginal dryness",
+        "text": "Sexual issues during menopause can be related to low libido, which is a result of fluctuating hormones, or to physical discomfort due to genitourinary symtpoms such as vaginal dryness and pain, or sensitive bladders. Additionally, worrying about weight gain or other physical symptoms can lead to a decrease in confidence which leaves us far from feeling sexy.",
+        "url": "https://drive.google.com/file/d/1jX2rh0wV2wzJu5gzl1e2BG1WEdYZjLSy/view?usp=sharing"
     },
     {
         "value": "symptoms_value_12",
-        "text": "Sudden need to pass urine",
-        "url": "#"
+        "title": "Understanding the Urinary Symptoms of Menopause",
+        "description": "Sudden need to pass urine",
+        "text": "The urinary sympotms of menopause, such as peeing when you laugh or cough or rushing to the loo are extremely common. Half of women reporting them yet only 1 in 6 going to visit a doctor. Unlike some other menopause symptoms, these will not go away unless treated, so it is really important to manage them rather than suffering in silence. There is often a lot that can be done to manage these symptoms non-invasively.",
+        "url": "https://www.bia.care/blog/understanding-the-urinary-symptoms-of-menopause"
+    },
+    {
+        "value": "symptoms_value_91012",
+        "title": "Understanding the Urinary Symptoms of Menopause",
+        "description": "Urinary",
+        "text": "The urinary sympotms of menopause, such as peeing when you laugh or cough or rushing to the loo are extremely common. Half of women reporting them yet only 1 in 6 going to visit a doctor. Unlike some other menopause symptoms, these will not go away unless treated, so it is really important to manage them rather than suffering in silence. There is often a lot that can be done to manage these symptoms non-invasively.",
+        "url": "https://www.bia.care/blog/understanding-the-urinary-symptoms-of-menopause"
     },
     {
         "value": "symptoms_value_13",
-        "text": "Painful joints or muscles",
-        "url": "#"
+        "title": "Managing Symptoms: Joint Aches and Pains",
+        "description": "Painful joints or muscles",
+        "text": "Joint pain is one of those symptoms that is less often talked about in relation to the menopause, but is actually very common. These pains are most likely due to declining oestrogen and progesterone levels during peri-menopause. It is very important to take care of your joints at all ages, since they will be with you all your life.",
+        "url": "https://www.bia.care/blog/joint-aches-and-pains"
     },
     {
         "value": "symptoms_value_14",
-        "text": "Heart racing or skipping beats",
-        "url": "#"
+        "title": "Menopause Symptoms: Heart Palpitations",
+        "description": "Heart racing or skipping beats",
+        "text": "Heart palpitations is the term for when your heart feels like it is fluttering or pounding much faster than usual and during menopause they are usually accompanied by hot flushes. Like hot flushes, we recommend paying attention to anything that might be triggering your heart palpitations",
+        "url": "https://www.bia.care/blog/symptoms-weight-gain"
     },
     {
         "value": "symptoms_value_15",
-        "text": "Migranes",
-        "url": "#"
+        "title": "Managing Symptoms: Headaches and Migraines",
+        "description": "Migranes",
+        "text": "Headaches and migrains are unfortunately common in all stages of life. During the menopause, some women report an increase in headaches and migraines, which research tells us is due to fluctiating oestrogen levels. Figuring out your triggers can help you avoid migraines and headaches. Additionally, some women find therapies like acupuncutre helpful for managing them. ",
+        "url": "https://www.bia.care/blog/symptoms-headaches"
     },
     {
         "value": "symptoms_value_16",
-        "text": "Weight gain",
-        "url": "#"
+        "title": "Managing Symptoms: Weight Gain",
+        "description": "Weight gain",
+        "text": "Weight gain during menopause can be a result of the natural slowing down of your metabolism during this phase of life. Additionally, weight redistribution around the midsection is common due to hormonal changes. Paying attention to these changes will help you adapt your nutrition and exercise to help you stay healthy during menopause and beyond.",
+        "url": "https://www.bia.care/blog/symptoms-weight-gain"
     },
     {
         "value": "symptoms_value_17",
-        "text": "Change to skin, hair and nails",
-        "url": "#"
+        "title": "Managing Symptoms: Brittle Hair and Nails",
+        "description": "Change to skin, hair and nails",
+        "text": "During the perimenopause, you may notice changes to your hair and nails, which may feel dryer or more brittle. These changes are normal and are a result of fluctuating hormone levels, but there are things you can do to manage them. Keeping hydrated both inside (by drinking plenty of water) and outside (by using appropriate moisturisers) will help manage these symptoms.",
+        "url": "https://www.bia.care/blog/brittle-hair-and-nails-during-menopause"
     },
     {
         "value": "symptoms_value_18",
-        "text": "None of these",
+        "title": "",
+        "description": "None of these",
+        "text": "",
         "url": "#"
     },
     {
         "value": "health_goals_value_1",
-        "text": "Exercise more",
-        "url": "#"
+        "title": "Adding Exercise to your Life during Menopause",
+        "description": "Exercise more",
+        "text": "No matter your age, keeping an active body is very important for your overall health- exercise can help everything from keeping your bones healthy to keeping energy and moods high. Of course, what was a great workout at 20 may be different from a great workout at 40. We recommend alternating cardio activities like running or swimming with weight bearing exercises that work to keep your muscles and bones healthy.",
+        "url": "https://www.bia.care/blog/exercise-and-menopause-symptoms"
     },
     {
         "value": "health_goals_value_2",
-        "text": "Improve diet or nutrition",
-        "url": "#"
+        "title": "Diet and Nutrition during Menopause",
+        "description": "Improve diet or nutrition",
+        "text": "Paying attention to what you eat can be a powerful way to manage your menopause and its symptoms. Research tells us that our diet can affect everything from our gut health to our mood, so it is no surprise that how you eat will affect your symptoms. We advise keeping an eye on your nutrient consumption, especially making sure you are getting enough calcium, as recommended daily intake goes up when you reach 40.. Many women also find phytoestrogens worth investigating, as they are found in foods and can have an oestrogen-like effect in the body when consumed regularly and in the correct quantities.",
+        "url": "https://www.bia.care/blog/diet-and-nutrition-during-menopause"
     },
     {
         "value": "health_goals_value_3",
-        "text": "Quit smoking",
-        "url": "#"
+        "title": "How Smoking Affects Menopause Symptoms",
+        "description": "Quit smoking",
+        "text": "During peri-menopausal years, smoking can trigger certain symptoms. For instance, reports of hot flushes being triggered by smoking are quite common.  There are other aspects of your health and wellbeing that will thank you for quitting, for instance, stopping smoking will improve the appearance of your skin, and will be less dry after you quit and non-smokers and ex-smokers report feeling less stressed than smokers. We know quitting is difficult, so we have some tips of how to get help in this article.",
+        "url": "https://www.bia.care/blog/smoking-and-menopause"
     },
     {
         "value": "health_goals_value_4",
-        "text": "Improve sleep",
-        "url": "#"
+        "title": "How does Menopause affect Sleep?",
+        "description": "Improve sleep",
+        "text": "Sleeping better is a common health goal, and while it is true that adults sleep less as they get older, prioritising sleep is very important no matter your age. There are things you can do during the day to help you sleep better at night, such as keeping good sleep hygiene by avoiding caffeine and screens before bed time. ",
+        "url": "https://www.bia.care/blog/how-does-menopause-affect-sleep"
     },
     {
         "value": "health_goals_value_5",
-        "text": "Improve mood or mental health",
-        "url": "#"
+        "title": "Emotional Fitness During Menopause",
+        "description": "Improve mood or mental health",
+        "text": "During peri-menopausal years, smoking can trigger certain symptoms. For instance, reports of hot flushes being triggered by smoking are quite common.  There are other aspects of your health and wellbeing that will thank you for quitting, for instance, stopping smoking will improve the appearance of your skin, and will be less dry after you quit and non-smokers and ex-smokers report feeling less stressed than smokers. We know quitting is difficult, so we have some tips of how to get help in this article.",
+        "url": "www.bia.care/blog/emotional-fitness-during-menopause"
     },
     {
         "value": "health_goals_value_6",
-        "text": "Lose weight",
-        "url": "#"
+        "title": "Managing Weight Gain during Menopause",
+        "description": "Lose weight",
+        "text": "Weight loss is one of the most common health goals of women during menopause. The natural slowing down of metabolism that comes with ageing can cause weight gain. This means that during this phase you will likely need to recalibrate what and how much you eat if losing weight is one of your goals. ",
+        "url": "https://www.bia.care/blog/symptoms-weight-gain"
     },
     {
         "value": "health_goals_value_7",
-        "text": "Reduce alcohol intake",
-        "url": "#"
+        "title": "Drinking Alcohol and its Efects on Menopause",
+        "description": "Reduce alcohol intake",
+        "text": "Many women find that reducing their intake of alcohol during menopause helps alleviate their symptoms. We recommend being mindful of when you drink and how much, so that you can make the best decisions for you each time. ",
+        "url": "https://www.bia.care/blog/drinking-alcohol-and-its-effects-on-menopause"
     },
     {
         "value": "health_goals_value_8",
-        "text": "None of these",
+        "title": "",
+        "description": "None of these",
+        "text": "",
         "url": "#"
+    },
+    {
+        "value": "resource_1",
+        "title": "An Introduction to Hormones and Menopause",
+        "description": "",
+        "text": "",
+        "url": "https://www.bia.care/blog/an-introduction-to-hormones-and-menopause"
+    },
+    {
+        "value": "resource_2",
+        "title": "6 Tips to Get the Most from your GP Appointment",
+        "description": "",
+        "text": "",
+        "url": "https://www.bia.care/blog/preparing-for-menopause-gp-appointment"
+    },
+    {
+        "value": "resource_3",
+        "title": "How to Keep your Bones Healthy During Menopause",
+        "description": "",
+        "text": "",
+        "url": "https://www.bia.care/blog/how-to-keep-your-bones-healthy-during-menopause"
+    },
+    {
+        "value": "resource_4",
+        "title": "The Basics of Hormone Replacement Therapy Explained",
+        "description": "",
+        "text": "",
+        "url": "https://www.bia.care/blog/hormone-replacement-therapy-explained-by-experts "
     }
 ]

@@ -15,7 +15,9 @@ export class CompleteComponent implements OnInit {
   result: any;
   symptoms: any[] = [];
   goals: any[] = [];
-  
+  extra_content: any[] = [];
+
+  resources_values: string[] = ["resource_1", "resource_2", "resource_3", "resource_4"];
 
   constructor(private survey: SurveyService) { }
 
@@ -23,10 +25,58 @@ export class CompleteComponent implements OnInit {
     this.survey.currentSurveyResult.subscribe(response => this.result = response);
     this.findSymptom(this.result.symptoms);
     this.findGoal(this.result.health_goals);
+    this.findResource(this.resources_values);
+    console.log(this.extra_content);
   }
 
-  findSymptom(result: any) {
+  findSymptom(result: any[]) {
+    if(result.includes('symptoms_value_4') && result.includes('symptoms_value_5')){
+      result.push('symptoms_value_45')
+      result = _.remove(result, (n) => {
+        return n != 'symptoms_value_4' && n != 'symptoms_value_5'
+      })
+    }
+    if(result.includes('symptoms_value_6') && result.includes('symptoms_value_7')){
+      result.push('symptoms_value_67')
+      result = _.remove(result, (n) => {
+        return n != 'symptoms_value_6' && n != 'symptoms_value_7'
+      })
+    }
+    if(result.includes('symptoms_value_11') && result.includes('symptoms_value_8')){
+      result.push('symptoms_value_811')
+      result = _.remove(result, (n) => {
+        return n != 'symptoms_value_8' && n != 'symptoms_value_11'
+      })
+    }
+    if(result.includes('symptoms_value_9') && result.includes('symptoms_value_10') && result.includes('symptoms_value_12') && !result.includes('symptoms_value_91012')){
+      result.push('symptoms_value_91012')
+      result = _.remove(result, (n) => {
+        return n != 'symptoms_value_9' && n != 'symptoms_value_10' && n != 'symptoms_value_12'
+      })
+    }
+    if(result.includes('symptoms_value_9') && result.includes('symptoms_value_10') && !result.includes('symptoms_value_91012')){
+      result.push('symptoms_value_91012')
+      result = _.remove(result, (n) => {
+        return n != 'symptoms_value_9' && n != 'symptoms_value_10'
+      })
+    }
+    if(result.includes('symptoms_value_9') && result.includes('symptoms_value_12') && !result.includes('symptoms_value_91012')){
+      result.push('symptoms_value_91012')
+      result = _.remove(result, (n) => {
+        return n != 'symptoms_value_9' && n != 'symptoms_value_12'
+      })
+    }
+    if(result.includes('symptoms_value_10') && result.includes('symptoms_value_12') && !result.includes('symptoms_value_91012')){
+      result.push('symptoms_value_91012')
+      result = _.remove(result, (n) => {
+        return n != 'symptoms_value_10' && n != 'symptoms_value_12'
+      })
+    }
+
+
+    console.log('this is new return' + result);
     result.forEach((symptom: any) => {
+      console.log(symptom);
       this.symptoms.push(_.find(resources, ['value', symptom]))
     });
   }
@@ -36,5 +86,12 @@ export class CompleteComponent implements OnInit {
       this.goals.push(_.find(resources, ['value', goal]))
     });
   }
+
+  findResource(result: any) {
+    result.forEach(( resources_values: any) => {
+      this.extra_content.push(_.find(resources, ['value',  resources_values]))
+    });
+  }
+
 
 }
