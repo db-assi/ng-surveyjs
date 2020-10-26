@@ -1,15 +1,18 @@
 <div>
   <div class="intro">
+    <br><br>
     <h1>Thank You, {{ result.first_name }}</h1>
-    <h3>Below are your results and recommended articles. You can also <a href='#'>print your results here.</a></h3>
+    
+    <h3>Below are your recommended articles. </h3>
     <div>
-        <h4>You are likely in peri-menopause. You can read more about peri-menopause here.</h4>
+        <h4>You can also read more about the phases of menopause<a href='https://www.bia.care/blog/menopause-terms-explained' target='_blank'> here.</a></h4>
     </div>
-    <h6>Perimenopause means ‘around menopause,’ and typically starts in a woman’s 40s. It is the time when signs and symptoms of falling oestrogen levels begin to manifest. For example, irregular periods or hot flushes. Perimenopause lasts until 12 months after your final menstrual bleed. For over half of women, the perimenopause stage lasts for over 7 years. But this doesn’t mean you have to endure through your symptoms for all that time, as there are treatments that can help.</h6>
+    <h6></h6>
   </div>
 
   <div class="intro">
-    <h1> Your Symptoms</h1>
+    <br><br><br>
+    <h1> Your Menopause Symptoms</h1>
 
     <div *ngFor="let symptom of symptoms; let i = index;">    
         <div class="panel-group">
@@ -23,11 +26,11 @@
                 <div class="panel-body">
 
                     <h6>{{ symptom.text }}</h6>
-                      <h6>Read more about this symptom</h6>
+                      <h6>Read more about this symptom:</h6>
                     <div class="card" style="width:32rem; background-color: #B8DEF5; margin-bottom: 12px;">
-                      <a href="{{ symptom.url }}"><img class="card-img-top" src="../../assets/images/{{symptom.value}}.png" alt="Card image cap" style="width:100%"></a>
+                      <a href="{{ symptom.url }}" target="_blank"><img class="card-img-top" src="../../assets/images/{{symptom.value}}.png" alt="Card image cap" style="width:100%"></a>
                         <div class="card-body" style="margin: 12px;">
-                            <h6 class="card-title" style="height: 54px; font-weight: 600;"><a href="{{ symptom.url}}">{{ symptom.title }}</a></h6>
+                            <h6 class="card-title" style="height: 54px; font-weight: 600;"><a href="{{ symptom.url}}" target="_blank">{{ symptom.title }}</a></h6>
                         </div>
                       </div>
                 </div>
@@ -36,7 +39,7 @@
         </div> 
     </div>
     
-    
+    <br>
     <h1> Your Health Goals</h1>
     
     <div *ngFor="let goal of goals; let i = index;">    
@@ -50,11 +53,11 @@
               <div id="{{'collapse'+i+i}}" class="panel-collapse collapse">
                 <div class="panel-body">
                   <h6>{{ goal.text }}</h6>
-                  <h6>Read more about this symptom</h6>
+                  <h6>Read more about this health goal:</h6>
                 <div class="card" style="width:32rem; background-color: #B8DEF5; margin-bottom: 12px;">
-                  <a href="{{ goal.url }}"><img class="card-img-top" src="../../assets/images/{{goal.value}}.png" alt="Card image cap" style="width:100%"></a>
+                  <a href="{{ goal.url }}" target="_blank"><img class="card-img-top" src="../../assets/images/{{goal.value}}.png" alt="Card image cap" style="width:100%"></a>
                     <div class="card-body" style="margin: 12px;">
-                        <h6 class="card-title" style="height: 54px;"><a href="{{ goal.url }}">{{ goal.title }}</a></h6>
+                        <h6 class="card-title" style="height: 54px;"><a href="{{ goal.url }}" target="_blank">{{ goal.title }}</a></h6>
                     </div>
                   </div>
                 </div>
@@ -69,9 +72,9 @@
       <div >
         <div class="col-md-6" [class.even]="odd">    
           <div class="card" style="width:32rem; background-color: #B8DEF5; margin-bottom: 12px;">
-            <a href="{{ resource.url }}"><img class="card-img-top" src="../../assets/images/{{resource.value}}.png" alt="Card image cap" style="width:100%"></a>
+            <a href="{{ resource.url }}" target="_blank"><img class="card-img-top" src="../../assets/images/{{resource.value}}.png" alt="Card image cap" style="width:100%"></a>
               <div class="card-body" style="margin: 12px;">
-                  <h6 class="card-title" style="height: 54px;"><a href="{{ resource.url }}">{{ resource.title }}</a></h6>
+                  <h6 class="card-title" style="height: 54px;"><a href="{{ resource.url }}" target="_blank">{{ resource.title }}</a></h6>
               </div>
             </div>
             </div>

@@ -1,482 +1,482 @@
 {	"triggers": [
-		{
-			"type": "complete",
-			"expression": "{age} < 40"
-		}
-	],
-	"pages": [
-		{
-			"name": "start",
-			"elements": [
-				{
-					"type": "html",
-     				"name": "welcome",
-     				"hideNumber": true,
-    				"html": "<div class='intro'><h1>Hello there, we're Bia.</h1>\n<h3>We’ve made this short assessment to help you receive relevant information about your menopause.</h3>\n<h6>Please note, this is not medical advice. If you are concerned about a medical issue or symptom, please speak to your doctor.</h6><h6>All information you give us will be anonymised and stored securely according to our <a href='#'>privacy policy</a> and GDPR.</h6>\n</div>"
-				}
-			]
-		},
-		{
-			"name": "page_two",
-			"elements": [
-				{
-					"type": "text",
-     				"name": "age",
-					"title": "Please tell us how old you are?",
-					"inputType": "number",
-					"isRequired": true,
-					"hideNumber": true
-				}
-			]
-		},
-		{
-			"name": "page_three",
-			"elements": [
-				{
-					"type": "panel",
-     				"name": "page_three_panel",
-     				"elements": [
-						 {
-							"type": "radiogroup",
-                            "name": "describe_period",
-							"startWithNewLine": false,
-							"titleLocation": "hidden",
-							"isRequired": true,
-                            "choices": [
-                                {
-                                    "value": "describe_period_value_1",
-                                    "text": "I have regular periods."
-                                }, {
-                                    "value": "describe_period_value_2",
-                                    "text": "I have irregular periods."
-                                }, {
-                                    "value": "describe_period_value_3",
-                                    "text": "My last period was over 3 months ago, but in the last year."
-								},
-								{
-                                    "value": "describe_period_value_4",
-                                    "text": "My last period was over 12 months ago."
-                                }
-                            ],
-                            "colCount": 1
-						 }
-					 ],
-					 "title": "Please select the option that best describes your periods:"
-				}
-			]
-		},
-		{
-			"name": "page_four",
-			"elements": [
-				{
-					"type": "panel",
-     				"name": "page_four_panel",
-     				"elements": [
-						{
-							"type": "panel",
-							"name": "page_four_panel_panel", 
-							"elements": [
-								{
-									"type": "radiogroup",
-									"name": "affecting_period",
-									"title": "(For example: birth control, hormonal therapy, Mirena coil, hysterectomy, ablation, chemotherapy, pregnancy)",
-									"startWithNewLine": false,
-									"isRequired": true,
-									"choices": [
-										{
-											"value": "affecting_period_value_1",
-											"text": "Yes"
-										}, {
-											"value": "affecting_period_value_2",
-											"text": "No"
-										}
-									],
-									"colCount": 2
-								},
-								{
-									"type": "text",
-									"name": "what_affecting_period",
-								   	"title": "What is affecting your periods?",
-									"hideNumber": true,
-									"visibleIf": "{affecting_period}='affecting_period_value_1'"
-								}
-							]
-						}
-					],
-					"title": "Could any other factors be affecting your periods?"
-				}
-			]
-		},
-		{
-			"name": "page_five",
-			"elements": [
-				{
-					"type": "panel",
-					"name": "page_five_panel",
-					"elements": 
-					[
-						{
-							"type": "checkbox",
-							"name": "symptoms",
-							"startWithNewLine": false,
-							"titleLocation": "hidden",
-							"isRequired": true,
-							"hideNumber": true,
-							"choices": [
-								{
-									"value": "symptoms_value_1",
-									"text": "Hot or cold flushes or night sweats"
-								},
-								{
-									"value": "symptoms_value_2",
-									"text": "Difficulty falling or staying asleep"
-								},
-								{
-									"value": "symptoms_value_3",
-									"text": "Low energy or fatigue"
-								},
-								{
-									"value": "symptoms_value_4",
-									"text": "Feeling anxious or low mood"
-								},
-								{
-									"value": "symptoms_value_5",
-									"text": "Mood swings"
-								}, 
-								{
-									"value": "symptoms_value_6",
-									"text": "Reduced concentration"
-								},
-								{
-									"value": "symptoms_value_7",
-									"text": "Forgetfulness"
-								}, 
-								{
-									"value": "symptoms_value_8",
-									"text": "Reduced sex drive"
-								},
-								{
-									"value": "symptoms_value_9",
-									"text": "Leaking urine when you laugh or cough"
-								}, 
-								{
-									"value": "symptoms_value_10",
-									"text": "Frequently peeing during day or night"
-								},
-								{
-									"value": "symptoms_value_11",
-									"text": "Vaginal dryness"
-								}, 
-								{
-									"value": "symptoms_value_12",
-									"text": "Sudden need to pass urine"
-								},
-								{
-									"value": "symptoms_value_13",
-									"text": "Painful joints or muscles"
-								}, 
-								{
-									"value": "symptoms_value_14",
-									"text": "Heart racing or skipping beats"
-								},
-								{
-									"value": "symptoms_value_15",
-									"text": "Migranes"
-								}, 
-								{
-									"value": "symptoms_value_16",
-									"text": "Weight gain"
-								},
-								{
-									"value": "symptoms_value_17",
-									"text": "Change to skin, hair and nails"
-								}, 
-								{
-									"value": "symptoms_value_18",
-									"text": "None of these"
-								}
-							],
-							"colCount": 3
-						}
-					],
-					"title": "Have you experienced any of the following symptoms?"
-				}
-			]
-		},
-		{
-			"name": "page_six",
-			"elements": 
-			[
-				{
-					"type": "panel",
-					"name": "page_six_panel",
-					"elements": 
-					[
-						{
-							"type": "matrix",
-							"name": "rate_symptoms",
-							"startWithNewLine": false,
-							"titleLocation": "hidden",
-							"hideNumber": true,
-							"columns": 
-							[
-								{
-									"value": "rate_symptoms_value_1",
-									"text": "Not at all "
-								},
-								{
-									"value": "rate_symptoms_value_2",
-									"text": "A little "
-								},
-								{
-									"value": "rate_symptoms_value_3",
-									"text": "Quite a bit "
-								},
-								{
-									"value": "rate_symptoms_value_4",
-									"text": "A lot "
-								}
-							],
-							"rows": 
-							[
-								{
-									"value": "symptoms_value_1",
-									"text": "Hot or cold flushes or night sweats",
-									"visibleIf": "{symptoms} contains ['symptoms_value_1']"
-								},
-								{
-									"value": "symptoms_value_2",
-									"text": "Difficulty falling or staying asleep",
-									"visibleIf": "{symptoms} contains ['symptoms_value_2']"
-								},
-								{
-									"value": "symptoms_value_3",
-									"text": "Low energy or fatigue",
-									"visibleIf": "{symptoms} contains ['symptoms_value_3']"
-								},
-								{
-									"value": "symptoms_value_4",
-									"text": "Feeling anxious or low mood",
-									"visibleIf": "{symptoms} contains ['symptoms_value_4']"
-								},
-								{
-									"value": "symptoms_value_5",
-									"text": "Mood swings",
-									"visibleIf": "{symptoms} contains ['symptoms_value_5']"
-								},
-								{
-									"value": "symptoms_value_6",
-									"text": "Reduced concentration",
-									"visibleIf": "{symptoms} contains ['symptoms_value_6']"
-								},
-								{
-									"value": "symptoms_value_7",
-									"text": "Forgetfulness",
-									"visibleIf": "{symptoms} contains ['symptoms_value_7']"
-								},
-								{
-									"value": "symptoms_value_8",
-									"text": "Reduced sex drive",
-									"visibleIf": "{symptoms} contains ['symptoms_value_8']"
-								},
-								{
-									"value": "symptoms_value_9",
-									"text": "Leaking urine when you laugh or cough",
-									"visibleIf": "{symptoms} contains ['symptoms_value_9']"
-								},
-								{
-									"value": "symptoms_value_10",
-									"text": "Frequently peeing during day or night",
-									"visibleIf": "{symptoms} contains ['symptoms_value_10']"
-								},
-								{
-									"value": "symptoms_value_11",
-									"text": "Vaginal dryness",
-									"visibleIf": "{symptoms} contains ['symptoms_value_11']"
-								},
-								{
-									"value": "symptoms_value_12",
-									"text": "Sudden need to pass urine",
-									"visibleIf": "{symptoms} contains ['symptoms_value_12']"
-								},
-								{
-									"value": "symptoms_value_13",
-									"text": "Painful joints or muscles",
-									"visibleIf": "{symptoms} contains ['symptoms_value_13']"
-								},
-								{
-									"value": "symptoms_value_14",
-									"text": "Heart racing or skipping beats",
-									"visibleIf": "{symptoms} contains ['symptoms_value_14']"
-								},
-								{
-									"value": "symptoms_value_15",
-									"text": "Migranes",
-									"visibleIf": "{symptoms} contains ['symptoms_value_15']"
-								},
-								{
-									"value": "symptoms_value_16",
-									"text": "Weight gain",
-									"visibleIf": "{symptoms} contains ['symptoms_value_16']"
-								},
-								{
-									"value": "symptoms_value_17",
-									"text": "Change to skin, hair and nails",
-									"visibleIf": "{symptoms} contains ['symptoms_value_17']"
-								}
-							]
-
-						}
-					],
-					"title": "How much do these symptoms bother you?"
-				}
-			],
-			"visibleIf": "{symptoms} != ['symptoms_value_18']"
-		},
-		{
-			"name": "page_seven",
-			"elements": [
-				{
-					"type": "panel",
-     				"name": "page_seven_panel",
-     				"elements": [
-						{
-							"type": "radiogroup",
-							"name": "hrt_interest",
-							"startWithNewLine": false,
-							"titleLocation": "hidden",
-							"isRequired": true,
-							"choices": [
-								{
-									"value": "hrt_interest_value_1",
-									"text": "Yes"
-								}, 
-								{
-									"value": "hrt_interest_value_2",
-									"text": "No"
-								},
-								{
-									"value": "hrt_interest_value_3",
-									"text": "I'm not sure"
-								}
-							],
-							"colCount": 3
-						}
-
-					],
-					"title": "Are you interested in learning more about hormone replacement therapy (HRT)?"
-				}
-			]
-		},
-		{
-			"name": "page_eight",
-			"elements": [
-				{
-					"type": "panel",
-					"name": "page_eight_panel",
-					"elements": 
-					[
-						{
-							"type": "checkbox",
-							"name": "health_goals",
-							"startWithNewLine": false,
-							"title": "Pick as many as you like",
-							"hideNumber": true,
-							"isRequired": true,
-							"choices": [
-								{
-									"value": "health_goals_value_1",
-									"text": "Exercise more"
-								},
-								{
-									"value": "health_goals_value_2",
-									"text": "Improve diet or nutrition"
-								},
-								{
-									"value": "health_goals_value_3",
-									"text": "Quit smoking"
-								},
-								{
-									"value": "health_goals_value_4",
-									"text": "Improve sleep"
-								},
-								{
-									"value": "health_goals_value_5",
-									"text": "Improve mood or mental health"
-								}, 
-								{
-									"value": "health_goals_value_6",
-									"text": "Lose weight"
-								},
-								{
-									"value": "health_goals_value_7",
-									"text": "Reduce alcohol intake"
-								}, 
-								{
-									"value": "health_goals_value_8",
-									"text": "None of these"
-								}
-							],
-							"colCount": 2
-						}
-					],
-					"title": "What are your top health goals?"
-				}
-			]
-		},
-		{
-			"name": "page_nine",
-			"elements": [{
+	{
+		"type": "complete",
+		"expression": "{age} < 40"
+	}
+],
+"pages": [
+	{
+		"name": "start",
+		"elements": [
+			{
+				"type": "html",
+				 "name": "welcome",
+				 "hideNumber": true,
+				"html": "<div class='intro'><h1>Hello there, we're Bia.</h1>\n<h3>We’ve made this short assessment to help you receive relevant information about your menopause.</h3>\n<h6>Please note, this is not medical advice. If you are concerned about a medical issue or symptom, please speak to your doctor.</h6><h6>All information you give us will be anonymised and stored securely according to our <a href='https://bia.care/assessment-privacy-policy' target='_blank'>privacy policy</a> and GDPR.</h6><h6> To return to our website <a href='https://bia.care' target='_blank'> click here</a>.</h6>\n</div>"
+			}
+		]
+	},
+	{
+		"name": "page_two",
+		"elements": [
+			{
+				"type": "text",
+				 "name": "age",
+				"title": "Please tell us how old you are?",
+				"inputType": "number",
+				"isRequired": true,
+				"hideNumber": true
+			}
+		]
+	},
+	{
+		"name": "page_three",
+		"elements": [
+			{
 				"type": "panel",
-				"name": "page_nine_panel",
-				"elements": [{
-						"type": "html",
-						"name": "welcome",
-						"hideNumber": true,
-						"html": "<h6 class='intro'>We’ll send you your results and keep you updated with our newsletter. We’ll never share it with third parties and you can unsubscribe any time.</h6>"
-					},
+				 "name": "page_three_panel",
+				 "elements": [
+					 {
+						"type": "radiogroup",
+						"name": "describe_period",
+						"startWithNewLine": false,
+						"titleLocation": "hidden",
+						"isRequired": true,
+						"choices": [
+							{
+								"value": "describe_period_value_1",
+								"text": "I have regular periods."
+							}, {
+								"value": "describe_period_value_2",
+								"text": "I have irregular periods."
+							}, {
+								"value": "describe_period_value_3",
+								"text": "My last period was over 3 months ago, but in the last year."
+							},
+							{
+								"value": "describe_period_value_4",
+								"text": "My last period was over 12 months ago."
+							}
+						],
+						"colCount": 1
+					 }
+				 ],
+				 "title": "Please select the option that best describes your periods:"
+			}
+		]
+	},
+	{
+		"name": "page_four",
+		"elements": [
+			{
+				"type": "panel",
+				 "name": "page_four_panel",
+				 "elements": [
 					{
 						"type": "panel",
-						"name": "page_nine_panel_panel_one",
+						"name": "page_four_panel_panel", 
 						"elements": [
 							{
-							"type": "text",
-							"name": "first_name",
-							"title": "First Name",
-							"isRequired": true,
-							"hideNumber": true
+								"type": "radiogroup",
+								"name": "affecting_period",
+								"title": "(For example: birth control, hormonal therapy, Mirena coil, hysterectomy, ablation, chemotherapy, pregnancy)",
+								"startWithNewLine": false,
+								"isRequired": true,
+								"choices": [
+									{
+										"value": "affecting_period_value_1",
+										"text": "Yes"
+									}, {
+										"value": "affecting_period_value_2",
+										"text": "No"
+									}
+								],
+								"colCount": 2
 							},
 							{
 								"type": "text",
-								"name": "last_name",
-								"title": "Last Name",
-								"startWithNewLine": false,
-								"isRequired": true,
-								"hideNumber": true
+								"name": "what_affecting_period",
+								   "title": "What is affecting your periods?",
+								"hideNumber": true,
+								"visibleIf": "{affecting_period}='affecting_period_value_1'"
 							}
 						]
-					},
-					{
-						"type": "panel",
-						"name": "page_nine_panel_panel_two",
-						"elements": [{
-							"type": "text",
-							"name": "email",
-							"title": "Email",
-							"isRequired": true,
-							"hideNumber": true
-						}]
 					}
 				],
-				"title": "Let's continue the conversation"
-			}]
-		}
-		
-	],
-	"showQuestionNumbers": "off",
-	"startSurveyText": "Get Started →",
-	"firstPageIsStarted": true,
-	"pagePrevText": "← Back",
-	"pageNextText": "Next →",
-	"completedHtml": "<span><span>"
+				"title": "Could any other factors be affecting your periods?"
+			}
+		]
+	},
+	{
+		"name": "page_five",
+		"elements": [
+			{
+				"type": "panel",
+				"name": "page_five_panel",
+				"elements": 
+				[
+					{
+						"type": "checkbox",
+						"name": "symptoms",
+						"startWithNewLine": false,
+						"titleLocation": "hidden",
+						"isRequired": true,
+						"hideNumber": true,
+						"choices": [
+							{
+								"value": "symptoms_value_1",
+								"text": "Hot or cold flushes or night sweats"
+							},
+							{
+								"value": "symptoms_value_2",
+								"text": "Difficulty falling or staying asleep"
+							},
+							{
+								"value": "symptoms_value_3",
+								"text": "Low energy or fatigue"
+							},
+							{
+								"value": "symptoms_value_4",
+								"text": "Feeling anxious or low mood"
+							},
+							{
+								"value": "symptoms_value_5",
+								"text": "Mood swings"
+							}, 
+							{
+								"value": "symptoms_value_6",
+								"text": "Reduced concentration"
+							},
+							{
+								"value": "symptoms_value_7",
+								"text": "Forgetfulness"
+							}, 
+							{
+								"value": "symptoms_value_8",
+								"text": "Reduced sex drive"
+							},
+							{
+								"value": "symptoms_value_9",
+								"text": "Leaking urine when you laugh or cough"
+							}, 
+							{
+								"value": "symptoms_value_10",
+								"text": "Frequently peeing during day or night"
+							},
+							{
+								"value": "symptoms_value_11",
+								"text": "Vaginal dryness"
+							}, 
+							{
+								"value": "symptoms_value_12",
+								"text": "Sudden need to pass urine"
+							},
+							{
+								"value": "symptoms_value_13",
+								"text": "Painful joints or muscles"
+							}, 
+							{
+								"value": "symptoms_value_14",
+								"text": "Heart racing or skipping beats"
+							},
+							{
+								"value": "symptoms_value_15",
+								"text": "Headaches or Migraines"
+							}, 
+							{
+								"value": "symptoms_value_16",
+								"text": "Weight gain"
+							},
+							{
+								"value": "symptoms_value_17",
+								"text": "Change to skin, hair and nails"
+							}, 
+							{
+								"value": "symptoms_value_18",
+								"visibleIf": "{symptoms} empty",
+								"text": "None of these"
+							}
+						],
+						"colCount": 3
+					}
+				],
+				"title": "Have you experienced any of the following symptoms?"
+			}
+		]
+	},
+	{
+		"name": "page_six",
+		"elements": 
+		[
+			{
+				"type": "panel",
+				"name": "page_six_panel",
+				"elements": 
+				[
+					{
+						"type": "matrix",
+						"name": "rate_symptoms",
+						"startWithNewLine": false,
+						"titleLocation": "hidden",
+						"hideNumber": true,
+						"columns": 
+						[
+							{
+								"value": "rate_symptoms_value_1",
+								"text": "Not at all "
+							},
+							{
+								"value": "rate_symptoms_value_2",
+								"text": "A little "
+							},
+							{
+								"value": "rate_symptoms_value_3",
+								"text": "Quite a bit "
+							},
+							{
+								"value": "rate_symptoms_value_4",
+								"text": "A lot "
+							}
+						],
+						"rows": 
+						[
+							{
+								"value": "symptoms_value_1",
+								"text": "Hot or cold flushes or night sweats",
+								"visibleIf": "{symptoms} contains ['symptoms_value_1']"
+							},
+							{
+								"value": "symptoms_value_2",
+								"text": "Difficulty falling or staying asleep",
+								"visibleIf": "{symptoms} contains ['symptoms_value_2']"
+							},
+							{
+								"value": "symptoms_value_3",
+								"text": "Low energy or fatigue",
+								"visibleIf": "{symptoms} contains ['symptoms_value_3']"
+							},
+							{
+								"value": "symptoms_value_4",
+								"text": "Feeling anxious or low mood",
+								"visibleIf": "{symptoms} contains ['symptoms_value_4']"
+							},
+							{
+								"value": "symptoms_value_5",
+								"text": "Mood swings",
+								"visibleIf": "{symptoms} contains ['symptoms_value_5']"
+							},
+							{
+								"value": "symptoms_value_6",
+								"text": "Reduced concentration",
+								"visibleIf": "{symptoms} contains ['symptoms_value_6']"
+							},
+							{
+								"value": "symptoms_value_7",
+								"text": "Forgetfulness",
+								"visibleIf": "{symptoms} contains ['symptoms_value_7']"
+							},
+							{
+								"value": "symptoms_value_8",
+								"text": "Reduced sex drive",
+								"visibleIf": "{symptoms} contains ['symptoms_value_8']"
+							},
+							{
+								"value": "symptoms_value_9",
+								"text": "Leaking urine when you laugh or cough",
+								"visibleIf": "{symptoms} contains ['symptoms_value_9']"
+							},
+							{
+								"value": "symptoms_value_10",
+								"text": "Frequently peeing during day or night",
+								"visibleIf": "{symptoms} contains ['symptoms_value_10']"
+							},
+							{
+								"value": "symptoms_value_11",
+								"text": "Vaginal dryness",
+								"visibleIf": "{symptoms} contains ['symptoms_value_11']"
+							},
+							{
+								"value": "symptoms_value_12",
+								"text": "Sudden need to pass urine",
+								"visibleIf": "{symptoms} contains ['symptoms_value_12']"
+							},
+							{
+								"value": "symptoms_value_13",
+								"text": "Painful joints or muscles",
+								"visibleIf": "{symptoms} contains ['symptoms_value_13']"
+							},
+							{
+								"value": "symptoms_value_14",
+								"text": "Heart racing or skipping beats",
+								"visibleIf": "{symptoms} contains ['symptoms_value_14']"
+							},
+							{
+								"value": "symptoms_value_15",
+								"text": "Headaches or Migraines",
+								"visibleIf": "{symptoms} contains ['symptoms_value_15']"
+							},
+							{
+								"value": "symptoms_value_16",
+								"text": "Weight gain",
+								"visibleIf": "{symptoms} contains ['symptoms_value_16']"
+							},
+							{
+								"value": "symptoms_value_17",
+								"text": "Change to skin, hair and nails",
+								"visibleIf": "{symptoms} contains ['symptoms_value_17']"
+							}
+						]
+
+					}
+				],
+				"title": "How much do these symptoms bother you?"
+			}
+		],
+		"visibleIf": "{symptoms} != ['symptoms_value_18']"
+	},
+	{
+		"name": "page_seven",
+		"elements": [
+			{
+				"type": "panel",
+				 "name": "page_seven_panel",
+				 "elements": [
+					{
+						"type": "radiogroup",
+						"name": "hrt_interest",
+						"startWithNewLine": false,
+						"titleLocation": "hidden",
+						"isRequired": true,
+						"choices": [
+							{
+								"value": "hrt_interest_value_1",
+								"text": "Yes"
+							}, 
+							{
+								"value": "hrt_interest_value_2",
+								"text": "No"
+							},
+							{
+								"value": "hrt_interest_value_3",
+								"text": "I'm not sure"
+							}
+						],
+						"colCount": 3
+					}
+
+				],
+				"title": "Are you interested in learning more about hormone replacement therapy (HRT)?"
+			}
+		]
+	},
+	{
+		"name": "page_eight",
+		"elements": [
+			{
+				"type": "panel",
+				"name": "page_eight_panel",
+				"elements": 
+				[
+					{
+						"type": "checkbox",
+						"name": "health_goals",
+						"startWithNewLine": false,
+						"title": "Pick as many as you like",
+						"hideNumber": true,
+						"isRequired": true,
+						"choices": [
+							{
+								"value": "health_goals_value_1",
+								"text": "Exercise more"
+							},
+							{
+								"value": "health_goals_value_2",
+								"text": "Improve diet or nutrition"
+							},
+							{
+								"value": "health_goals_value_3",
+								"text": "Quit smoking"
+							},
+							{
+								"value": "health_goals_value_4",
+								"text": "Improve sleep"
+							},
+							{
+								"value": "health_goals_value_5",
+								"text": "Improve mood or mental health"
+							}, 
+							{
+								"value": "health_goals_value_6",
+								"text": "Lose weight"
+							},
+							{
+								"value": "health_goals_value_7",
+								"text": "Reduce alcohol intake"
+							}, 
+							{
+								"value": "health_goals_value_8",
+								"visibleIf": "{health_goals} empty",
+								"text": "None of these"
+							}
+						],
+						"colCount": 2
+					}
+				],
+				"title": "What are your top health goals?"
+			}
+		]
+	},
+	{
+		"name": "page_nine",
+		"elements": [{
+			"type": "panel",
+			"name": "page_nine_panel",
+			"elements": [{
+					"type": "html",
+					"name": "welcome",
+					"hideNumber": true,
+					"html": "<h6 class='intro'>We’d love to keep you updated with our newsletter. We’ll never share your information with third parties and you can unsubscribe any time.</h6>"
+				},
+				{
+					"type": "panel",
+					"name": "page_nine_panel_panel_one",
+					"elements": [
+						{
+						"type": "text",
+						"name": "first_name",
+						"title": "First Name",
+						"hideNumber": true
+						},
+						{
+							"type": "text",
+							"name": "last_name",
+							"title": "Last Name",
+							"startWithNewLine": false,
+							"hideNumber": true
+						}
+					]
+				},
+				{
+					"type": "panel",
+					"name": "page_nine_panel_panel_two",
+					"elements": [{
+						"type": "text",
+						"name": "email",
+						"title": "Email",
+						"isRequired": true,
+						"hideNumber": true
+					}]
+				}
+			],
+			"title": "Let's continue the conversation"
+		}]
+	}
+	
+],
+"showQuestionNumbers": "off",
+"startSurveyText": "Get Started →",
+"firstPageIsStarted": true,
+"pagePrevText": "← Back",
+"pageNextText": "Next →",
+"completedHtml": "<span><span>"
 }
