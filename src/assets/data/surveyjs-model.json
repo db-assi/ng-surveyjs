@@ -193,7 +193,7 @@
 							}, 
 							{
 								"value": "symptoms_value_18",
-								"visibleIf": "{symptoms} empty",
+								"enableIf": "{symptoms} empty",
 								"text": "None of these"
 							}
 						],
@@ -415,7 +415,7 @@
 							}, 
 							{
 								"value": "health_goals_value_8",
-								"visibleIf": "{health_goals} empty",
+								"enableIf": "{health_goals} empty",
 								"text": "None of these"
 							}
 						],

@@ -72,16 +72,23 @@ export class CompleteComponent implements OnInit {
         return n != 'symptoms_value_10' && n != 'symptoms_value_12'
       })
     }
-
-
-    console.log('this is new return' + result);
+    if(result.includes('symptoms_value_18')){
+      result = _.remove(result, (n) => {
+        return n != 'symptoms_value_18'
+      })
+    }
+    
     result.forEach((symptom: any) => {
-      console.log(symptom);
       this.symptoms.push(_.find(resources, ['value', symptom]))
     });
   }
 
   findGoal(result: any) {
+    if(result.includes('health_goals_value_8')){
+      result = _.remove(result, (n) => {
+        return n != 'health_goals_value_8'
+      })
+    }
     result.forEach((goal: any) => {
       this.goals.push(_.find(resources, ['value', goal]))
     });

@@ -31,7 +31,6 @@ export class SurveyService {
       this.earlyAge.next(true)
     } else {
       this.completeStatus.next(true);
-      console.log(survey.getAllValues());
       this.surveyResult.next(survey.getAllValues());
       this.signup.subscribe(survey);
     }
