@@ -12,7 +12,7 @@
 				"type": "html",
 				 "name": "welcome",
 				 "hideNumber": true,
-				"html": "<div class='intro'><h1>Hello there, we're Bia.</h1>\n<h3>We’ve made this short assessment to help you receive relevant information about your menopause.</h3>\n<h6>Please note, this is not medical advice. If you are concerned about a medical issue or symptom, please speak to your doctor.</h6><h6>All information you give us will be anonymised and stored securely according to our <a href='https://bia.care/assessment-privacy-policy' target='_blank'>privacy policy</a> and GDPR.</h6><h6> To return to our website <a href='https://bia.care' target='_blank'> click here</a>.</h6>\n</div>"
+				"html": "<div class='intro'><h1>Hello there, we're Bia.</h1>\n<h3>This assessment will take 3 minutes and help you receive tailored information</h3>\n<h6>Please note we this is not medical advice. If you are concerned about a medical issue or symptom, please speak to your doctor. All information will be anonymised and stored securely according to our privacy policy and GDPR.</h6><h6> To return to our website <a href='https://bia.care' target='_blank'> click here</a>.</h6>\n</div>"
 			}
 		]
 	},
@@ -21,7 +21,7 @@
 		"elements": [
 			{
 				"type": "text",
-				 "name": "age",
+				 "name": "fed42f52-44a8-11eb-bafe-00155d3cabc5",
 				"title": "Please tell us how old you are?",
 				"inputType": "number",
 				"isRequired": true,
@@ -38,30 +38,24 @@
 				 "elements": [
 					 {
 						"type": "radiogroup",
-						"name": "describe_period",
+						"name": "fed451a6-44a8-11eb-bafe-00155d3cabc5",
 						"startWithNewLine": false,
 						"titleLocation": "hidden",
 						"isRequired": true,
 						"choices": [
 							{
-								"value": "describe_period_value_1",
-								"text": "I have regular periods."
-							}, {
-								"value": "describe_period_value_2",
-								"text": "I have irregular periods."
-							}, {
-								"value": "describe_period_value_3",
-								"text": "My last period was over 3 months ago, but in the last year."
-							},
+								"value": "f3c30707-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Yes"
+							}, 
 							{
-								"value": "describe_period_value_4",
-								"text": "My last period was over 12 months ago."
+								"value": "f3c339ac-44ac-11eb-bafe-00155d3cabc5",
+								"text": "No"
 							}
 						],
 						"colCount": 1
 					 }
 				 ],
-				 "title": "Please select the option that best describes your periods:"
+				 "title": "Have you had a period in the last 12 months?"
 			}
 		]
 	},
@@ -72,128 +66,196 @@
 				"type": "panel",
 				 "name": "page_four_panel",
 				 "elements": [
-					{
-						"type": "panel",
-						"name": "page_four_panel_panel", 
-						"elements": [
+					 {
+						"type": "radiogroup",
+						"name": "fed453b7-44a8-11eb-bafe-00155d3cabc5",
+						"startWithNewLine": false,
+						"titleLocation": "hidden",
+						"isRequired": true,
+						"choices": [
 							{
-								"type": "radiogroup",
-								"name": "affecting_period",
-								"title": "(For example: birth control, hormonal therapy, Mirena coil, hysterectomy, ablation, chemotherapy, pregnancy)",
-								"startWithNewLine": false,
-								"isRequired": true,
-								"choices": [
-									{
-										"value": "affecting_period_value_1",
-										"text": "Yes"
-									}, {
-										"value": "affecting_period_value_2",
-										"text": "No"
-									}
-								],
-								"colCount": 2
-							},
+								"value": "f3c33cbb-44ac-11eb-bafe-00155d3cabc5",
+								"text": "I have regular periods."
+							}, 
 							{
-								"type": "text",
-								"name": "what_affecting_period",
-								   "title": "What is affecting your periods?",
-								"hideNumber": true,
-								"visibleIf": "{affecting_period}='affecting_period_value_1'"
+								"value": "f3c33e11-44ac-11eb-bafe-00155d3cabc5",
+								"text": "I have irregular periods."
 							}
-						]
-					}
-				],
-				"title": "Could any other factors be affecting your periods?"
+						],
+						"colCount": 1
+					 }
+				 ],
+				 "title": "Please select the option that best describes your periods:"
 			}
-		]
+		],
+		"visibleIf": "{fed451a6-44a8-11eb-bafe-00155d3cabc5} contains ['f3c30707-44ac-11eb-bafe-00155d3cabc5']"
 	},
 	{
 		"name": "page_five",
 		"elements": [
 			{
 				"type": "panel",
-				"name": "page_five_panel",
+				 "name": "page_five_panel",
+				 "elements": [
+					{
+						"type": "panel",
+						"name": "page_five_panel_panel", 
+						"elements": [
+							{
+								"type": "radiogroup",
+								"name": "fed45682-44a8-11eb-bafe-00155d3cabc5",
+								"title": "(For example: birth control, hormonal therapy, Mirena coil, hysterectomy, ablation, chemotherapy, pregnancy)",
+								"startWithNewLine": false,
+								"isRequired": true,
+								"choices": 
+								[
+									{
+										"value": "f3c30707-44ac-11eb-bafe-00155d3cabc5",
+										"text": "Yes"
+									}, {
+										"value": "f3c339ac-44ac-11eb-bafe-00155d3cabc5",
+										"text": "No"
+									}
+								],
+								"colCount": 2
+							},
+							{
+								"type": "radiogroup",
+								"name": "fed454c3-44a8-11eb-bafe-00155d3cabc5",
+								"title": "What is affecting your periods?",
+								"hideNumber": true,
+								"isRequired": true,
+								"choices": 
+								[
+									{
+										"value": "f3c33fc2-44ac-11eb-bafe-00155d3cabc5",
+										"text": "Hormone Replacement Therapy"
+									}, 
+									{
+										"value": "f3c34181-44ac-11eb-bafe-00155d3cabc5",
+										"text": "Birth Control Pill"
+									}, 
+									{
+										"value": "f3c3429c-44ac-11eb-bafe-00155d3cabc5",
+										"text": "Mirena Coil"
+									}, 
+									{
+										"value": "f3c343fc-44ac-11eb-bafe-00155d3cabc5",
+										"text": "Chemotherapy"
+									}, 
+									{
+										"value": "f3c3456f-44ac-11eb-bafe-00155d3cabc5",
+										"text": "Hysterectomy"
+									}, 
+									{
+										"value": "f3c34682-44ac-11eb-bafe-00155d3cabc5",
+										"text": "Previous Ablation"
+									}, 
+									{
+										"value": "f3c34788-44ac-11eb-bafe-00155d3cabc5",
+										"text": "Other"
+									}
+
+								],
+								"colCount": 2,
+								"visibleIf": "{fed45682-44a8-11eb-bafe-00155d3cabc5}contains ['f3c30707-44ac-11eb-bafe-00155d3cabc5']"
+							}
+						]
+					}
+				],
+				"title": "Could any other factors be affecting your periods?"
+			}
+		],
+		"visibleIf": "{fed451a6-44a8-11eb-bafe-00155d3cabc5} contains ['f3c30707-44ac-11eb-bafe-00155d3cabc5']"
+	},
+	{
+		"name": "page_six",
+		"elements": [
+			{
+				"type": "panel",
+				"name": "page_six_panel",
 				"elements": 
 				[
 					{
 						"type": "checkbox",
-						"name": "symptoms",
+						"name": "fed4576b-44a8-11eb-bafe-00155d3cabc5",
 						"startWithNewLine": false,
 						"titleLocation": "hidden",
 						"isRequired": true,
 						"hideNumber": true,
 						"choices": [
 							{
-								"value": "symptoms_value_1",
+								"value": "f3c3489b-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Hot or cold flushes or night sweats"
 							},
 							{
-								"value": "symptoms_value_2",
+								"value": "f3c34a86-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Difficulty falling or staying asleep"
 							},
 							{
-								"value": "symptoms_value_3",
+								"value": "f3c34bbd-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Low energy or fatigue"
 							},
 							{
-								"value": "symptoms_value_4",
-								"text": "Feeling anxious or low mood"
+								"value": "f3c34cd9-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Feeling anxious and low mood"
 							},
 							{
-								"value": "symptoms_value_5",
+								"value": "f3c34e2b-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Mood swings"
 							}, 
 							{
-								"value": "symptoms_value_6",
+								"value": "f3c34f61-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Reduced concentration"
 							},
 							{
-								"value": "symptoms_value_7",
+								"value": "f3c35065-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Forgetfulness"
 							}, 
 							{
-								"value": "symptoms_value_8",
+								"value": "f3c351f1-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Reduced sex drive"
 							},
 							{
-								"value": "symptoms_value_9",
-								"text": "Leaking urine when you laugh or cough"
-							}, 
+								"value": "f3c352fc-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Vaginal dryness"
+							},
 							{
-								"value": "symptoms_value_10",
+								"value": "f3c35409-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Frequently peeing during day or night"
 							},
 							{
-								"value": "symptoms_value_11",
-								"text": "Vaginal dryness"
+								"value": "f3c35563-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Leaking urine when you laugh or cough"
 							}, 
+ 
 							{
-								"value": "symptoms_value_12",
+								"value": "f3c3566a-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Sudden need to pass urine"
 							},
 							{
-								"value": "symptoms_value_13",
+								"value": "f3c35767-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Painful joints or muscles"
 							}, 
 							{
-								"value": "symptoms_value_14",
-								"text": "Heart racing or skipping beats"
+								"value": "f3c358bc-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Racing heart or skipping beats"
 							},
 							{
-								"value": "symptoms_value_15",
-								"text": "Headaches or Migraines"
+								"value": "f3c359be-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Migraines"
 							}, 
 							{
-								"value": "symptoms_value_16",
+								"value": "f3c35ac1-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Weight gain"
 							},
 							{
-								"value": "symptoms_value_17",
-								"text": "Change to skin, hair and nails"
+								"value": "f3c35bc0-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Dry skin, thinning hair, or nail changes"
 							}, 
 							{
-								"value": "symptoms_value_18",
-								"enableIf": "{symptoms} empty",
+								"value": "f3c35d12-44ac-11eb-bafe-00155d3cabc5",
+								"enabledIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} empty",
 								"text": "None of these"
 							}
 						],
@@ -205,17 +267,17 @@
 		]
 	},
 	{
-		"name": "page_six",
+		"name": "page_seven",
 		"elements": 
 		[
 			{
 				"type": "panel",
-				"name": "page_six_panel",
+				"name": "page_seven_panel",
 				"elements": 
 				[
 					{
 						"type": "matrix",
-						"name": "rate_symptoms",
+						"name": "fed459a7-44a8-11eb-bafe-00155d3cabc5",
 						"startWithNewLine": false,
 						"titleLocation": "hidden",
 						"hideNumber": true,
@@ -241,89 +303,89 @@
 						"rows": 
 						[
 							{
-								"value": "symptoms_value_1",
+								"value": "fed45add-44a8-11eb-bafe-00155d3cabc5",
 								"text": "Hot or cold flushes or night sweats",
-								"visibleIf": "{symptoms} contains ['symptoms_value_1']"
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c3489b-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "symptoms_value_2",
+								"value": "fed45bb7-44a8-11eb-bafe-00155d3cabc5",
 								"text": "Difficulty falling or staying asleep",
-								"visibleIf": "{symptoms} contains ['symptoms_value_2']"
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c34a86-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "symptoms_value_3",
+								"value": "fed45cb5-44a8-11eb-bafe-00155d3cabc5",
 								"text": "Low energy or fatigue",
-								"visibleIf": "{symptoms} contains ['symptoms_value_3']"
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c34bbd-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "symptoms_value_4",
+								"value": "fed45d8e-44a8-11eb-bafe-00155d3cabc5",
 								"text": "Feeling anxious or low mood",
-								"visibleIf": "{symptoms} contains ['symptoms_value_4']"
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c34cd9-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "symptoms_value_5",
+								"value": "fed45e52-44a8-11eb-bafe-00155d3cabc5",
 								"text": "Mood swings",
-								"visibleIf": "{symptoms} contains ['symptoms_value_5']"
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c34e2b-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "symptoms_value_6",
+								"value": "fed45f42-44a8-11eb-bafe-00155d3cabc5",
 								"text": "Reduced concentration",
-								"visibleIf": "{symptoms} contains ['symptoms_value_6']"
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c34f61-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "symptoms_value_7",
+								"value": "fed4605a-44a8-11eb-bafe-00155d3cabc5",
 								"text": "Forgetfulness",
-								"visibleIf": "{symptoms} contains ['symptoms_value_7']"
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c35065-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "symptoms_value_8",
+								"value": "fed4612d-44a8-11eb-bafe-00155d3cabc5",
 								"text": "Reduced sex drive",
-								"visibleIf": "{symptoms} contains ['symptoms_value_8']"
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c351f1-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "symptoms_value_9",
-								"text": "Leaking urine when you laugh or cough",
-								"visibleIf": "{symptoms} contains ['symptoms_value_9']"
-							},
-							{
-								"value": "symptoms_value_10",
-								"text": "Frequently peeing during day or night",
-								"visibleIf": "{symptoms} contains ['symptoms_value_10']"
-							},
-							{
-								"value": "symptoms_value_11",
+								"value": "fed46206-44a8-11eb-bafe-00155d3cabc5",
 								"text": "Vaginal dryness",
-								"visibleIf": "{symptoms} contains ['symptoms_value_11']"
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c352fc-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "symptoms_value_12",
+								"value": "fed462fd-44a8-11eb-bafe-00155d3cabc5",
+								"text": "Frequently peeing during day or night",
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c35409-44ac-11eb-bafe-00155d3cabc5']"
+							},
+							{
+								"value": "fed463d1-44a8-11eb-bafe-00155d3cabc5",
+								"text": "Leaking urine when you laugh or cough",
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c35563-44ac-11eb-bafe-00155d3cabc5']"
+							},
+							{
+								"value": "fed464a6-44a8-11eb-bafe-00155d3cabc5",
 								"text": "Sudden need to pass urine",
-								"visibleIf": "{symptoms} contains ['symptoms_value_12']"
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c3566a-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "symptoms_value_13",
+								"value": "fed46596-44a8-11eb-bafe-00155d3cabc5",
 								"text": "Painful joints or muscles",
-								"visibleIf": "{symptoms} contains ['symptoms_value_13']"
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c35767-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "symptoms_value_14",
-								"text": "Heart racing or skipping beats",
-								"visibleIf": "{symptoms} contains ['symptoms_value_14']"
+								"value": "fed46660-44a8-11eb-bafe-00155d3cabc5",
+								"text": "Racing heart or skipping beats",
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c358bc-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "symptoms_value_15",
-								"text": "Headaches or Migraines",
-								"visibleIf": "{symptoms} contains ['symptoms_value_15']"
+								"value": "fed46729-44a8-11eb-bafe-00155d3cabc5",
+								"text": "Migraines",
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c359be-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "symptoms_value_16",
+								"value": "fed4681e-44a8-11eb-bafe-00155d3cabc5",
 								"text": "Weight gain",
-								"visibleIf": "{symptoms} contains ['symptoms_value_16']"
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c35ac1-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "symptoms_value_17",
-								"text": "Change to skin, hair and nails",
-								"visibleIf": "{symptoms} contains ['symptoms_value_17']"
+								"value": "fed468ea-44a8-11eb-bafe-00155d3cabc5",
+								"text": "Dry skin, thinning hair, or nail changes",
+								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c35bc0-44ac-11eb-bafe-00155d3cabc5']"
 							}
 						]
 
@@ -332,90 +394,110 @@
 				"title": "How much do these symptoms bother you?"
 			}
 		],
-		"visibleIf": "{symptoms} != ['symptoms_value_18']"
-	},
-	{
-		"name": "page_seven",
-		"elements": [
-			{
-				"type": "panel",
-				 "name": "page_seven_panel",
-				 "elements": [
-					{
-						"type": "radiogroup",
-						"name": "hrt_interest",
-						"startWithNewLine": false,
-						"titleLocation": "hidden",
-						"isRequired": true,
-						"choices": [
-							{
-								"value": "hrt_interest_value_1",
-								"text": "Yes"
-							}, 
-							{
-								"value": "hrt_interest_value_2",
-								"text": "No"
-							},
-							{
-								"value": "hrt_interest_value_3",
-								"text": "I'm not sure"
-							}
-						],
-						"colCount": 3
-					}
-
-				],
-				"title": "Are you interested in learning more about hormone replacement therapy (HRT)?"
-			}
-		]
+		"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} != ['f3c35d12-44ac-11eb-bafe-00155d3cabc5']"
 	},
 	{
 		"name": "page_eight",
 		"elements": [
 			{
 				"type": "panel",
-				"name": "page_eight_panel",
+				 "name": "page_eight_panel",
+				 "elements": [
+					{
+						"type": "checkbox",
+						"name": "fed469b6-44a8-11eb-bafe-00155d3cabc5",
+						"startWithNewLine": false,
+						"titleLocation": "hidden",
+						"isRequired": true,
+						"choices": [
+							{
+								"value": "f3c35e0f-44ac-11eb-bafe-00155d3cabc5",
+								"text": "HRT"
+							}, 
+							{
+								"value": "f3c35f2f-44ac-11eb-bafe-00155d3cabc5",
+								"text": "CBT"
+							},
+							{
+								"value": "f3c36081-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Weight loss"
+							},
+							{
+								"value": "f3c3618c-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Pelvic floor training"
+							},
+							{
+								"value": "f3c3628f-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Exercise regimes"
+							},
+							{
+								"value": "f3c36390-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Healthy nutrition"
+							},
+							{
+								"value": "f3c36509-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Supplements"
+							},
+							{
+								"value": "f3c36616-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Emotional fitness"
+							}
+						],
+						"colCount": 3
+					}
+
+				],
+				"title": "Which one of these are you interested in learning more about?"
+			}
+		]
+	},
+	{
+		"name": "page_nine",
+		"elements": [
+			{
+				"type": "panel",
+				"name": "page_nine_panel",
 				"elements": 
 				[
 					{
 						"type": "checkbox",
-						"name": "health_goals",
+						"name": "fed46a86-44a8-11eb-bafe-00155d3cabc5",
+						"titleLocation": "hidden",
 						"startWithNewLine": false,
-						"title": "Pick as many as you like",
 						"hideNumber": true,
 						"isRequired": true,
 						"choices": [
 							{
-								"value": "health_goals_value_1",
-								"text": "Exercise more"
-							},
-							{
-								"value": "health_goals_value_2",
-								"text": "Improve diet or nutrition"
-							},
-							{
-								"value": "health_goals_value_3",
-								"text": "Quit smoking"
-							},
-							{
-								"value": "health_goals_value_4",
-								"text": "Improve sleep"
-							},
-							{
-								"value": "health_goals_value_5",
-								"text": "Improve mood or mental health"
-							}, 
-							{
-								"value": "health_goals_value_6",
+								"value": "f3c36713-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Lose weight"
 							},
 							{
-								"value": "health_goals_value_7",
+								"value": "f3c3685f-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Improve sleep"
+							},
+							{
+								"value": "f3c36960-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Reduce alcohol intake"
+							},
+							{
+								"value": "f3c36a65-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Improve mood or mental health"
+							},
+							{
+								"value": "f3c36b7e-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Quit smoking"
 							}, 
 							{
-								"value": "health_goals_value_8",
-								"enableIf": "{health_goals} empty",
+								"value": "f3c36ce8-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Increase exercise"
+							},
+							{
+								"value": "f3c36dec-44ac-11eb-bafe-00155d3cabc5",
+								"text": "Improve diet and nutrition"
+							}, 
+							{
+								"value": "f3c35d12-44ac-11eb-bafe-00155d3cabc5",
+								"enableIf": "{fed46a86-44a8-11eb-bafe-00155d3cabc5} empty",
 								"text": "None of these"
 							}
 						],
@@ -427,10 +509,10 @@
 		]
 	},
 	{
-		"name": "page_nine",
+		"name": "page_ten",
 		"elements": [{
 			"type": "panel",
-			"name": "page_nine_panel",
+			"name": "page_ten_panel",
 			"elements": [{
 					"type": "html",
 					"name": "welcome",
@@ -439,7 +521,7 @@
 				},
 				{
 					"type": "panel",
-					"name": "page_nine_panel_panel_one",
+					"name": "page_ten_panel_panel_one",
 					"elements": [
 						{
 						"type": "text",
@@ -458,7 +540,7 @@
 				},
 				{
 					"type": "panel",
-					"name": "page_nine_panel_panel_two",
+					"name": "page_ten_panel_panel_two",
 					"elements": [{
 						"type": "text",
 						"name": "email",

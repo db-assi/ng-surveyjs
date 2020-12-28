@@ -23,13 +23,15 @@ export class CompleteComponent implements OnInit {
 
   ngOnInit(): void {
     this.survey.currentSurveyResult.subscribe(response => this.result = response);
+    console.log('this is result: ', this.result);
     this.findSymptom(this.result.symptoms);
     this.findGoal(this.result.health_goals);
     this.findResource(this.resources_values);
-    console.log(this.extra_content);
+    //console.log(this.extra_content);
   }
 
   findSymptom(result: any[]) {
+    console.log(this.result.symptoms)
     if(result.includes('symptoms_value_4') && result.includes('symptoms_value_5')){
       result.push('symptoms_value_45')
       result = _.remove(result, (n) => {
@@ -84,6 +86,7 @@ export class CompleteComponent implements OnInit {
   }
 
   findGoal(result: any) {
+    console.log(this.result.health_goals);
     if(result.includes('health_goals_value_8')){
       result = _.remove(result, (n) => {
         return n != 'health_goals_value_8'
