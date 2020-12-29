@@ -120,7 +120,7 @@
 								"colCount": 2
 							},
 							{
-								"type": "radiogroup",
+								"type": "checkbox",
 								"name": "fed454c3-44a8-11eb-bafe-00155d3cabc5",
 								"title": "What is affecting your periods?",
 								"hideNumber": true,
@@ -275,122 +275,104 @@
 				"elements": 
 				[
 					{
-						"type": "matrix",
+						"type": "radiogroup",
 						"name": "fed459a7-44a8-11eb-bafe-00155d3cabc5",
 						"startWithNewLine": false,
 						"titleLocation": "hidden",
+						"isRequired": true,
 						"hideNumber": true,
-						"columns": 
-						[
+						"choices": [
 							{
-								"value": "e5900a2d-491b-11eb-bafe-00155d3cabc5",
-								"text": "Not at all"
-							},
-							{
-								"value": "e59028b1-491b-11eb-bafe-00155d3cabc5",
-								"text": "A little"
-							},
-							{
-								"value": "e5902b91-491b-11eb-bafe-00155d3cabc5",
-								"text": "Quite a bit"
-							},
-							{
-								"value": "e5902def-491b-11eb-bafe-00155d3cabc5",
-								"text": "A lot"
-							}
-						],
-						"rows": 
-						[
-							{
-								"value": "fed45add-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c3489b-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Hot or cold flushes or night sweats",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c3489b-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed45bb7-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c34a86-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Difficulty falling or staying asleep",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c34a86-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed45cb5-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c34bbd-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Low energy or fatigue",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c34bbd-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed45d8e-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c34cd9-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Feeling anxious or low mood",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c34cd9-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed45e52-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c34e2b-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Mood swings",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c34e2b-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed45f42-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c34f61-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Reduced concentration",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c34f61-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed4605a-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c35065-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Forgetfulness",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c35065-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed4612d-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c351f1-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Reduced sex drive",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c351f1-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed46206-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c352fc-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Vaginal dryness",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c352fc-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed462fd-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c35409-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Frequently peeing during day or night",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c35409-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed463d1-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c35563-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Leaking urine when you laugh or cough",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c35563-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed464a6-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c3566a-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Sudden need to pass urine",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c3566a-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed46596-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c35767-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Painful joints or muscles",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c35767-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed46660-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c358bc-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Racing heart or skipping beats",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c358bc-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed46729-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c359be-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Migraines",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c359be-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed4681e-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c35ac1-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Weight gain",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c35ac1-44ac-11eb-bafe-00155d3cabc5']"
 							},
 							{
-								"value": "fed468ea-44a8-11eb-bafe-00155d3cabc5",
+								"value": "f3c35bc0-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Dry skin, thinning hair, or nail changes",
 								"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c35bc0-44ac-11eb-bafe-00155d3cabc5']"
 							}
-						]
-
+						],
+						"colCount": 3
 					}
+
 				],
-				"title": "How much do these symptoms bother you?"
+				"title": "Which of the symptoms you selected has the biggest impact on your quality of life?"
 			}
 		],
 		"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} != ['f3c35d12-44ac-11eb-bafe-00155d3cabc5']"
@@ -440,6 +422,10 @@
 							{
 								"value": "f3c36616-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Emotional fitness"
+							},
+							{
+								"value": "f3c35d12-44ac-11eb-bafe-00155d3cabc5",
+								"text": "None of these"
 							}
 						],
 						"colCount": 3
