@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../../environments/environment';
 
 import { SignupAdapter } from '../../models/signup.model'
 import { SurveyModel } from 'survey-angular';
@@ -8,15 +9,15 @@ import { SurveyModel } from 'survey-angular';
   providedIn: 'root'
 })
 export class SignupService {
-  private baseUrl = 'https://menopause-assessment.herokuapp.com/api/signup';
+  private baseUrl = (environment.apiUrl + '/signup');
 
   constructor(private http: HttpClient, private adapter: SignupAdapter) { }
 
-  subscribe(survey: SurveyModel) {
+  signup(survey: SurveyModel) {
     const url = `${this.baseUrl}`
     var values = this.adapter.adapt(survey);
     this.http.post(url, {
-      email: values.eMail, fname: values.firstName, lname: values.lastName
+      email: values.email, fname: values.firstName, lname: values.lastName
     }).subscribe({
       next: res => {
         console.log(res)

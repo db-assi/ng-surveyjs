@@ -165,8 +165,7 @@
 				],
 				"title": "Could any other factors be affecting your periods?"
 			}
-		],
-		"visibleIf": "{fed451a6-44a8-11eb-bafe-00155d3cabc5} contains ['f3c30707-44ac-11eb-bafe-00155d3cabc5']"
+		]
 	},
 	{
 		"name": "page_six",
@@ -284,20 +283,20 @@
 						"columns": 
 						[
 							{
-								"value": "rate_symptoms_value_1",
-								"text": "Not at all "
+								"value": "e5900a2d-491b-11eb-bafe-00155d3cabc5",
+								"text": "Not at all"
 							},
 							{
-								"value": "rate_symptoms_value_2",
-								"text": "A little "
+								"value": "e59028b1-491b-11eb-bafe-00155d3cabc5",
+								"text": "A little"
 							},
 							{
-								"value": "rate_symptoms_value_3",
-								"text": "Quite a bit "
+								"value": "e5902b91-491b-11eb-bafe-00155d3cabc5",
+								"text": "Quite a bit"
 							},
 							{
-								"value": "rate_symptoms_value_4",
-								"text": "A lot "
+								"value": "e5902def-491b-11eb-bafe-00155d3cabc5",
+								"text": "A lot"
 							}
 						],
 						"rows": 

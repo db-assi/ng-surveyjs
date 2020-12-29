@@ -8,7 +8,7 @@ export class Signup {
     constructor(
         public firstName: string,
         public lastName: string,
-        public eMail: string
+        public email: string
     ){}
 }
 

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import * as _ from 'lodash';
+import { Recommendation } from 'src/app/core/models/reccomendation.model';
+import { RecommendationService } from 'src/app/core/services/recommendation/recommendation.service';
 
 import { SurveyService } from '../../core/services/survey/survey.service';
-import resources from '../../../assets/data/resources.json';
 
 @Component({
   selector: 'app-complete',
@@ -13,95 +13,19 @@ import resources from '../../../assets/data/resources.json';
 export class CompleteComponent implements OnInit {
 
   result: any;
-  symptoms: any[] = [];
-  goals: any[] = [];
-  extra_content: any[] = [];
+  recommendation: Recommendation;
+  articles: any;
 
-  resources_values: string[] = ["resource_1", "resource_2", "resource_3", "resource_4"];
+  constructor(private survey: SurveyService, private reccomendations: RecommendationService) { }
 
-  constructor(private survey: SurveyService) { }
-
-  ngOnInit(): void {
+  ngOnInit() {
     this.survey.currentSurveyResult.subscribe(response => this.result = response);
-    console.log('this is result: ', this.result);
-    this.findSymptom(this.result.symptoms);
-    this.findGoal(this.result.health_goals);
-    this.findResource(this.resources_values);
-    //console.log(this.extra_content);
+    this.survey.currentRecommendation.subscribe(response => this.recommendation = response);
+    this.reccomendations.getRecommendations(this.recommendation).subscribe(response => this.articles = response);
+    console.log(this.recommendation);
+    console.log(this.articles);
   }
 
-  findSymptom(result: any[]) {
-    console.log(this.result.symptoms)
-    if(result.includes('symptoms_value_4') && result.includes('symptoms_value_5')){
-      result.push('symptoms_value_45')
-      result = _.remove(result, (n) => {
-        return n != 'symptoms_value_4' && n != 'symptoms_value_5'
-      })
-    }
-    if(result.includes('symptoms_value_6') && result.includes('symptoms_value_7')){
-      result.push('symptoms_value_67')
-      result = _.remove(result, (n) => {
-        return n != 'symptoms_value_6' && n != 'symptoms_value_7'
-      })
-    }
-    if(result.includes('symptoms_value_11') && result.includes('symptoms_value_8')){
-      result.push('symptoms_value_811')
-      result = _.remove(result, (n) => {
-        return n != 'symptoms_value_8' && n != 'symptoms_value_11'
-      })
-    }
-    if(result.includes('symptoms_value_9') && result.includes('symptoms_value_10') && result.includes('symptoms_value_12') && !result.includes('symptoms_value_91012')){
-      result.push('symptoms_value_91012')
-      result = _.remove(result, (n) => {
-        return n != 'symptoms_value_9' && n != 'symptoms_value_10' && n != 'symptoms_value_12'
-      })
-    }
-    if(result.includes('symptoms_value_9') && result.includes('symptoms_value_10') && !result.includes('symptoms_value_91012')){
-      result.push('symptoms_value_91012')
-      result = _.remove(result, (n) => {
-        return n != 'symptoms_value_9' && n != 'symptoms_value_10'
-      })
-    }
-    if(result.includes('symptoms_value_9') && result.includes('symptoms_value_12') && !result.includes('symptoms_value_91012')){
-      result.push('symptoms_value_91012')
-      result = _.remove(result, (n) => {
-        return n != 'symptoms_value_9' && n != 'symptoms_value_12'
-      })
-    }
-    if(result.includes('symptoms_value_10') && result.includes('symptoms_value_12') && !result.includes('symptoms_value_91012')){
-      result.push('symptoms_value_91012')
-      result = _.remove(result, (n) => {
-        return n != 'symptoms_value_10' && n != 'symptoms_value_12'
-      })
-    }
-    if(result.includes('symptoms_value_18')){
-      result = _.remove(result, (n) => {
-        return n != 'symptoms_value_18'
-      })
-    }
-    
-    result.forEach((symptom: any) => {
-      this.symptoms.push(_.find(resources, ['value', symptom]))
-    });
-  }
-
-  findGoal(result: any) {
-    console.log(this.result.health_goals);
-    if(result.includes('health_goals_value_8')){
-      result = _.remove(result, (n) => {
-        return n != 'health_goals_value_8'
-      })
-    }
-    result.forEach((goal: any) => {
-      this.goals.push(_.find(resources, ['value', goal]))
-    });
-  }
-
-  findResource(result: any) {
-    result.forEach(( resources_values: any) => {
-      this.extra_content.push(_.find(resources, ['value',  resources_values]))
-    });
-  }
-
+  
 
 }

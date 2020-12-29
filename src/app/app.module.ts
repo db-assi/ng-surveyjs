@@ -12,6 +12,10 @@ import { SurveyService } from './core/services/survey/survey.service';
 import { SignupService } from './core/services/signup/signup.service';
 import { SignupAdapter } from './core/models/signup.model';
 
+import { RecommendationService } from './core/services/recommendation/recommendation.service';
+import { RecommendationAdapter } from './core/models/reccomendation.model';
+import { SubmitService } from './core/services/submit/submit.service';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +31,10 @@ import { SignupAdapter } from './core/models/signup.model';
   providers: [
     SurveyService,
     SignupService,
-    SignupAdapter
+    SignupAdapter,
+    RecommendationAdapter,
+    RecommendationService,
+    SubmitService
   ],
   bootstrap: [AppComponent]
 })

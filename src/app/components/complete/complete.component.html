@@ -12,25 +12,25 @@
 
   <div class="intro">
     <br><br><br>
-    <h1 *ngIf="symptoms.length > 0"> Your Menopause Symptoms</h1>
+    <h1 *ngIf="articles.length > 0"> Your Recommendations</h1>
 
-    <div *ngFor="let symptom of symptoms; let i = index;">    
+    <div *ngFor="let article of articles; let i = index;">    
         <div class="panel-group">
             <div class="panel panel-default" id="resources">
               <div class="panel-heading clearfix resources-title">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" href="{{'#collapse'+i}}">{{ symptom.description }}<span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="float: right; color: dimgrey;"></span></a>
+                  <a data-toggle="collapse" href="{{'#collapse'+i}}">{{ article.article_title }}<span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="float: right; color: dimgrey;"></span></a>
                 </h4>
               </div>
               <div id="{{'collapse'+i}}" class="panel-collapse collapse">
                 <div class="panel-body">
 
-                    <h6>{{ symptom.text }}</h6>
+                    <h6>{{ article.article_desc }}</h6>
                       <h6>Read more about this symptom:</h6>
                     <div class="card" style="width:32rem; background-color: #B8DEF5; margin-bottom: 12px;">
-                      <a href="{{ symptom.url }}" target="_blank"><img class="card-img-top" src="../../assets/images/{{symptom.value}}.png" alt="Card image cap" style="width:100%"></a>
+                      <a href="{{ article.article_url }}" target="_blank"><img class="card-img-top" src="" alt="Card image cap" style="width:100%"></a>
                         <div class="card-body" style="margin: 12px;">
-                            <h6 class="card-title" style="height: 54px; font-weight: 600;"><a href="{{ symptom.url}}" target="_blank">{{ symptom.title }}</a></h6>
+                            <h6 class="card-title" style="height: 54px; font-weight: 600;"><a href="{{ article.article_url}}" target="_blank"></a></h6>
                         </div>
                       </div>
                 </div>
@@ -38,51 +38,6 @@
             </div>
         </div> 
     </div>
-    
-    <br>
-    <h1 *ngIf="goals.length > 0"> Your Health Goals</h1>
-    
-    <div *ngFor="let goal of goals; let i = index;">    
-        <div class="panel-group">
-            <div class="panel panel-default" id="resources">
-              <div class="panel-heading clearfix resources-title">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" href="{{'#collapse' + i + i }}">{{ goal.description}}<span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="float: right; color: dimgrey;"></span></a>
-                </h4>
-              </div>
-              <div id="{{'collapse'+i+i}}" class="panel-collapse collapse">
-                <div class="panel-body">
-                  <h6>{{ goal.text }}</h6>
-                  <h6>Read more about this health goal:</h6>
-                <div class="card" style="width:32rem; background-color: #B8DEF5; margin-bottom: 12px;">
-                  <a href="{{ goal.url }}" target="_blank"><img class="card-img-top" src="../../assets/images/{{goal.value}}.png" alt="Card image cap" style="width:100%"></a>
-                    <div class="card-body" style="margin: 12px;">
-                        <h6 class="card-title" style="height: 54px;"><a href="{{ goal.url }}" target="_blank">{{ goal.title }}</a></h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div> 
-    </div>
-
-    <h1 *ngIf="extra_content.length > 0">You might also like</h1>
-    <!-- <div class="row"> -->
-    <div *ngFor="let resource of extra_content; let i = index; let even = even; let odd = odd">
-      <div >
-        <div class="col-md-6" [class.even]="odd">    
-          <div class="card" style="width:32rem; background-color: #B8DEF5; margin-bottom: 12px;">
-            <a href="{{ resource.url }}" target="_blank"><img class="card-img-top" src="../../assets/images/{{resource.value}}.png" alt="Card image cap" style="width:100%"></a>
-              <div class="card-body" style="margin: 12px;">
-                  <h6 class="card-title" style="height: 54px;"><a href="{{ resource.url }}" target="_blank">{{ resource.title }}</a></h6>
-              </div>
-            </div>
-            </div>
-      </div>
-
-        <!-- </div> -->
-    </div>
-
 
 
 

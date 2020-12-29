@@ -1,8 +1,11 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, ReplaySubject } from 'rxjs';
 import * as Survey from 'survey-angular';
+
 import { SignupService } from '../signup/signup.service';
+import { RecommendationService } from '../recommendation/recommendation.service';
+import { Recommendation, RecommendationAdapter } from '../../models/reccomendation.model';
+import { SubmitService } from '../submit/submit.service';
 
 @Injectable({
   providedIn: 'root'
@@ -18,9 +21,11 @@ export class SurveyService {
 
   private surveyResult = new BehaviorSubject('Null');
   currentSurveyResult = this.surveyResult.asObservable();
-  
 
-  constructor(private http: HttpClient, private signup: SignupService) { }
+  private recommendation = new BehaviorSubject(null);
+  currentRecommendation = this.recommendation.asObservable();
+
+  constructor(private signup: SignupService, private adapter: RecommendationAdapter, private submit: SubmitService) { }
 
   createSurveyModel(model: any): Survey.Model {
     return new Survey.Model(model);
@@ -32,7 +37,10 @@ export class SurveyService {
     } else {
       this.completeStatus.next(true);
       this.surveyResult.next(survey.getAllValues());
-      this.signup.subscribe(survey);
+      this.signup.signup(survey);
+      this.recommendation.next(this.adapter.adapt(survey));
+      this.submit.submit(JSON.stringify(survey.getAllValues()));
+      console.log(JSON.stringify(survey.getAllValues()));
     }
   }
 
