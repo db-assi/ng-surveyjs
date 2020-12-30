@@ -39,7 +39,7 @@ export class SurveyService {
       this.surveyResult.next(survey.getAllValues());
       this.signup.signup(survey);
       this.recommendation.next(this.adapter.adapt(survey));
-      this.submit.submit(JSON.stringify(survey.getAllValues()));
+      this.submit.submit(survey.getAllValues());
       console.log(JSON.stringify(survey.getAllValues()));
     }
   }

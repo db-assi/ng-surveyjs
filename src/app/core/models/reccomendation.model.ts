@@ -9,7 +9,7 @@ export class Recommendation {
         public goals: string[],
     ){}
 }
-
+ 
 @Injectable({
     providedIn: 'root'
 })
