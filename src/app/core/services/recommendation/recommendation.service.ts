@@ -13,7 +13,13 @@ export class RecommendationService {
   constructor(private http: HttpClient) { }
 
   getRecommendations(recommendation: Recommendation) {
-    const url = (`${this.baseUrl}?id=` + recommendation.symptoms.join('&id=') + recommendation.goals.join('&id='));
+    let url: string;
+    try {
+      url = (`${this.baseUrl}?id=` + recommendation.symptoms.join('&id=') + '&id=' + recommendation.goals.join('&id='));
+    } catch (e) {
+      url = this.baseUrl;
+    }
+    console.log(url);
     return this.http.get(url)
   }
 

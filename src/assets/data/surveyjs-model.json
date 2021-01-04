@@ -1,7 +1,7 @@
 {	"triggers": [
 	{
 		"type": "complete",
-		"expression": "{age} < 40"
+		"expression": "{fed42f52-44a8-11eb-bafe-00155d3cabc5} < 40"
 	}
 ],
 "pages": [
@@ -122,9 +122,8 @@
 							{
 								"type": "checkbox",
 								"name": "fed454c3-44a8-11eb-bafe-00155d3cabc5",
-								"title": "What is affecting your periods?",
+								"title": "What is affecting your periods? Leave blank if none applies.",
 								"hideNumber": true,
-								"isRequired": true,
 								"choices": 
 								[
 									{
@@ -158,7 +157,7 @@
 
 								],
 								"colCount": 2,
-								"visibleIf": "{fed45682-44a8-11eb-bafe-00155d3cabc5}contains ['f3c30707-44ac-11eb-bafe-00155d3cabc5']"
+								"visibleIf": "{fed45682-44a8-11eb-bafe-00155d3cabc5} contains ['f3c30707-44ac-11eb-bafe-00155d3cabc5']"
 							}
 						]
 					}
@@ -179,9 +178,7 @@
 						"type": "checkbox",
 						"name": "fed4576b-44a8-11eb-bafe-00155d3cabc5",
 						"startWithNewLine": false,
-						"titleLocation": "hidden",
-						"isRequired": true,
-						"hideNumber": true,
+						"title": "Leave blank if none applies.",
 						"choices": [
 							{
 								"value": "f3c3489b-44ac-11eb-bafe-00155d3cabc5",
@@ -251,11 +248,6 @@
 							{
 								"value": "f3c35bc0-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Dry skin, thinning hair, or nail changes"
-							}, 
-							{
-								"value": "f3c35d12-44ac-11eb-bafe-00155d3cabc5",
-								"enabledIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} empty",
-								"text": "None of these"
 							}
 						],
 						"colCount": 3
@@ -279,7 +271,6 @@
 						"name": "fed459a7-44a8-11eb-bafe-00155d3cabc5",
 						"startWithNewLine": false,
 						"titleLocation": "hidden",
-						"isRequired": true,
 						"hideNumber": true,
 						"choices": [
 							{
@@ -388,8 +379,7 @@
 						"type": "checkbox",
 						"name": "fed469b6-44a8-11eb-bafe-00155d3cabc5",
 						"startWithNewLine": false,
-						"titleLocation": "hidden",
-						"isRequired": true,
+						"title": "Leave blank if none applies.",
 						"choices": [
 							{
 								"value": "f3c35e0f-44ac-11eb-bafe-00155d3cabc5",
@@ -422,10 +412,6 @@
 							{
 								"value": "f3c36616-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Emotional fitness"
-							},
-							{
-								"value": "f3c35d12-44ac-11eb-bafe-00155d3cabc5",
-								"text": "None of these"
 							}
 						],
 						"colCount": 3
@@ -447,10 +433,9 @@
 					{
 						"type": "checkbox",
 						"name": "fed46a86-44a8-11eb-bafe-00155d3cabc5",
-						"titleLocation": "hidden",
+						"title": "Leave blank if none applies.",
 						"startWithNewLine": false,
 						"hideNumber": true,
-						"isRequired": true,
 						"choices": [
 							{
 								"value": "f3c36713-44ac-11eb-bafe-00155d3cabc5",
@@ -479,11 +464,6 @@
 							{
 								"value": "f3c36dec-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Improve diet and nutrition"
-							}, 
-							{
-								"value": "f3c35d12-44ac-11eb-bafe-00155d3cabc5",
-								"enableIf": "{fed46a86-44a8-11eb-bafe-00155d3cabc5} empty",
-								"text": "None of these"
 							}
 						],
 						"colCount": 2

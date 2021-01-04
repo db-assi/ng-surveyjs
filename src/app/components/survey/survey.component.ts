@@ -27,9 +27,14 @@ export class SurveyComponent implements OnInit {
         { 
           model: this.survey.createSurveyModel(json),
           onComplete: this.survey.onCompleteSurvey
-        })
+        });
 
     Survey.StylesManager.applyTheme("bootstrap");
+
+    Survey
+        .FunctionFactory
+        .Instance
+        .register("disable", this.disable);
 
     this.survey.currentEarlyAge.subscribe(status => {
       this.isEarlyAge = status
@@ -40,6 +45,18 @@ export class SurveyComponent implements OnInit {
     });
 
   }
+
+  disable(params: any) {
+    
+    if(!params && params.length > 1) {
+      console.log('Tparams: ' + params);
+      return true;
+    } else {
+      console.log('Fparams: ' + params);
+      return false;
+    }
+  }
+
 
 
 
