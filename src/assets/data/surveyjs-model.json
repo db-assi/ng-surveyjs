@@ -366,7 +366,7 @@
 				"title": "Which of the symptoms you selected has the biggest impact on your quality of life?"
 			}
 		],
-		"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} != ['f3c35d12-44ac-11eb-bafe-00155d3cabc5']"
+		"visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5.length} > 1"
 	},
 	{
 		"name": "page_eight",

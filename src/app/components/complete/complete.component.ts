@@ -15,6 +15,7 @@ export class CompleteComponent implements OnInit {
   result: any;
   recommendation: Recommendation;
   articles: any;
+  status: any;
 
   constructor(private survey: SurveyService, private reccomendations: RecommendationService) { }
 
@@ -22,8 +23,10 @@ export class CompleteComponent implements OnInit {
     this.survey.currentSurveyResult.subscribe(response => this.result = response);
     this.survey.currentRecommendation.subscribe(response => this.recommendation = response);
     this.reccomendations.getRecommendations(this.recommendation).subscribe(response => this.articles = response);
+    this.survey.currentStatus.subscribe(response => this.status = response);
     console.log(this.recommendation);
     console.log(this.articles);
+    console.log('status' + this.status);
   }
 
   

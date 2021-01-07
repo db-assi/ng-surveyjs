@@ -16,6 +16,7 @@ import { RecommendationService } from './core/services/recommendation/recommenda
 import { RecommendationAdapter } from './core/models/reccomendation.model';
 import { SubmitService } from './core/services/submit/submit.service';
 import { ResponseAdapter } from './core/models/submit.model';
+import { OutcomeService } from './core/services/outcome/outcome.service';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ResponseAdapter } from './core/models/submit.model';
     RecommendationAdapter,
     RecommendationService,
     ResponseAdapter,
-    SubmitService
+    SubmitService,
+    OutcomeService
   ],
   bootstrap: [AppComponent]
 })
