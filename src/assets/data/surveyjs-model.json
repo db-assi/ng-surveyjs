@@ -17,11 +17,24 @@
 		]
 	},
 	{
+		"name": "page_one",
+		"elements": [
+			{
+				"type": "text",
+				"name": "name",
+				"title": "Please tell us your name?",
+				"inputType": "text",
+				"isRequired": true,
+				"hideNumber": true
+			}
+		]
+	},
+	{
 		"name": "page_two",
 		"elements": [
 			{
 				"type": "text",
-				 "name": "fed42f52-44a8-11eb-bafe-00155d3cabc5",
+				"name": "fed42f52-44a8-11eb-bafe-00155d3cabc5",
 				"title": "Please tell us how old you are?",
 				"inputType": "number",
 				"isRequired": true,
@@ -431,7 +444,7 @@
 				"elements": 
 				[
 					{
-						"type": "checkbox",
+						"type": "radiogroup",
 						"name": "fed46a86-44a8-11eb-bafe-00155d3cabc5",
 						"title": "Leave blank if none applies.",
 						"startWithNewLine": false,
@@ -486,33 +499,26 @@
 				},
 				{
 					"type": "panel",
-					"name": "page_ten_panel_panel_one",
-					"elements": [
-						{
-						"type": "text",
-						"name": "first_name",
-						"title": "First Name",
-						"hideNumber": true
-						},
-						{
-							"type": "text",
-							"name": "last_name",
-							"title": "Last Name",
-							"startWithNewLine": false,
-							"hideNumber": true
-						}
-					]
-				},
-				{
-					"type": "panel",
 					"name": "page_ten_panel_panel_two",
-					"elements": [{
+					"elements": 
+					[
+						{
 						"type": "text",
 						"name": "email",
 						"title": "Email",
 						"isRequired": true,
 						"hideNumber": true
-					}]
+						},
+						{
+						"type": "checkbox",
+						"name": "newsletter",
+						"title": "Would you like to sign up to our newsletter?",
+						"hideNumber": true,
+						"choices" :[
+							"I would like to sign up to the newsletter."
+						]
+						}
+					]
 				}
 			],
 			"title": "Let's continue the conversation"
@@ -520,6 +526,7 @@
 	}
 	
 ],
+"goNextPageAutomatic": true,
 "showQuestionNumbers": "off",
 "startSurveyText": "Get Started →",
 "firstPageIsStarted": true,

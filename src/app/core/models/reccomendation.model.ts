@@ -6,7 +6,7 @@ import { Adapter } from '../interfaces/adapter.interface';
 export class Recommendation {
     constructor(
         public symptoms: string[],
-        public goals: string[],
+        public goals: string,
     ){}
 }
  

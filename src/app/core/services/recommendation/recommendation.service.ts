@@ -15,7 +15,7 @@ export class RecommendationService {
   getRecommendations(recommendation: Recommendation) {
     let url: string;
     try {
-      url = (`${this.baseUrl}?id=` + recommendation.symptoms.join('&id=') + '&id=' + recommendation.goals.join('&id='));
+      url = (`${this.baseUrl}?id=` + recommendation.symptoms.join('&id=') + '&id=' + recommendation.goals);
     } catch (e) {
       url = this.baseUrl;
     }

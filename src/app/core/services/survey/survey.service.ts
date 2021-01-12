@@ -29,6 +29,18 @@ export class SurveyService {
   private status = new BehaviorSubject(null);
   currentStatus = this.status.asObservable();
 
+  private name = new BehaviorSubject(null);
+  currentName = this.name.asObservable(); 
+
+  private age = new BehaviorSubject(null);
+  currentAge = this.age.asObservable();
+
+  private goal = new BehaviorSubject(null);
+  currentGoal = this.goal.asObservable();
+
+  private symptom = new BehaviorSubject(null);
+  currentSymptom = this.symptom.asObservable();
+
   constructor(private signup: SignupService, private adapter: RecommendationAdapter, private submit: SubmitService, private outcome: OutcomeService) { }
 
   createSurveyModel(model: any): Survey.Model {
@@ -45,6 +57,8 @@ export class SurveyService {
       this.recommendation.next(this.adapter.adapt(survey));
       this.submit.submit(survey);
       this.status.next(this.outcome.getOutcome(survey));
+      this.name.next(survey.getValue('name'));
+      this.age.next(survey.getValue('fed42f52-44a8-11eb-bafe-00155d3cabc5'));
     }
   }
 

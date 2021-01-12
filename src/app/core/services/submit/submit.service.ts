@@ -25,7 +25,7 @@ export class SubmitService {
 
     this.http.post(url, JSON.stringify(values), options).subscribe({
       next: res => {
-        console.log(res)
+        res
       },
       error: err => {
         console.error('There was an error: ', err)
