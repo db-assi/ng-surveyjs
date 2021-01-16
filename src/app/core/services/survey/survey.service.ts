@@ -3,8 +3,7 @@ import { BehaviorSubject, ReplaySubject } from 'rxjs';
 import * as Survey from 'survey-angular';
 
 import { SignupService } from '../signup/signup.service';
-import { RecommendationService } from '../recommendation/recommendation.service';
-import { Recommendation, RecommendationAdapter } from '../../models/reccomendation.model';
+import { RecommendationAdapter } from '../../models/reccomendation.model';
 import { SubmitService } from '../submit/submit.service';
 import { OutcomeService } from '../outcome/outcome.service';
 
@@ -26,8 +25,8 @@ export class SurveyService {
   private recommendation = new BehaviorSubject(null);
   currentRecommendation = this.recommendation.asObservable();
 
-  private status = new BehaviorSubject(null);
-  currentStatus = this.status.asObservable();
+  status: any = '';
+  //currentStatus = this.status.asObservable();
 
   private name = new BehaviorSubject(null);
   currentName = this.name.asObservable(); 
@@ -56,9 +55,9 @@ export class SurveyService {
       this.signup.signup(survey);
       this.recommendation.next(this.adapter.adapt(survey));
       this.submit.submit(survey);
-      this.status.next(this.outcome.getOutcome(survey));
-      this.name.next(survey.getValue('name'));
+      this.status = this.outcome.getOutcome(survey);
       this.age.next(survey.getValue('fed42f52-44a8-11eb-bafe-00155d3cabc5'));
+      this.name.next(survey.getValue('name'));
     }
   }
 
