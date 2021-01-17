@@ -20,6 +20,8 @@ export class CompleteComponent implements OnInit {
   age: any = '';
   goal: any = '';
   symptom: any = '';
+  newsletter: any;
+  signup: boolean = false;
 
 
   constructor(private survey: SurveyService, private reccomendations: RecommendationService) { }
@@ -31,7 +33,20 @@ export class CompleteComponent implements OnInit {
     this.survey.status.subscribe((response: any) => this.outcome = response);
     this.survey.currentName.subscribe(response => this.name = response);
     this.survey.currentAge.subscribe(response => this.age = response);
-    console.log('status' + this.outcome);
+    this.survey.currentNewsleter.subscribe(response => this.newsletter = response);
+    this.signup = this.showNewsletterSignUp();
+    this.survey.currentSymptom.subscribe(response => this.symptom = response);
+    this.survey.currentGoal.subscribe(response => this.goal = response);
+
+    console.log('symptom ' + this.symptom);
+    
+  }
+
+  showNewsletterSignUp(){
+    if(this.newsletter)
+      return false
+    
+    return true;
   }
 
   

@@ -31,6 +31,9 @@ export class SurveyService {
   private name = new BehaviorSubject(null);
   currentName = this.name.asObservable(); 
 
+  private newletter = new BehaviorSubject(false);
+  currentNewsleter = this.newletter.asObservable(); 
+
   private age = new BehaviorSubject(null);
   currentAge = this.age.asObservable();
 
@@ -58,7 +61,16 @@ export class SurveyService {
       this.status = this.outcome.getOutcome(survey);
       this.age.next(survey.getValue('fed42f52-44a8-11eb-bafe-00155d3cabc5'));
       this.name.next(survey.getValue('name'));
+      this.newletter.next(survey.getValue('newsletter'));
+      this.symptom.next(this.getAnswerTextByQuestionName(survey, 'fed459a7-44a8-11eb-bafe-00155d3cabc5', survey.getValue('fed459a7-44a8-11eb-bafe-00155d3cabc5')))
+      this.goal.next(this.getAnswerTextByQuestionName(survey, 'fed46a86-44a8-11eb-bafe-00155d3cabc5', survey.getValue('fed46a86-44a8-11eb-bafe-00155d3cabc5')));
+      
     }
+  }
+
+  getAnswerTextByQuestionName(survey: Survey.SurveyModel, questionName: string, answerText: string) {
+    var question = survey.getQuestionByName(questionName);
+    return question.getDisplayValue(false, answerText);
   }
 
 

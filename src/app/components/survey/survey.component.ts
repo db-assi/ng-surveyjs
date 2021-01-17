@@ -30,6 +30,7 @@ export class SurveyComponent implements OnInit {
         });
 
     Survey.StylesManager.applyTheme("bootstrap");
+    
 
 
     this.survey.currentEarlyAge.subscribe(status => {

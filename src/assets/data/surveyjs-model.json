@@ -510,7 +510,7 @@
 						"hideNumber": true
 						},
 						{
-						"type": "checkbox",
+						"type": "radiogroup",
 						"name": "newsletter",
 						"title": "Would you like to sign up to our newsletter?",
 						"hideNumber": true,
@@ -528,6 +528,7 @@
 ],
 "goNextPageAutomatic": true,
 "showQuestionNumbers": "off",
+"showProgressBar": "bottom",
 "startSurveyText": "Get Started →",
 "firstPageIsStarted": true,
 "pagePrevText": "← Back",

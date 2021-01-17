@@ -10,6 +10,9 @@
     <h1>Thank You, {{ name }} of {{ age }} of age</h1>
 
     <h1>{{ outcome.status | titlecase }}</h1>
+
+    <h2>Your most bothersome symptom is: {{ symptom | titlecase }}</h2>
+    <h2>Your main goal is: {{ goal | titlecase }}</h2>
     
     <h3>Below are your recommended articles. </h3>
     <div>
@@ -41,6 +44,10 @@
               </div>
             </div>
         </div> 
+    </div>
+
+    <div *ngIf="signup">
+      <h2>sign up for newsletter</h2>
     </div>
 
 
