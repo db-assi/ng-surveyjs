@@ -21,8 +21,9 @@ input[type=number] {
   padding: 0 !important;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
   margin: 0 !important;
+  padding: 0px !important;
 }
 
 .sv_bootstrap_css .sv_qstn {
@@ -45,76 +46,87 @@ p {
   border-bottom-left-radius: 0px !important;
 }
 
+.sv_p_title {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
 /* Font Families */
-h1 {
+h1, h5, h4 {
   font-family: questa-grande, serif !important;
 }
 
-p {
+p, .small span {
   font-family: open-sans, sans-serif;
+}
+
+/* Horizontal Alignment */
+.sv_qstn h5, .small, .sv_p_title {
+  text-align: center;
+  word-wrap: break-word;
 }
 
 /* Font Sizes */
 /* Width Media Queries */
 @media only screen and (max-width: 320px) {
-  h1 {
+  h1, h5, h4 {
     font-size: 14pt !important;
   }
-  p {
+  p, .small {
     font-size: 10pt !important;
   }
 }
 
 @media only screen and (min-width: 321px) and (max-width: 375px){
-  h1 {
+  h1, h5, h4 {
     font-size: 16pt !important;
   }
-  p {
+  p, .small span {
     font-size: 10pt !important;
   }
 }
 
 @media only screen and (min-width: 376px) and (max-width: 414px){
-  h1 {
+  h1, h5, h4 {
     font-size: 18pt !important;
   }
-  p {
+  p, .small span {
     font-size: 12pt !important;
   }
 }
 
 @media only screen and (min-width: 415px) and (max-width: 600px){
-  h1 {
+  h1, h5, h4 {
     font-size: 20pt !important;
   }
-  p {
+  p, .small span {
     font-size: 12pt !important;
   }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 823px){
-  h1 {
+  h1, h5, h4 {
     font-size: 28pt !important;
   }
-  p {
+  p, .small span {
     font-size: 12pt !important;
   }
 }
 
 @media only screen and (min-width: 824px) and (max-width: 1024px){
-  h1 {
+  h1, h5, h4 {
     font-size: 32pt !important;
   }
-  p {
+  p, .small span {
     font-size: 12pt !important;
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1920px){
-  h1 {
+  h1, h5, h4 {
     font-size: 36pt !important;
   }
-  p {
+  p, .small span {
     font-size: 12pt !important;
   }
 }
@@ -138,19 +150,55 @@ p {
   }
 }
 
-.sv_start_btn {
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.small {
+  margin-bottom: 6vh !important;
 }
 
+.sv_start_btn, .form-control {
+  margin: 0;
+  left: 50%;
+  position: relative;
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+}
+
+.sv_next_btn {
+  margin: 0;
+  float: right;
+  position: relative;
+}
+
+.sv_prev_btn {
+  margin: 0;
+  float: left;
+  position: relative;
+}
+
+
 .btn {
-  background-color: black;
-  color: white;
+  background-color: black !important;
+  color: white !important;
   border-radius: 0px !important;
-  border: 0px;
+  border: 0px !important;
+  font-family: open-sans, sans-serif !important;
+  font-weight: 700 !important;
+  padding: 8px 14px !important;
+}
+
+.form-control {
+  display: block !important;
+  width: 50% !important;
+  height: 36px !important;
+  background-color: transparent !important;
+  line-height: 1.6 !important;
+  font-family: open-sans, sans-serif !important;
+  padding: 8px 14px !important;
+  color: black !important;
+  border: 0px !important;
+  border-radius: 0px !important;
+  border-bottom: 1px solid black !important;
+  box-shadow: none !important;
+  text-align: center;
 }
 
 

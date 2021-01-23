@@ -22,9 +22,10 @@
 			{
 				"type": "text",
 				"name": "name",
-				"title": "Please tell us your name?",
+        "title": "What is your name?",
+        "description": "We’re asking so we can personalise your results page, but it’s optional.",
 				"inputType": "text",
-				"isRequired": true,
+				"isRequired": false,
 				"hideNumber": true
 			}
 		]
@@ -35,7 +36,7 @@
 			{
 				"type": "text",
 				"name": "fed42f52-44a8-11eb-bafe-00155d3cabc5",
-				"title": "Please tell us how old you are?",
+				"title": "Please tell us your age?",
 				"inputType": "number",
 				"isRequired": true,
 				"hideNumber": true
@@ -528,10 +529,9 @@
 ],
 "goNextPageAutomatic": true,
 "showQuestionNumbers": "off",
-"showProgressBar": "bottom",
 "startSurveyText": "GET STARTED",
 "firstPageIsStarted": true,
-"pageNextText": "Next",
-"showNavigationButtons": "bottom",
+"pagePrevText": "BACK",
+"pageNextText": "NEXT",
 "completedHtml": "<span><span>"
 }
