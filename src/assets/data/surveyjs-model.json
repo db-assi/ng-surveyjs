@@ -529,9 +529,9 @@
 "goNextPageAutomatic": true,
 "showQuestionNumbers": "off",
 "showProgressBar": "bottom",
-"startSurveyText": "Get Started →",
+"startSurveyText": "Get Started",
 "firstPageIsStarted": true,
-"pagePrevText": "← Back",
-"pageNextText": "Next →",
+"pageNextText": "Next",
+"showNavigationButtons": "bottom",
 "completedHtml": "<span><span>"
 }
