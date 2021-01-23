@@ -10,9 +10,9 @@
 		"elements": [
 			{
 				"type": "html",
-				 "name": "welcome",
-				 "hideNumber": true,
-				"html": "<div class='intro'><h1>Hello there, we're Bia.</h1>\n<h3>This assessment will take 3 minutes and help you receive tailored information</h3>\n<h6>Please note we this is not medical advice. If you are concerned about a medical issue or symptom, please speak to your doctor. All information will be anonymised and stored securely according to our privacy policy and GDPR.</h6><h6> To return to our website <a href='https://bia.care' target='_blank'> click here</a>.</h6>\n</div>"
+				"name": "welcome",
+				"hideNumber": true,
+				"html": "<div><h1>Navigating menopause, together.</h1>\n<p>No one’s menopause experience is the same. This assessment will help you receive information tailored to your menopause journey in just 3 minutes.</p>\n<p>Please note we this is not medical advice. If you are concerned about a medical issue or symptom, please speak to your doctor. All information you share with us will be anonymised and stored securely according to our [privacy policy] and GDPR.</p></div>"
 			}
 		]
 	},
@@ -59,7 +59,7 @@
 							{
 								"value": "f3c30707-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Yes"
-							}, 
+							},
 							{
 								"value": "f3c339ac-44ac-11eb-bafe-00155d3cabc5",
 								"text": "No"
@@ -89,7 +89,7 @@
 							{
 								"value": "f3c33cbb-44ac-11eb-bafe-00155d3cabc5",
 								"text": "I have regular periods."
-							}, 
+							},
 							{
 								"value": "f3c33e11-44ac-11eb-bafe-00155d3cabc5",
 								"text": "I have irregular periods."
@@ -112,7 +112,7 @@
 				 "elements": [
 					{
 						"type": "panel",
-						"name": "page_five_panel_panel", 
+						"name": "page_five_panel_panel",
 						"elements": [
 							{
 								"type": "radiogroup",
@@ -120,7 +120,7 @@
 								"title": "(For example: birth control, hormonal therapy, Mirena coil, hysterectomy, ablation, chemotherapy, pregnancy)",
 								"startWithNewLine": false,
 								"isRequired": true,
-								"choices": 
+								"choices":
 								[
 									{
 										"value": "f3c30707-44ac-11eb-bafe-00155d3cabc5",
@@ -137,32 +137,32 @@
 								"name": "fed454c3-44a8-11eb-bafe-00155d3cabc5",
 								"title": "What is affecting your periods? Leave blank if none applies.",
 								"hideNumber": true,
-								"choices": 
+								"choices":
 								[
 									{
 										"value": "f3c33fc2-44ac-11eb-bafe-00155d3cabc5",
 										"text": "Hormone Replacement Therapy"
-									}, 
+									},
 									{
 										"value": "f3c34181-44ac-11eb-bafe-00155d3cabc5",
 										"text": "Birth Control Pill"
-									}, 
+									},
 									{
 										"value": "f3c3429c-44ac-11eb-bafe-00155d3cabc5",
 										"text": "Mirena Coil"
-									}, 
+									},
 									{
 										"value": "f3c343fc-44ac-11eb-bafe-00155d3cabc5",
 										"text": "Chemotherapy"
-									}, 
+									},
 									{
 										"value": "f3c3456f-44ac-11eb-bafe-00155d3cabc5",
 										"text": "Hysterectomy"
-									}, 
+									},
 									{
 										"value": "f3c34682-44ac-11eb-bafe-00155d3cabc5",
 										"text": "Previous Ablation"
-									}, 
+									},
 									{
 										"value": "f3c34788-44ac-11eb-bafe-00155d3cabc5",
 										"text": "Other"
@@ -185,7 +185,7 @@
 			{
 				"type": "panel",
 				"name": "page_six_panel",
-				"elements": 
+				"elements":
 				[
 					{
 						"type": "checkbox",
@@ -212,7 +212,7 @@
 							{
 								"value": "f3c34e2b-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Mood swings"
-							}, 
+							},
 							{
 								"value": "f3c34f61-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Reduced concentration"
@@ -220,7 +220,7 @@
 							{
 								"value": "f3c35065-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Forgetfulness"
-							}, 
+							},
 							{
 								"value": "f3c351f1-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Reduced sex drive"
@@ -236,8 +236,8 @@
 							{
 								"value": "f3c35563-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Leaking urine when you laugh or cough"
-							}, 
- 
+							},
+
 							{
 								"value": "f3c3566a-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Sudden need to pass urine"
@@ -245,7 +245,7 @@
 							{
 								"value": "f3c35767-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Painful joints or muscles"
-							}, 
+							},
 							{
 								"value": "f3c358bc-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Racing heart or skipping beats"
@@ -253,7 +253,7 @@
 							{
 								"value": "f3c359be-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Migraines"
-							}, 
+							},
 							{
 								"value": "f3c35ac1-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Weight gain"
@@ -272,12 +272,12 @@
 	},
 	{
 		"name": "page_seven",
-		"elements": 
+		"elements":
 		[
 			{
 				"type": "panel",
 				"name": "page_seven_panel",
-				"elements": 
+				"elements":
 				[
 					{
 						"type": "radiogroup",
@@ -397,7 +397,7 @@
 							{
 								"value": "f3c35e0f-44ac-11eb-bafe-00155d3cabc5",
 								"text": "HRT"
-							}, 
+							},
 							{
 								"value": "f3c35f2f-44ac-11eb-bafe-00155d3cabc5",
 								"text": "CBT"
@@ -441,7 +441,7 @@
 			{
 				"type": "panel",
 				"name": "page_nine_panel",
-				"elements": 
+				"elements":
 				[
 					{
 						"type": "radiogroup",
@@ -469,7 +469,7 @@
 							{
 								"value": "f3c36b7e-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Quit smoking"
-							}, 
+							},
 							{
 								"value": "f3c36ce8-44ac-11eb-bafe-00155d3cabc5",
 								"text": "Increase exercise"
@@ -500,7 +500,7 @@
 				{
 					"type": "panel",
 					"name": "page_ten_panel_panel_two",
-					"elements": 
+					"elements":
 					[
 						{
 						"type": "text",
@@ -524,12 +524,12 @@
 			"title": "Let's continue the conversation"
 		}]
 	}
-	
+
 ],
 "goNextPageAutomatic": true,
 "showQuestionNumbers": "off",
 "showProgressBar": "bottom",
-"startSurveyText": "Get Started",
+"startSurveyText": "GET STARTED",
 "firstPageIsStarted": true,
 "pageNextText": "Next",
 "showNavigationButtons": "bottom",

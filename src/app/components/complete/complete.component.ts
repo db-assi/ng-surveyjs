@@ -5,7 +5,7 @@ import { RecommendationService } from 'src/app/core/services/recommendation/reco
 import { SurveyService } from '../../core/services/survey/survey.service';
 
 @Component({
-  selector: 'app-complete',
+  selector: 'complete',
   templateUrl: './complete.component.html',
   styleUrls: ['./complete.component.css']
 })
@@ -39,16 +39,16 @@ export class CompleteComponent implements OnInit {
     this.survey.currentGoal.subscribe(response => this.goal = response);
 
     console.log('symptom ' + this.symptom);
-    
+
   }
 
   showNewsletterSignUp(){
     if(this.newsletter)
       return false
-    
+
     return true;
   }
 
-  
+
 
 }

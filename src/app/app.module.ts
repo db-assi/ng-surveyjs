@@ -17,18 +17,20 @@ import { RecommendationAdapter } from './core/models/reccomendation.model';
 import { SubmitService } from './core/services/submit/submit.service';
 import { ResponseAdapter } from './core/models/submit.model';
 import { OutcomeService } from './core/services/outcome/outcome.service';
+import { EarlyAgeComponent } from './components/early-age/early-age.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SurveyComponent,
-    CompleteComponent
+    CompleteComponent,
+    EarlyAgeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule 
+    HttpClientModule
   ],
   providers: [
     SurveyService,

@@ -1,15 +1,11 @@
-<!-- <div class="container">
-  <div class="row row-no-gutters" style = "position:relative; top:21vh;">
-    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" style="background-color: lightseagreen;"> -->
-      <div id='surveyElement'></div>
-      <div *ngIf="isCompleted">
-        <app-complete></app-complete>
-      </div>
-      <div *ngIf="isEarlyAge">
-        <div class="intro">
-          <h3>Thank you, but this assessment is designed for women between the ages of 40 and 60. For resources on early menopause, you can visit the Daisy Network (https://www.daisynetwork.org/).</h3>
-        </div>
-      </div>
-<!--     </div>
+<div class="container">
+  <div class="row row-no-gutters">
+    <div
+      class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"
+    >
+      <div id="surveyElement"></div>
+      <div *ngIf="isCompleted"><complete></complete></div>
+      <div *ngIf="isEarlyAge"><early-age></early-age></div>
+    </div>
   </div>
-</div> -->
+</div>
