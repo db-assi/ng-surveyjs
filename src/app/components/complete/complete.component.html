@@ -1,66 +1,92 @@
-<div>
-  
+<div class="container">
+  <div class="row row-no-gutters">
+    <div
+      class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"
+    >
+    <h4>Hi, {{ name | titlecase }}</h4>
+    <p><i>Here are your results. Click on the <strong>bolded</strong> words to learn more about those topics, or scroll down for a list of articles selected for you.</i></p>
+    <ng-template
+      [ngIf]='(outcome === "pre-menopause")'
+    >
+      <p>You have told us you are {{ age }} years old. Based on what you told us you are likely in pre-menopause.</p>
+      <p>Pre-menopause is the time between puberty and peri-menopause. Your hormones may be starting to change although you continue to have regular periods and haven't experienced any symptoms of peri-menopause. You can read more about the <a>stages of menopause here</a></p>
+    </ng-template>
+    <ng-template
+      [ngIf]='(outcome === "peri-menopause")'
+    >
+      <span>You have told us you are {{ age }} years old.</span>
+      <ng-template
+        [ngIf]='symptom'
+      >
+      <span>Your most bothersome symptom is {{ symptom }}</span>
+      </ng-template>
+      <ng-template
+        [ngIf]='goal'
+      >
+        <span>Your main health goal is {{ goal }}</span>
+      </ng-template>
+      <span> Based on what you told us you are likely peri-menopausal.</span>
+      <p>Perimenopause means ‘around the menopause,’ and typically starts in a woman’s 40s. It is the time when signs and symptoms of falling oestrogen levels begin to show. Most commonly irregular periods or hot flushes. Perimenopause lasts until 12 months after your final menstrual period. For over half of women, the perimenopause stage lasts for over 7 years. This doesn’t mean you have to endure through symptoms for all that time as there are lots of treatments that can help! You can read more about the <a>stages of menopause here</a>.</p>
+    </ng-template>
+    <ng-template
+      [ngIf]='(outcome === "post-menopause")'
+    >
+      <span>You have told us you are {{ age }} years old.</span>
+      <ng-template
+        [ngIf]='symptom'
+      >
+        <span>Your most bothersome symptom is {{ symptom }}</span>
+      </ng-template>
+      <ng-template
+        [ngIf]='goal'
+      >
+        <span>Your main health goal is {{ goal }}</span>
+      </ng-template>
+      <span>  Based on what you told us you are likely post-menopausal.</span>
+      <p>Post-menopause is the time from your last period (or surgery) onwards. As you are no longer ovulating, your ovaries' production of hormones, such as oestrogen, progesterone and testosterone, declines. As your body gets used to these lower levels of oestrogen, your body will adapt and stabilise, usually leading to reduced symptoms. You can read more about the <a>stages of menopause here</a>.</p>
+    </ng-template>
+    <ng-template
+      [ngIf]="(outcome === 'it\'s-complicated')"
+    >
+      <span>You have told us you are {{ age }} years old.</span>
+      <ng-template
+        [ngIf]='symptom'
+      >
+        <span>Your most bothersome symptom is {{ symptom }}</span>
+      </ng-template>
+      <ng-template
+        [ngIf]='goal'
+      >
+        <span>Your main health goal is {{ goal }}</span>
+      </ng-template>
+      <p>Unfortunately based on what you told us it is difficult to pinpoint what phase of menopause you are likelt in. If you are experiencing menopause symptoms or concerned about menopause, we recommend speaking to your GP. If you would like to learn more, you can read more about the <a>stages of menopause here</a>.</p>
+    </ng-template>
 
 
 
 
 
-  <div class="intro">
-    <br><br>
-    <h1>Thank You, {{ name }} of {{ age }} of age</h1>
 
-    <h1>{{ outcome.status | titlecase }}</h1>
 
-    <h2>Your most bothersome symptom is: {{ symptom | titlecase }}</h2>
-    <h2>Your main goal is: {{ goal | titlecase }}</h2>
-    
-    <h3>Below are your recommended articles. </h3>
-    <div>
-        <h4>You can also read more about the phases of menopause<a href='https://www.bia.care/blog/menopause-terms-explained' target='_blank'> here.</a></h4>
+
+
     </div>
-    <h6></h6>
   </div>
-
-  <div class="intro">
-    <br><br><br>
-    <h1 *ngIf="articles.length > 0"> Your Recommendations</h1>
-
-    <div *ngFor="let article of articles; let i = index;">    
-        <div class="panel-group">
-            <div class="panel panel-default" id="resources">
-              <div class="panel-heading clearfix resources-title">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" href="{{'#collapse'+i}}">{{ article.title }}<span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="float: right; color: dimgrey;"></span></a>
-                </h4>
-              </div>
-              <div id="{{'collapse'+i}}" class="panel-collapse collapse">
-                <div class="panel-body">
-
-                    <h6>{{ article.description }}</h6>
-                      <h4>Read more about this symptom:</h4>
-                      <h5>{{ article.answers }}</h5>
-                      <h6>{{ article.body }}</h6>
-                </div>
-              </div>
-            </div>
-        </div> 
-    </div>
-
-    <div *ngIf="signup">
-      <h2>sign up for newsletter</h2>
-    </div>
-
-
-
-
-  </div>
-
-
-
-
-
-
-
-
-
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -38,7 +38,7 @@ export class CompleteComponent implements OnInit {
     this.survey.currentSymptom.subscribe(response => this.symptom = response);
     this.survey.currentGoal.subscribe(response => this.goal = response);
 
-    console.log('symptom ' + this.symptom);
+    console.log('outocome ' + this.outcome);
 
   }
 
