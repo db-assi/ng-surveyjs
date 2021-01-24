@@ -16,6 +16,10 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+*:focus {
+  outline: none !important;
+}
+
 /* Marging & Padding */
 .panel-body {
   padding: 0 !important;
@@ -61,7 +65,7 @@ p, .small span {
 }
 
 /* Horizontal Alignment */
-.sv_qstn h5, .small, .sv_p_title {
+.sv_qstn h5, .small, .sv_p_title, h4 {
   text-align: center;
   word-wrap: break-word;
 }
@@ -150,10 +154,6 @@ p, .small span {
   }
 }
 
-.small {
-  margin-bottom: 6vh !important;
-}
-
 .sv_start_btn, .form-control {
   margin: 0;
   left: 50%;
@@ -162,7 +162,7 @@ p, .small span {
   transform: translate(-50%);
 }
 
-.sv_next_btn {
+.sv_next_btn, .sv_complete_btn {
   margin: 0;
   float: right;
   position: relative;
@@ -201,8 +201,10 @@ p, .small span {
   text-align: center;
 }
 
-
-
+.sv_qstn {
+  float: none !important;
+  margin: 0 auto !important;
+}
 
 
 
