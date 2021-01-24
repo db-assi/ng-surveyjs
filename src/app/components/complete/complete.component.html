@@ -1,78 +1,123 @@
-<div class="container">
-  <div class="row row-no-gutters">
-    <div
-      class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"
-    >
-    <h4>Hi, {{ name | titlecase }}</h4>
-    <p><i>Here are your results. Click on the <strong>bolded</strong> words to learn more about those topics, or scroll down for a list of articles selected for you.</i></p>
-    <ng-template
-      [ngIf]='(outcome === "pre-menopause")'
-    >
-      <p>You have told us you are {{ age }} years old. Based on what you told us you are likely in pre-menopause.</p>
-      <p>Pre-menopause is the time between puberty and peri-menopause. Your hormones may be starting to change although you continue to have regular periods and haven't experienced any symptoms of peri-menopause. You can read more about the <a>stages of menopause here</a></p>
-    </ng-template>
-    <ng-template
-      [ngIf]='(outcome === "peri-menopause")'
-    >
-      <span>You have told us you are {{ age }} years old.</span>
-      <ng-template
-        [ngIf]='symptom'
-      >
-      <span>Your most bothersome symptom is {{ symptom }}</span>
-      </ng-template>
-      <ng-template
-        [ngIf]='goal'
-      >
-        <span>Your main health goal is {{ goal }}</span>
-      </ng-template>
-      <span> Based on what you told us you are likely peri-menopausal.</span>
-      <p>Perimenopause means ‘around the menopause,’ and typically starts in a woman’s 40s. It is the time when signs and symptoms of falling oestrogen levels begin to show. Most commonly irregular periods or hot flushes. Perimenopause lasts until 12 months after your final menstrual period. For over half of women, the perimenopause stage lasts for over 7 years. This doesn’t mean you have to endure through symptoms for all that time as there are lots of treatments that can help! You can read more about the <a>stages of menopause here</a>.</p>
-    </ng-template>
-    <ng-template
-      [ngIf]='(outcome === "post-menopause")'
-    >
-      <span>You have told us you are {{ age }} years old.</span>
-      <ng-template
-        [ngIf]='symptom'
-      >
-        <span>Your most bothersome symptom is {{ symptom }}</span>
-      </ng-template>
-      <ng-template
-        [ngIf]='goal'
-      >
-        <span>Your main health goal is {{ goal }}</span>
-      </ng-template>
-      <span>  Based on what you told us you are likely post-menopausal.</span>
-      <p>Post-menopause is the time from your last period (or surgery) onwards. As you are no longer ovulating, your ovaries' production of hormones, such as oestrogen, progesterone and testosterone, declines. As your body gets used to these lower levels of oestrogen, your body will adapt and stabilise, usually leading to reduced symptoms. You can read more about the <a>stages of menopause here</a>.</p>
-    </ng-template>
-    <ng-template
-      [ngIf]="(outcome === 'it\'s-complicated')"
-    >
-      <span>You have told us you are {{ age }} years old.</span>
-      <ng-template
-        [ngIf]='symptom'
-      >
-        <span>Your most bothersome symptom is {{ symptom }}</span>
-      </ng-template>
-      <ng-template
-        [ngIf]='goal'
-      >
-        <span>Your main health goal is {{ goal }}</span>
-      </ng-template>
-      <p>Unfortunately based on what you told us it is difficult to pinpoint what phase of menopause you are likelt in. If you are experiencing menopause symptoms or concerned about menopause, we recommend speaking to your GP. If you would like to learn more, you can read more about the <a>stages of menopause here</a>.</p>
-    </ng-template>
+<h4>Hi, {{ name | titlecase }}</h4>
+<p><i>Here are your results. Click on the <strong>bolded</strong> words to learn more about those topics, or scroll down for a list of articles selected for you.</i></p>
 
+<!--PRE-MENOPAUSE-->
+<ng-template
+  [ngIf]='(outcome.status === "pre-menopause")'
+>
+  <span>You have told us you are {{ age }} years old. Based on what you told us you are likely in pre-menopause.</span>
+  <br>
+  <span> Pre-menopause is the time between puberty and peri-menopause. Your hormones may be starting to change although you continue to have regular periods and haven't experienced any symptoms of peri-menopause. You can read more about the <a>stages of menopause here</a></span>
+</ng-template>
 
+<!--PERI-MENOPAUSE-->
+<ng-template
+  [ngIf]='(outcome.status === "peri-menopause")'
+>
+  <span>You have told us you are {{ age }} years old.</span>
+  <ng-template
+    [ngIf]='symptom'
+  >
+    <span> Your most bothersome symptom is <strong>{{ symptom | lowercase }}</strong>. </span>
+  </ng-template>
+  <ng-template
+    [ngIf]='goal'
+  >
+    <span> Your main health goal is <strong>{{ goal |lowercase }}</strong>.</span>
+  </ng-template>
+  <br>
+  <span>Based on what you told us you are likely <strong>peri-menopausal.</strong></span>
+  <br>
+  <span>Perimenopause means ‘around the menopause,’ and typically starts in a woman’s 40s. It is the time when signs and symptoms of falling oestrogen levels begin to show. Most commonly irregular periods or hot flushes. Perimenopause lasts until 12 months after your final menstrual period. For over half of women, the perimenopause stage lasts for over 7 years. This doesn’t mean you have to endure through symptoms for all that time as there are lots of treatments that can help! You can read more about the <a>stages of menopause here</a>.</span>
+</ng-template>
 
+<!--POST-MENOPAUSE-->
+<ng-template
+  [ngIf]='(outcome.status === "post-menopause")'
+>
+  <span>You have told us you are {{ age }} years old.</span>
+  <br>
+  <ng-template
+    [ngIf]='symptom'
+  >
+    <span> Your most bothersome symptom is <strong>{{ symptom | lowercase }}</strong>.</span>
+  </ng-template>
+  <ng-template
+    [ngIf]='goal'
+  >
+    <span> Your main health goal is <strong>{{ goal | lowercase}}</strong>.</span>
+  </ng-template>
+  <br>
+  <span>Based on what you told us you are likely <strong>post-menopausal.</strong></span>
+  <br>
+  <span>Post-menopause is the time from your last period (or surgery) onwards. As you are no longer ovulating, your ovaries' production of hormones, such as oestrogen, progesterone and testosterone, declines. As your body gets used to these lower levels of oestrogen, your body will adapt and stabilise, usually leading to reduced symptoms. You can read more about the <a>stages of menopause here</a>.</span>
+</ng-template>
 
+<!--ITS-COMPLICATED-->
+<ng-template
+  [ngIf]="(outcome.status === 'it\'s complicated')"
+>
+  <span>You have told us you are {{ age }} years old.</span>
+  <br>
+  <ng-template
+    [ngIf]='symptom'
+  >
+    <span> Your most bothersome symptom is <strong>{{ symptom | lowercase }}</strong>.</span>
+  </ng-template>
+  <ng-template
+    [ngIf]='goal'
+  >
+    <span> Your main health goal is <strong>{{ goal | lowercase }}</strong>.</span>
+  </ng-template>
+  <br>
+  <span>Unfortunately based on what you told us it is difficult to pinpoint what phase of menopause you are likelt in. If you are experiencing menopause symptoms or concerned about menopause, we recommend speaking to your GP. If you would like to learn more, you can read more about the <a>stages of menopause here</a>.</span>
+</ng-template>
 
-
-
-
-
+<!--ARTICLES-->
+<div>
+  <ng-template
+    [ngIf]="articles.length > 0"
+  >
+    <div class="container-fluid">
+      <h4>Learn More About</h4>
+      <div class="row">
+        <div
+          *ngFor="let article of articles"
+        >
+          <div class="col-sm-6 col-md-4" style="padding: 8px;">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                {{ article.title }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </ng-template>
 </div>
+
+
+<!--SIGNUP-->
+<ng-template
+  [ngIf]="signup"
+>
+<h4>Sign up for our newsletter to stay in the loop:</h4>
+
+<div class="signup">
+  <form>
+    <div class="form-group">
+      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+    </div>
+    <button type="submit" class="btn sv_start_btn">Sign Up</button>
+  </form>
+</div>
+
+</ng-template>
+
+
+
+
 
 
 
