@@ -114,7 +114,7 @@
 				"hideNumber": true,
 				"choices": [{
 						"value": "f3c33fc2-44ac-11eb-bafe-00155d3cabc5",
-						"text": "Hormone Replacement Therapy"
+						"text": "HRT"
 					},
 					{
 						"value": "f3c34181-44ac-11eb-bafe-00155d3cabc5",
@@ -226,7 +226,7 @@
           "text": "Dry skin, hair or nails"
         }
       ],
-      "colCount": 3
+      "colCount": 2
     }],
     "title": "Have you experienced any of the following symptoms?",
     "description": "Leave blank if none"
@@ -325,7 +325,7 @@
             "visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5} contains ['f3c35bc0-44ac-11eb-bafe-00155d3cabc5']"
           }
         ],
-        "colCount": 3
+        "colCount": 2
       }
 
     ],
@@ -372,7 +372,7 @@
             "text": "Emotional fitness"
           }
         ],
-        "colCount": 3
+        "colCount": 2
       }
 
     ],
@@ -432,7 +432,7 @@
         "hideNumber": true
       },
       {
-        "type": "radiogroup",
+        "type": "checkbox",
         "name": "newsletter",
         "titleLocation": "hidden",
         "hideNumber": true,

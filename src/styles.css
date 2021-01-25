@@ -150,7 +150,7 @@ p, .small span {
     margin-bottom: 2.8vh !important;
   }
   .panel-footer, .form-control, .sv_qcbc, #sq_106_ariaTitle {
-    margin-top: 3.2vh !important;
+    margin-top: 4vh !important;
   }
 }
 
@@ -238,16 +238,96 @@ p, .small span {
   text-align: center;
 }
 
+input[type=radio], input[type=checkbox] {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.sv_qstn .sv-q-column-2 .radio.checked, .checkbox.checked {
+  background-color: #CECECE !important;
+  color: black !important;
+}
+
+.radio, .checkbox {
+  border: 1px solid #CECECE !important;
+  font-family: open-sans, sans-serif !important;
+  padding: 8px !important;
+}
+
+.sv_qstn .sv-q-column-2, .sv-question .sv-q-column-2 {
+  max-width: inherit !important;
+  display: inline-block;
+  padding-right: 0px !important;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 450px) {
+  .sv_qstn .sv-q-column-2  {
+    display: block !important;
+    width: 72% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 767px) {
+  .sv_qstn .sv-q-column-2 {
+    display: inline-block !important;
+    width: 48% !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .sv_qstn .sv-q-column-2 {
+    display: inline-block !important;
+    width: 40% !important;
+  }
+}
+
+.checkbox, .radio {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+  margin-left: 16px;
+}
+
+.sv_main .sv_container .panel-body.card-block .sv_row .sv_qstn .radio label, .sv_main .sv_container .panel-body.card-block .sv_row .sv_qstn .checkbox label {
+  line-height: inherit !important;
+  vertical-align: top;
+}
+
+label {
+  display: block !important;
+  text-align: center !important;
+}
+
+.sv_qstn .radio label {
+  justify-content: center !important;
+  display: block !important;
+}
+
+.checkbox label, .radio label {
+  min-height: none;
+  padding-left: 0px !important;
+  margin-bottom: 0 !important;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#sq_112 input[type=checkbox] {
+  opacity: 100 !important;
+  cursor: pointer !important;
+  height: 16px !important;
+  width: 16px !important;
+  border-radius: 0px !important;
+  border: #CECECE !important;
+}
 
 
-
-
-
-
-
-
-
-
-
-
+#sq_112 .checkbox {
+  border: 0px !important;
+  margin-left: auto !important;
+}
 
