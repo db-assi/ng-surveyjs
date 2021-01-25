@@ -110,6 +110,7 @@
 				"name": "fed454c3-44a8-11eb-bafe-00155d3cabc5",
         "title": "What is affecting your periods?",
         "description":  "Leave blank if none",
+        "isRequired": true,
 				"hideNumber": true,
 				"choices": [{
 						"value": "f3c33fc2-44ac-11eb-bafe-00155d3cabc5",
@@ -427,7 +428,7 @@
         "type": "text",
         "name": "email",
         "titleLocation": "hidden",
-        "isRequired": true,
+        "isRequired": false,
         "hideNumber": true
       },
       {

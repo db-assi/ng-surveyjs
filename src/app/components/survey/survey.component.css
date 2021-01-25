@@ -22,7 +22,11 @@
   }
 }
 
-@media only screen and (max-height: 414px) {
+/* .container {
+  margin-top: 10vh;
+} */
+
+/* @media only screen and (max-height: 414px) {
   .container {
     margin-top: 10vh;
   }
@@ -44,7 +48,7 @@
   .container {
     margin-top: 22vh;
   }
-}
+} */
 
 .col-sm-10, .col-md-8 {
   background-color: rgb(32, 142, 179);
