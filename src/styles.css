@@ -1,6 +1,5 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
-@import "./assets/css/reset.css";
-@import url("https://use.typekit.net/kll3mxz.css");
+/* @import "./assets/css/reset.css"; */
 @import url("https://use.typekit.net/kll3mxz.css");
 
 
@@ -51,6 +50,10 @@ p {
   margin: 0 0 16px !important;
 }
 
+a {
+  color: black !important;
+}
+
 .panel-footer {
   padding: 0px !important;
   background-color: transparent !important;
@@ -67,53 +70,58 @@ p {
 /* Font Families */
 h1, h5, h4 {
   font-family: questa-grande, serif !important;
+  font-weight: 500 !important;
 }
 
-p, .small span {
+p, .small span, .complete-results, .panel-body .span {
   font-family: open-sans, sans-serif;
 }
 
 /* Horizontal Alignment */
-.sv_qstn h5, .small, .sv_p_title, h4 {
+.sv_qstn h5, .small, .sv_p_title, h4, .panel-body .span {
   text-align: center;
   word-wrap: break-word;
+}
+
+.small, .complete-results span {
+  margin-top: 16px;
 }
 
 /* Font Sizes */
 /* Width Media Queries */
 @media only screen and (max-width: 320px) {
   h1, h5, h4 {
-    font-size: 20pt !important;
+    font-size: 22pt !important;
   }
-  p, .small span {
+  p, .small span, .complete-results span, .panel-body .span {
     font-size: 12pt !important;
   }
 }
 
 @media only screen and (min-width: 321px) and (max-width: 375px){
   h1, h5, h4 {
-    font-size: 20pt !important;
+    font-size: 22pt !important;
   }
-  p, .small span {
-    font-size: 10pt !important;
+  p, .small span, .complete-results span, .panel-body .span {
+    font-size: 12pt !important;
   }
 }
 
 @media only screen and (min-width: 376px) and (max-width: 414px){
   h1, h5, h4 {
-    font-size: 22pt !important;
+    font-size: 24pt !important;
   }
-  p, .small span {
-    font-size: 10pt !important;
+  p, .small span, .complete-results span, .panel-body .span {
+    font-size: 12pt !important;
   }
 }
 
 @media only screen and (min-width: 415px) and (max-width: 600px){
   h1, h5, h4 {
-    font-size: 24pt !important;
+    font-size: 28pt !important;
   }
-  p, .small span {
-    font-size: 12pt !important;
+  p, .small span, .complete-results span, .panel-body .span {
+    font-size: 14pt !important;
   }
 }
 
@@ -121,8 +129,8 @@ p, .small span {
   h1, h5, h4 {
     font-size: 32pt !important;
   }
-  p, .small span {
-    font-size: 12pt !important;
+  p, .small span, .complete-results span, .panel-body .span {
+    font-size: 14pt !important;
   }
 }
 
@@ -130,8 +138,8 @@ p, .small span {
   h1, h5, h4 {
     font-size: 32pt !important;
   }
-  p, .small span {
-    font-size: 12pt !important;
+  p, .small span, .complete-results span, .panel-body .span {
+    font-size: 14pt !important;
   }
 }
 
@@ -139,8 +147,8 @@ p, .small span {
   h1, h5, h4 {
     font-size: 36pt !important;
   }
-  p, .small span {
-    font-size: 12pt !important;
+  p, .small span, .complete-results span, .panel-body .span {
+    font-size: 14pt !important;
   }
 }
 
@@ -199,6 +207,7 @@ p, .small span {
   font-family: open-sans, sans-serif !important;
   font-weight: 700 !important;
   padding: 8px 14px !important;
+  letter-spacing: 0.08em;
 }
 
 .form-control {
@@ -214,7 +223,8 @@ p, .small span {
   border-radius: 0px !important;
   border-bottom: 1px solid black !important;
   box-shadow: none !important;
-  text-align: center;
+  text-align: center !important;
+  font-size: 14pt !important;
 }
 
 .sv_qstn {
@@ -227,11 +237,20 @@ p, .small span {
   background-color: transparent !important;
   border: 0px !important;
   font-family: open-sans, sans-serif !important;
+  font-size: 10pt !important;
+  font-weight: 600 !important;
 }
 .alert {
   margin: 0px !important;
+  margin-top: 8px !important;
   border: 0px;
   border-radius: 0px;
+  padding: 0px !important;
+  text-align: center !important;
+}
+
+.alert span {
+  font-weight: 500 !important;
 }
 
 .sv_qstn fieldset {
@@ -329,5 +348,15 @@ label {
 #sq_112 .checkbox {
   border: 0px !important;
   margin-left: auto !important;
+  max-width: 72%;
 }
 
+#sq_112 .checked {
+  border: 0px !important;
+  background-color: transparent !important;
+  margin-left: auto !important;
+}
+
+.glyphicon {
+  display: none !important;
+}

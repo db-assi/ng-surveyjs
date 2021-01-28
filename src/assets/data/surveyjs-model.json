@@ -43,7 +43,8 @@
 				"hideNumber": true
 			}
     ],
-    "title": "Please tell us your age?"
+    "title": "Please tell us your age?",
+    "description": "This assessment is designed for women between the ages of 40 to 65."
 	},
 	{
 		"name": "page_three",
@@ -85,7 +86,7 @@
 			],
 			"colCount": 2
 		}],
-		"title": "What are your periods like?",
+		"title": "Please tell us what your periods are like.",
 		"visibleIf": "{fed451a6-44a8-11eb-bafe-00155d3cabc5} contains ['f3c30707-44ac-11eb-bafe-00155d3cabc5']"
 	},
 	{
@@ -109,7 +110,6 @@
 				"type": "checkbox",
 				"name": "fed454c3-44a8-11eb-bafe-00155d3cabc5",
         "title": "What is affecting your periods?",
-        "description":  "Leave blank if none",
         "isRequired": true,
 				"hideNumber": true,
 				"choices": [{
@@ -131,15 +131,16 @@
 					{
 						"value": "f3c3456f-44ac-11eb-bafe-00155d3cabc5",
 						"text": "Hysterectomy"
+          },
+          {
+						"value": "f3c34788-44ac-11eb-bafe-00155d3cabc5",
+						"text": "Other"
 					},
 					{
 						"value": "f3c34682-44ac-11eb-bafe-00155d3cabc5",
 						"text": "Previous Ablation"
-					},
-					{
-						"value": "f3c34788-44ac-11eb-bafe-00155d3cabc5",
-						"text": "Other"
 					}
+
 				],
 				"colCount": 2,
 				"visibleIf": "{fed45682-44a8-11eb-bafe-00155d3cabc5} contains ['f3c30707-44ac-11eb-bafe-00155d3cabc5']"
@@ -428,7 +429,7 @@
         "type": "text",
         "name": "email",
         "titleLocation": "hidden",
-        "isRequired": false,
+        "isRequired": true,
         "hideNumber": true
       },
       {

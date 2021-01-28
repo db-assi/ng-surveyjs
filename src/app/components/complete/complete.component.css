@@ -12,4 +12,29 @@
   border-bottom: 1px solid black !important;
   box-shadow: none !important;
   text-align: center;
+  letter-spacing: 0.08em !important;
+}
+
+.complete-intro, .complete-articles {
+  margin-top: 16px;
+}
+
+.complete-intro p strong, .complete-results span strong, .complete-results span a strong {
+  font-weight: 700 !important;
+}
+
+.complete-results span, .complete-intro p {
+  line-height: 1.6 !important;
+}
+
+.complete-articles .panel {
+  margin-top: 0px !important;
+  background-color: #E6E6E6 !important;
+  border: 0px !important;
+  border-radius: 24px;
+  height: 12vh !important;
+}
+
+.complete-articles .panel-body {
+  padding: 15px !important;
 }
