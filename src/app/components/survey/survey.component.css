@@ -1,4 +1,4 @@
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) {
   .container {
     background-color: lightblue;
   }
@@ -20,7 +20,7 @@
   .container {
     background-color: lightsalmon
   }
-}
+} */
 
 /* .container {
   margin-top: 10vh;
@@ -50,9 +50,9 @@
   }
 } */
 
-.col-sm-10, .col-md-8 {
+/* .col-sm-10, .col-md-8 {
   background-color: rgb(32, 142, 179);
-}
+} */
 
 .btn-close {
   background-color: transparent !important;
