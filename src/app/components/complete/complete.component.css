@@ -1,6 +1,6 @@
 .signup input {
   display: block !important;
-  width: 50% !important;
+  width: 72% !important;
   height: 36px !important;
   background-color: transparent !important;
   line-height: 1.6 !important;
@@ -15,9 +15,11 @@
   letter-spacing: 0.08em !important;
 }
 
-.complete-intro, .complete-articles {
-  margin-top: 16px;
+/* CHECK */
+.complete-intro, .complete-articles, .signup {
+  margin-top: 32px;
 }
+
 
 .complete-intro p strong, .complete-results span strong, .complete-results span a strong {
   font-weight: 700 !important;
@@ -26,6 +28,11 @@
 .complete-results span, .complete-intro p {
   line-height: 1.6 !important;
 }
+
+.complete-articles h5, .signup h5 {
+  text-align: center;
+}
+
 
 .complete-articles .panel {
   margin-top: 0px !important;

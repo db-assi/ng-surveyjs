@@ -24,6 +24,10 @@ input[type=number] {
   background-color: transparent !important;
 }
 
+.jumbotron p {
+  font-weight: 400 !important;
+}
+
 
 .vertical-center {
   min-height: 100%;
@@ -90,8 +94,11 @@ p, .small span, .complete-results, .panel-body .span {
 /* Font Sizes */
 /* Width Media Queries */
 @media only screen and (max-width: 320px) {
-  h1, h5, h4 {
+  h1, h4 {
     font-size: 22pt !important;
+  }
+  h5 {
+    font-size: 18pt !important;
   }
   p, .small span, .complete-results span, .panel-body .span {
     font-size: 12pt !important;
@@ -99,8 +106,11 @@ p, .small span, .complete-results, .panel-body .span {
 }
 
 @media only screen and (min-width: 321px) and (max-width: 375px){
-  h1, h5, h4 {
+  h1, h4 {
     font-size: 22pt !important;
+  }
+  h5 {
+    font-size: 18pt !important;
   }
   p, .small span, .complete-results span, .panel-body .span {
     font-size: 12pt !important;
@@ -108,8 +118,11 @@ p, .small span, .complete-results, .panel-body .span {
 }
 
 @media only screen and (min-width: 376px) and (max-width: 414px){
-  h1, h5, h4 {
+  h1, h4 {
     font-size: 24pt !important;
+  }
+  h5 {
+    font-size: 20pt !important;
   }
   p, .small span, .complete-results span, .panel-body .span {
     font-size: 12pt !important;
@@ -117,8 +130,11 @@ p, .small span, .complete-results, .panel-body .span {
 }
 
 @media only screen and (min-width: 415px) and (max-width: 600px){
-  h1, h5, h4 {
+  h1, h4 {
     font-size: 28pt !important;
+  }
+  h5 {
+    font-size: 24pt !important;
   }
   p, .small span, .complete-results span, .panel-body .span {
     font-size: 14pt !important;
@@ -126,8 +142,11 @@ p, .small span, .complete-results, .panel-body .span {
 }
 
 @media only screen and (min-width: 601px) and (max-width: 823px){
-  h1, h5, h4 {
+  h1, h4 {
     font-size: 32pt !important;
+  }
+  h5 {
+    font-size: 24pt !important;
   }
   p, .small span, .complete-results span, .panel-body .span {
     font-size: 14pt !important;
@@ -135,8 +154,11 @@ p, .small span, .complete-results, .panel-body .span {
 }
 
 @media only screen and (min-width: 824px) and (max-width: 1024px){
-  h1, h5, h4 {
+  h1, h4 {
     font-size: 32pt !important;
+  }
+  h5 {
+    font-size: 24pt !important;
   }
   p, .small span, .complete-results span, .panel-body .span {
     font-size: 14pt !important;
@@ -144,8 +166,11 @@ p, .small span, .complete-results, .panel-body .span {
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1920px){
-  h1, h5, h4 {
+  h1, h4 {
     font-size: 36pt !important;
+  }
+  h5 {
+    font-size: 24pt !important;
   }
   p, .small span, .complete-results span, .panel-body .span {
     font-size: 14pt !important;
@@ -157,7 +182,10 @@ p, .small span, .complete-results, .panel-body .span {
   h1 {
     margin-bottom: 2.8vh !important;
   }
-  .panel-footer, .form-control, .sv_qcbc, #sq_106_ariaTitle {
+  #sq_106_ariaTitle .sv_qcbc {
+    margin-top: 2vh !important;
+  }
+  .panel-footer, .form-control, #sq_106_ariaTitle {
     margin-top: 4vh !important;
   }
 }
@@ -166,7 +194,10 @@ p, .small span, .complete-results, .panel-body .span {
   h1 {
     margin-bottom: 4vh !important;
   }
-  .panel-footer, .form-control, .sv_qcbc, #sq_106_ariaTitle {
+  #sq_106_ariaTitle .sv_qcbc {
+    margin-top: 2vh !important;
+  }
+  .panel-footer, .form-control, #sq_106_ariaTitle {
     margin-top: 6vh !important;
   }
 }
@@ -198,8 +229,19 @@ p, .small span, .complete-results, .panel-body .span {
   position: relative;
 }
 
+.sv_prev_btn {
+  background-color: transparent !important;
+  color: #777777!important;
+  border-radius: 0px !important;
+  border: 0px !important;
+  font-family: open-sans, sans-serif !important;
+  font-weight: 700 !important;
+  padding: 8px 14px !important;
+  letter-spacing: 0.08em;
+}
 
-.btn {
+
+.sv_next_btn, .sv_complete_btn, .sv_start_btn {
   background-color: black !important;
   color: white !important;
   border-radius: 0px !important;
@@ -208,6 +250,10 @@ p, .small span, .complete-results, .panel-body .span {
   font-weight: 700 !important;
   padding: 8px 14px !important;
   letter-spacing: 0.08em;
+}
+
+#sq_111 .form-control {
+  width: 72% !important;
 }
 
 .form-control {
@@ -317,6 +363,10 @@ input[type=radio], input[type=checkbox] {
   vertical-align: top;
 }
 
+#sq_112 label {
+  text-align: left !important;
+}
+
 label {
   display: block !important;
   text-align: center !important;
@@ -333,6 +383,9 @@ label {
   margin-bottom: 0 !important;
   font-weight: 400;
   cursor: pointer;
+}
+.sv_qcbx .checkbox-material {
+  margin-right: 0px !important;
 }
 
 #sq_112 input[type=checkbox] {

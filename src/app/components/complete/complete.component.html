@@ -1,5 +1,5 @@
-<h4>Hi, {{ name | titlecase }}</h4>
 <div class="complete-intro">
+  <h4>Hi, {{ name | titlecase }}</h4>
   <p><i>Here are your results. Click on the <strong>bolded</strong> words to learn more about those topics, or scroll down for a list of articles selected for you.</i></p>
 </div>
 
@@ -11,6 +11,7 @@
   [ngIf]='(outcome.status === "pre-menopause")'
   >
     <span> Based on what you told us you are likely in pre-menopause.</span>
+    <br>
     <span> Pre-menopause is the time between puberty and peri-menopause. Your hormones may be starting to change although you continue to have regular periods and haven't experienced any symptoms of peri-menopause. You can read more about the stages of menopause<strong><a> here</a></strong>.</span>
   </ng-template>
 
@@ -29,7 +30,8 @@
       <span> Your main health goal is <strong>{{ goal |lowercase }}</strong>.</span>
     </ng-template>
     <span> Based on what you told us you are likely <strong>peri-menopausal.</strong></span>
-    <span> Perimenopause means ‘around the menopause,’ and typically starts in a woman’s 40s. It is the time when signs and symptoms of falling oestrogen levels begin to show. Most commonly irregular periods or hot flushes. Perimenopause lasts until 12 months after your final menstrual period. For over half of women, the perimenopause stage lasts for over 7 years. This doesn’t mean you have to endure through symptoms for all that time as there are lots of treatments that can help! You can read more about the stages of menopause<strong><a> here</a></strong>.</span>
+    <br>
+    <span>Perimenopause means ‘around the menopause,’ and typically starts in a woman’s 40s. It is the time when signs and symptoms of falling oestrogen levels begin to show. Most commonly irregular periods or hot flushes. Perimenopause lasts until 12 months after your final menstrual period. For over half of women, the perimenopause stage lasts for over 7 years. This doesn’t mean you have to endure through symptoms for all that time as there are lots of treatments that can help! You can read more about the stages of menopause<strong><a> here</a></strong>.</span>
   </ng-template>
 
   <!--POST-MENOPAUSE-->
@@ -47,7 +49,8 @@
       <span> Your main health goal is <strong>{{ goal | lowercase}}</strong>.</span>
     </ng-template>
     <span> Based on what you told us you are likely <strong>post-menopausal.</strong></span>
-    <span> Post-menopause is the time from your last period (or surgery) onwards. As you are no longer ovulating, your ovaries' production of hormones, such as oestrogen, progesterone and testosterone, declines. As your body gets used to these lower levels of oestrogen, your body will adapt and stabilise, usually leading to reduced symptoms. You can read more about the stages of menopause<strong><a> here</a></strong>.</span>
+    <br>
+    <span>Post-menopause is the time from your last period (or surgery) onwards. As you are no longer ovulating, your ovaries' production of hormones, such as oestrogen, progesterone and testosterone, declines. As your body gets used to these lower levels of oestrogen, your body will adapt and stabilise, usually leading to reduced symptoms. You can read more about the stages of menopause<strong><a> here</a></strong>.</span>
   </ng-template>
 
   <!--ITS-COMPLICATED-->
@@ -64,7 +67,8 @@
     >
       <span> Your main health goal is <strong>{{ goal | lowercase }}</strong>.</span>
     </ng-template>
-    <span> Unfortunately based on what you told us it is difficult to pinpoint what phase of menopause you are likelt in. If you are experiencing menopause symptoms or concerned about menopause, we recommend speaking to your GP. If you would like to learn more, you can read more about the stages of menopause<strong><a> here</a></strong>.</span>
+    <br>
+    <span>Unfortunately based on what you told us it is difficult to pinpoint what phase of menopause you are likelt in. If you are experiencing menopause symptoms or concerned about menopause, we recommend speaking to your GP. If you would like to learn more, you can read more about the stages of menopause<strong><a> here</a></strong>.</span>
     </ng-template>
 </div>
 
@@ -75,7 +79,7 @@
     [ngIf]="articles.length > 0"
   >
     <div class="container-fluid">
-      <h4>Learn More About</h4>
+      <h5>Learn More About</h5>
       <div class="row" style="margin-top: 24px;">
         <div
           *ngFor="let article of articles"
@@ -98,17 +102,32 @@
 <ng-template
   [ngIf]="signup"
 >
-<h4>Sign up for our newsletter to stay in the loop:</h4>
-
 <div class="signup">
+  <h5>Sign up for our newsletter to stay in the loop:</h5>
   <form>
+<!--     <div class="container">
+      <div class="row row-no-gutters">
+        <div
+          class="col-sm-10 col-sm-offset-1 col-md-8"
+        >
+          <div class="form-group">
+            <input type="email" class="form-control">
+          </div>
+        </div>
+        <div
+          class="col-sm-2 col-sm-offset-5 col-md-2"
+        >
+          <button type="submit" class="btn sv_start_btn">SIGN UP</button>
+        </div>
+      </div>
+    </div> -->
+
     <div class="form-group">
       <input type="email" class="form-control">
     </div>
     <button type="submit" class="btn sv_start_btn">SIGN UP</button>
   </form>
 </div>
-
 </ng-template>
 
 

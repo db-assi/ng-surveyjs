@@ -450,7 +450,7 @@
 "showTitle": false,
 "showQuestionNumbers": "off",
 "startSurveyText": "GET STARTED",
-"pagePrevText": "BACK",
+"pagePrevText": "← BACK",
 "pageNextText": "NEXT",
 "completeText": "MY RESULTS",
 "completedHtml": "<span><span>"
