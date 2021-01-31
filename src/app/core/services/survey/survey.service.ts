@@ -29,10 +29,13 @@ export class SurveyService {
   //currentStatus = this.status.asObservable();
 
   private name = new BehaviorSubject(null);
-  currentName = this.name.asObservable(); 
+  currentName = this.name.asObservable();
 
-  private newletter = new BehaviorSubject(false);
-  currentNewsleter = this.newletter.asObservable(); 
+  private email = new BehaviorSubject(null);
+  currentEmail = this.email.asObservable();
+
+  private newsletter = new BehaviorSubject(false);
+  currentNewsleter = this.newsletter.asObservable();
 
   private age = new BehaviorSubject(null);
   currentAge = this.age.asObservable();
@@ -55,16 +58,23 @@ export class SurveyService {
     } else {
       this.completeStatus.next(true);
       this.surveyResult.next(survey.getAllValues());
-      this.signup.signup(survey);
+      this.newsletter.next(survey.getValue('newsletter'));
+
+      if(survey.getValue('newsletter')){
+        console.log('value newsletter ' + survey.getValue('newsletter'))
+        this.signup.signup(survey);
+      }
+
       this.recommendation.next(this.adapter.adapt(survey));
       this.submit.submit(survey);
       this.status = this.outcome.getOutcome(survey);
       this.age.next(survey.getValue('fed42f52-44a8-11eb-bafe-00155d3cabc5'));
       this.name.next(survey.getValue('name'));
-      this.newletter.next(survey.getValue('newsletter'));
+      this.email.next(survey.getValue('email'));
+
       this.symptom.next(this.getAnswerTextByQuestionName(survey, 'fed459a7-44a8-11eb-bafe-00155d3cabc5', survey.getValue('fed459a7-44a8-11eb-bafe-00155d3cabc5')))
       this.goal.next(this.getAnswerTextByQuestionName(survey, 'fed46a86-44a8-11eb-bafe-00155d3cabc5', survey.getValue('fed46a86-44a8-11eb-bafe-00155d3cabc5')));
-      
+
     }
   }
 

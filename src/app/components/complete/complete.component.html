@@ -97,14 +97,13 @@
   </ng-template>
 </div>
 
-
 <!--SIGNUP-->
 <ng-template
   [ngIf]="signup"
 >
 <div class="signup">
   <h5>Sign up for our newsletter to stay in the loop:</h5>
-  <form>
+  <form (ngSubmit)="signUpNewsletter($event)">
 <!--     <div class="container">
       <div class="row row-no-gutters">
         <div
@@ -130,7 +129,11 @@
 </div>
 </ng-template>
 
-
+<ng-template [ngIf]="signedup">
+  <div class="signup">
+    <h5>Thank you for signing up to our newsletter.</h5>
+  </div>
+</ng-template>
 
 
 

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://assessment-bia.herokuapp.com'
+    // apiUrl: 'https://assessment-bia.herokuapp.com'
+    apiUrl: 'http://localhost:3000'
 };
 
 /*

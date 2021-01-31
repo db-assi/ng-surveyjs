@@ -9,7 +9,7 @@ import { SurveyModel } from 'survey-angular';
   providedIn: 'root'
 })
 export class SignupService {
-  private baseUrl = (environment.apiUrl + '/signup');
+  private baseUrl = (environment.apiUrl + '/subscribe');
 
   constructor(private http: HttpClient, private adapter: SignupAdapter) { }
 
@@ -17,7 +17,7 @@ export class SignupService {
     const url = `${this.baseUrl}`
     var values = this.adapter.adapt(survey);
     this.http.post(url, {
-      email: values.email, fname: values.firstName, lname: values.lastName
+      email: values.email, fname: values.firstName
     }).subscribe({
       next: res => {
         console.log(res)
@@ -27,5 +27,21 @@ export class SignupService {
       }
     });
   }
+
+  _signup(email: string, name: string) {
+    const url = `${this.baseUrl}`
+    this.http.post(url, {
+      email: email, fname: name
+    }).subscribe({
+      next: res => {
+        console.log(res)
+      },
+      error: err => {
+        console.error('There was an error: ', err)
+      }
+    });
+
+  }
+
 
 }
