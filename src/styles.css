@@ -1,7 +1,17 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
+/* @import "bootstrap/dist/css/bootstrap.min.css"; */
 /* @import "./assets/css/reset.css"; */
-@import url("https://use.typekit.net/kll3mxz.css");
+/* @import url("https://use.typekit.net/kll3mxz.css"); */
+@import url("//hello.myfonts.net/count/3d455c");
 
+/* @font-face {
+  font-family: "Juana-Medium";
+  src: url('webFonts/JuanaMedium/font.woff2') format('woff2'), url('webFonts/JuanaMedium/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Juana-MediumIt";
+  src: url('webFonts/JuanaMediumIt/font.woff2') format('woff2'), url('webFonts/JuanaMediumIt/font.woff') format('woff');
+}
+ */
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -19,9 +29,13 @@ input[type=number] {
   outline: none !important;
 }
 
+body {
+  background-color: #FFFEF6 !important;
+  color: #17635E !important;
+}
+
 .jumbotron {
   margin-bottom: 0px !important;
-  background-color: transparent !important;
 }
 
 .jumbotron p {
@@ -44,6 +58,8 @@ input[type=number] {
 h1, h2, h3, h4, h5 {
   margin: 0 !important;
   padding: 0px !important;
+  text-align: center;
+  color: #17635E !important;
 }
 
 .sv_bootstrap_css .sv_qstn {
@@ -52,6 +68,7 @@ h1, h2, h3, h4, h5 {
 
 p {
   margin: 0 0 16px !important;
+  color: #17635E;
 }
 
 a {
@@ -73,12 +90,12 @@ a {
 
 /* Font Families */
 h1, h5, h4 {
-  font-family: questa-grande, serif !important;
+  font-family: "Juana-Medium", sans-serif !important;
   font-weight: 500 !important;
 }
 
 p, .small span, .complete-results, .panel-body .span {
-  font-family: open-sans, sans-serif;
+  font-family: "ModernEra-Medium", open-sans, sans-serif;
 }
 
 /* Horizontal Alignment */
@@ -231,24 +248,26 @@ p, .small span, .complete-results, .panel-body .span {
 
 .sv_prev_btn {
   background-color: transparent !important;
-  color: #777777!important;
+  color: #17635E!important;
   border-radius: 0px !important;
   border: 0px !important;
-  font-family: open-sans, sans-serif !important;
-  font-weight: 700 !important;
+  font-family: "ModernEra-Medium", open-sans, sans-serif;
+  font-size: 16pt !important;
+  font-weight: 400 !important;
   padding: 8px 14px !important;
   letter-spacing: 0.08em;
 }
 
 
 .sv_next_btn, .sv_complete_btn, .sv_start_btn {
-  background-color: black !important;
+  background-color: #17635E !important;
   color: white !important;
-  border-radius: 0px !important;
+  border-radius: 32px !important;
   border: 0px !important;
-  font-family: open-sans, sans-serif !important;
-  font-weight: 700 !important;
-  padding: 8px 14px !important;
+  font-family: "ModernEra-Medium", open-sans, sans-serif;
+  font-size: 16pt !important;
+  font-weight: 400 !important;
+  padding: 16px 38px !important;
   letter-spacing: 0.08em;
 }
 
@@ -262,12 +281,12 @@ p, .small span, .complete-results, .panel-body .span {
   height: 36px !important;
   background-color: transparent !important;
   line-height: 1.6 !important;
-  font-family: open-sans, sans-serif !important;
+  font-family: "ModernEra-Medium", open-sans, sans-serif;
   padding: 8px 14px !important;
-  color: black !important;
+  color: #17635E !important;
   border: 0px !important;
   border-radius: 0px !important;
-  border-bottom: 1px solid black !important;
+  border-bottom: 1px solid #17635E !important;
   box-shadow: none !important;
   text-align: center !important;
   font-size: 14pt !important;
@@ -282,7 +301,7 @@ p, .small span, .complete-results, .panel-body .span {
   color:rgb(50, 51, 51) !important;
   background-color: transparent !important;
   border: 0px !important;
-  font-family: open-sans, sans-serif !important;
+  font-family: "ModernEra-Medium", open-sans, sans-serif;
   font-size: 10pt !important;
   font-weight: 600 !important;
 }
@@ -311,14 +330,15 @@ input[type=radio], input[type=checkbox] {
 }
 
 .sv_qstn .sv-q-column-2 .radio.checked, .checkbox.checked {
-  background-color: #CECECE !important;
-  color: black !important;
+  background-color: #FF9574 !important;
+  color: #17635E !important;
 }
 
 .radio, .checkbox {
   border: 1px solid #CECECE !important;
-  font-family: open-sans, sans-serif !important;
-  padding: 8px !important;
+  font-family: "ModernEra-Medium", open-sans, sans-serif;
+  padding: 16px !important;
+  font-size: 16pt;
 }
 
 .sv_qstn .sv-q-column-2, .sv-question .sv-q-column-2 {

@@ -12,7 +12,7 @@
 				"type": "html",
 				"name": "welcome",
 				"hideNumber": true,
-				"html": "<div><h1>Navigating menopause, together.</h1>\n<p>No one’s menopause experience is the same. This assessment will help you receive information tailored to your menopause journey in just 3 minutes.</p>\n<p>Please note we this is not medical advice. If you are concerned about a medical issue or symptom, please speak to your doctor. All information you share with us will be anonymised and stored securely according to our [privacy policy] and GDPR.</p></div>"
+				"html": "<div><h1>Before we start...</h1>\n<p>Please note we this is not medical advice. If you are concerned about a medical issue or symptom, please speak to your doctor. All information you share with us will be anonymised and stored securely according to our [privacy policy] and GDPR.</p></div>"
 			}
 		]
 	},
@@ -449,9 +449,9 @@
 "firstPageIsStarted": true,
 "showTitle": false,
 "showQuestionNumbers": "off",
-"startSurveyText": "GET STARTED",
-"pagePrevText": "← BACK",
-"pageNextText": "NEXT",
-"completeText": "MY RESULTS",
+"startSurveyText": "I understand",
+"pagePrevText": "← Back",
+"pageNextText": "Next",
+"completeText": "My Results",
 "completedHtml": "<span><span>"
 }
