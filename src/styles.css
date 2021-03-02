@@ -262,12 +262,12 @@ p, .small span, .complete-results, .panel-body .span {
 .sv_next_btn, .sv_complete_btn, .sv_start_btn {
   background-color: #17635E !important;
   color: white !important;
-  border-radius: 32px !important;
+  border-radius: 24px !important;
   border: 0px !important;
   font-family: "ModernEra-Medium", open-sans, sans-serif;
   font-size: 16pt !important;
   font-weight: 400 !important;
-  padding: 16px 38px !important;
+  padding: 10px 24px !important;
   letter-spacing: 0.08em;
 }
 
@@ -331,14 +331,14 @@ input[type=radio], input[type=checkbox] {
 
 .sv_qstn .sv-q-column-2 .radio.checked, .checkbox.checked {
   background-color: #FF9574 !important;
-  color: #17635E !important;
+  color: white !important;
 }
 
 .radio, .checkbox {
   border: 1px solid #CECECE !important;
   font-family: "ModernEra-Medium", open-sans, sans-serif;
   padding: 16px !important;
-  font-size: 16pt;
+  font-size: 18px !important;
 }
 
 .sv_qstn .sv-q-column-2, .sv-question .sv-q-column-2 {
@@ -385,6 +385,7 @@ input[type=radio], input[type=checkbox] {
 
 #sq_112 label {
   text-align: left !important;
+  color: #17635E;
 }
 
 label {
@@ -409,12 +410,14 @@ label {
 }
 
 #sq_112 input[type=checkbox] {
+  content: "";
   opacity: 100 !important;
   cursor: pointer !important;
   height: 16px !important;
   width: 16px !important;
+  border: 2px solid #17635E;
   border-radius: 0px !important;
-  border: #CECECE !important;
+  background-color: white;
 }
 
 
@@ -433,3 +436,8 @@ label {
 .glyphicon {
   display: none !important;
 }
+
+.sv_row #sq_103, .sv_row #sq_104, .sv_row #sq_105, .sv_row #sq_107, .sv_row #sq_108, .sv_row #sq_109, .sv_row #sq_110 {
+  margin-top: 4.5vh !important;
+}
+
