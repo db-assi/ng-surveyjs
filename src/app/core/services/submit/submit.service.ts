@@ -21,14 +21,14 @@ export class SubmitService {
     }
     const url = `${this.baseUrl}`
     const values = this.adapter.adapt(survey);
-    console.log('SubmitService: ' + JSON.stringify(values));
+    // console.log('SubmitService: ' + JSON.stringify(values));
 
     this.http.post(url, JSON.stringify(values), options).subscribe({
       next: res => {
         res
       },
       error: err => {
-        console.error('There was an error: ', err)
+        // console.error('There was an error: ', err)
       }
     });
   }

@@ -19,7 +19,6 @@ export class RecommendationService {
     } catch (e) {
       url = this.baseUrl;
     }
-    console.log(url);
     return this.http.get(url)
   }
 

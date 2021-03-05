@@ -20,10 +20,10 @@ export class SignupService {
       email: values.email, fname: values.firstName
     }).subscribe({
       next: res => {
-        console.log(res)
+        // console.log(res)
       },
       error: err => {
-        console.error('There was an error: ', err)
+        // console.error('There was an error: ', err)
       }
     });
   }
@@ -34,10 +34,10 @@ export class SignupService {
       email: email, fname: name
     }).subscribe({
       next: res => {
-        console.log(res)
+        // console.log(res)
       },
       error: err => {
-        console.error('There was an error: ', err)
+        // console.error('There was an error: ', err)
       }
     });
 
