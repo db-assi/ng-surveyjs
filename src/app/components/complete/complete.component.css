@@ -68,6 +68,11 @@
   padding: 15px !important;
 }
 
+.complete-articles a, .complete-articles a:hover, .complete-articles a:active, .complete-articles a:visited {
+  color: white !important;
+  text-decoration: none !important;
+}
+
 .panel-body {
   position: relative !important;
   top: 50% !important;

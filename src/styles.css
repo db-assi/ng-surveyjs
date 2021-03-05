@@ -63,6 +63,10 @@ h1, h2, h3, h4, h5 {
   color: #17635E !important;
 }
 
+.survey-intro a, .survey-intro  a:hover, .survey-intro a:active, .survey-intro a:visited {
+  color: #17635E !important;
+  text-decoration: none !important;
+}
 .sv_bootstrap_css .sv_qstn {
   padding: 0 !important;
 }

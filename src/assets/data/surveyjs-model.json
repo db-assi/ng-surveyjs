@@ -12,7 +12,7 @@
 				"type": "html",
 				"name": "welcome",
 				"hideNumber": true,
-				"html": "<div><h1>Before we start...</h1>\n<p>Please note we this is not medical advice. If you are concerned about a medical issue or symptom, please speak to your doctor. All information you share with us will be anonymised and stored securely according to our [privacy policy] and GDPR.</p></div>"
+				"html": "<div class='survey-intro'><h1>Before we start...</h1>\n<p>Please note this is not medical advice. If you are concerned about a medical issue or symptom, please speak to your doctor. All information you share with us will be anonymised and stored securely according to our <a href='https://bia.care/privacy-policy'><strong>privacy policy</strong></a> and GDPR.</p></div>"
 			}
 		]
 	},
