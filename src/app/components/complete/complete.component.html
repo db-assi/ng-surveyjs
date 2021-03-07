@@ -68,7 +68,7 @@
       <span> Your main health goal is <strong>{{ goal | lowercase }}</strong>.</span>
     </ng-template>
     <br>
-    <span>Unfortunately based on what you told us it is difficult to pinpoint what phase of menopause you are likely in. If you are experiencing menopause symptoms or concerned about menopause, we recommend speaking to your GP. If you would like to learn more, you can read more about the stages of menopause <strong><a href="www.bia.care/articles/stages-of-menopause">here</a></strong>.</span>
+    <span>Unfortunately based on what you told us it is difficult to pinpoint what phase of menopause you are likely in. If you are experiencing menopause symptoms or concerned about menopause, we recommend speaking to your GP. If you would like to learn more, you can read more about the stages of menopause <strong><a href="https://www.bia.care/articles/stages-of-menopause" target="_blank" >here</a></strong>.</span>
     </ng-template>
 </div>
 
@@ -87,7 +87,7 @@
           <div class="col-sm-6 col-md-4" style="padding: 8px;">
             <div class="panel">
               <div class="panel-body">
-                <a [attr.href]="article.url"><span>{{ article.title }}</span></a>
+                <a [attr.href]="'//' + article.url" target="_blank"><span>{{ article.title }}</span></a>
               </div>
             </div>
           </div>

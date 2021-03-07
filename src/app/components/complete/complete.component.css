@@ -34,6 +34,11 @@
   font-weight: 700 !important;
 }
 
+.complete-results span a, .complete-results span a:hover, .complete-results span a:visited, .complete-results span a:active {
+  color: #ff9574 !important;
+  text-decoration: none !important;
+}
+
 .complete-results span, .complete-intro p {
   line-height: 1.6 !important;
   color: black;
