@@ -330,7 +330,7 @@
       }
 
     ],
-    "title": "Which symptom has the largest impact on your life?",
+    "title": "Which symptom has the biggest impact on your life?",
     "visibleIf": "{fed4576b-44a8-11eb-bafe-00155d3cabc5.length} > 1"
   },
   {

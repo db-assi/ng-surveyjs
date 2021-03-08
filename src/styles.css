@@ -200,6 +200,20 @@ p, .small span, .complete-results, .panel-body .span {
   }
 }
 
+/* Very large screens */
+@media only screen and (min-width: 1921px) {
+  h1, h4 {
+    font-size: 36pt !important;
+  }
+  h5 {
+    font-size: 24pt !important;
+  }
+  p, .small span, .complete-results span, .panel-body .span {
+    font-size: 14pt !important;
+  }
+}
+
+
 /* h1 .panel-footer margin Height Media Queries */
 @media only screen and (max-height: 600px){
   h1 {
